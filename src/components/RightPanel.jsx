@@ -11,7 +11,7 @@ const RightSection = styled.div`
 `
 
 const SidePanel = styled.div`
-  width: 340px;
+  width: 380px;
   display: flex;
   flex-direction: column;
   overflow: hidden;

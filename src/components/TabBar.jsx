@@ -15,12 +15,14 @@ const TabItem = styled.div`
   align-items: center;
   gap: 8px;
   padding: 7px 12px;
-  border-radius: 4px;
+  border-radius: 8px;
   cursor: pointer;
   font-size: 13px;
+  height: 40px;
+  box-sizing: border-box;
   background: ${props => props.$active ? '#2f3130' : '#ffffff'};
   color: ${props => props.$active ? '#fff' : '#2f3130'};
-  font-weight: 400;
+  font-weight: 600;
   border: 1px solid ${props => props.$active ? '#2f3130' : '#dcdcda'};
   white-space: nowrap;
   &:hover { background: ${props => props.$active ? '#2f3130' : '#f7f7f7'}; }
@@ -41,7 +43,6 @@ const TabTitle = styled.span`
 const TabSubtitle = styled.span`
   font-size: 12px;
   font-weight: 600;
-  opacity: 0.7;
 `
 
 const TabClose = styled.span`
