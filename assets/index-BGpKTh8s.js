@@ -1476,7 +1476,7 @@ Roger`}],yd=[{id:4872,subject:`Order #GR-29104 not received`,date:`Jun 24 09:15`
   display: flex;
   flex-shrink: 0;
 `,xf=M.div`
-  width: 340px;
+  width: 380px;
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -1791,12 +1791,14 @@ Roger`}],yd=[{id:4872,subject:`Order #GR-29104 not received`,date:`Jun 24 09:15`
   align-items: center;
   gap: 8px;
   padding: 7px 12px;
-  border-radius: 4px;
+  border-radius: 8px;
   cursor: pointer;
   font-size: 13px;
+  height: 40px;
+  box-sizing: border-box;
   background: ${e=>e.$active?`#2f3130`:`#ffffff`};
   color: ${e=>e.$active?`#fff`:`#2f3130`};
-  font-weight: 400;
+  font-weight: 600;
   border: 1px solid ${e=>e.$active?`#2f3130`:`#dcdcda`};
   white-space: nowrap;
   &:hover { background: ${e=>e.$active?`#2f3130`:`#f7f7f7`}; }
@@ -1811,7 +1813,6 @@ Roger`}],yd=[{id:4872,subject:`Order #GR-29104 not received`,date:`Jun 24 09:15`
 `,Vp=M.span`
   font-size: 12px;
   font-weight: 600;
-  opacity: 0.7;
 `,Hp=M.span`
   font-size: 16px;
   color: ${e=>e.$active?`rgba(255,255,255,0.7)`:`#999b97`};
