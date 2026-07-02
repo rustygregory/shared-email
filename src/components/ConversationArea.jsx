@@ -1,5 +1,9 @@
+import { useState, useMemo } from 'react'
 import styled from 'styled-components'
+import { Button } from '@zendeskgarden/react-buttons'
+import { Radio, Field, Label } from '@zendeskgarden/react-forms'
 import { ticketData, ticketComments } from '../data/mockTicket'
+import { sharedEmailUsers, currentRequester } from '../data/mockUsers'
 
 const Container = styled.div`
   display: flex;
@@ -99,6 +103,12 @@ const MessageBody = styled.div`
   color: #2f3130;
   line-height: 1.5;
   white-space: pre-wrap;
+  ${props => props.$isRequester && `
+    background: #ecf9f9;
+    border-radius: 4px;
+    padding: 12px;
+    margin-top: 4px;
+  `}
 `
 
 const ComposerArea = styled.div`
@@ -161,7 +171,198 @@ const ToolbarBtn = styled.button`
   &:hover { color: #2f3130; }
 `
 
-export default function ConversationArea() {
+/* Verify shared email Capsule Styles */
+const CapsuleCollapsed = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  width: 380px;
+  padding: 6px 12px;
+  border: 1px solid #d4a373;
+  border-radius: 4px;
+  background: #fef7ed;
+  font-size: 13px;
+  font-weight: 500;
+  color: #2f3130;
+  cursor: pointer;
+  margin: 8px 0 16px;
+  box-sizing: border-box;
+  &:hover { background: #fdf0dc; }
+`
+
+const CapsuleExpanded = styled.div`
+  margin: 8px 0 16px;
+  width: 380px;
+  border: 1px solid #d4a373;
+  border-radius: 4px;
+  background: #fef7ed;
+  overflow: hidden;
+`
+
+const CapsuleHeader = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  background: #fef7ed;
+  font-size: 13px;
+  font-weight: 500;
+  color: #2f3130;
+  cursor: pointer;
+  border-bottom: 1px solid #d4a373;
+  &:hover { background: #fdf0dc; }
+`
+
+const CapsuleChevron = styled.span`
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  color: #68737d;
+`
+
+const CapsuleBody = styled.div`
+  max-height: 350px;
+  overflow-y: auto;
+  padding: 12px;
+  background: #fff;
+`
+
+const CapsuleSearchWrapper = styled.div`
+  position: relative;
+  margin-bottom: 10px;
+`
+
+const CapsuleSearchInput = styled.input`
+  width: 100%;
+  height: 32px;
+  padding: 0 10px 0 32px;
+  border: 1px solid #dcdcda;
+  border-radius: 4px;
+  font-size: 13px;
+  color: #2f3130;
+  outline: none;
+  box-sizing: border-box;
+  &:focus { border-color: #406cc4; }
+`
+
+const CapsuleSearchIcon = styled.div`
+  position: absolute;
+  left: 10px;
+  top: 0;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  color: #646864;
+`
+
+const CapsuleUserItem = styled.div`
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  &:hover {
+    background: #f7f7f7;
+  }
+`
+
+const RadioWrapper = styled.div`
+  flex-shrink: 0;
+  margin-top: 1px;
+`
+
+const CapsuleUserAvatar = styled.div`
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: ${props => props.$color || '#b7b7b3'};
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 600;
+  flex-shrink: 0;
+  margin-top: 1px;
+`
+
+const CapsuleUserInfo = styled.div`
+  flex: 1;
+  min-width: 0;
+`
+
+const CapsuleUserName = styled.span`
+  font-size: 13px;
+  color: #406cc4;
+  font-weight: 500;
+  cursor: pointer;
+  &:hover { text-decoration: underline; }
+`
+
+const CapsuleUserEmail = styled.div`
+  font-size: 12px;
+  color: #646864;
+  margin-bottom: 2px;
+`
+
+const CapsuleUserOrg = styled.div`
+  font-size: 12px;
+  color: #646864;
+  margin-bottom: 2px;
+`
+
+const CapsuleUserId = styled.div`
+  font-size: 12px;
+  color: #646864;
+`
+
+const CapsuleFooter = styled.div`
+  display: flex;
+  align-items: center;
+  padding: 10px 12px;
+  border-top: 1px solid #eae9e8;
+  background: #fff;
+  gap: 12px;
+`
+
+
+
+export default function ConversationArea({ mode, onReassign, onOpenProfile }) {
+  const [capsuleOpen, setCapsuleOpen] = useState(false)
+  const [capsuleDismissed, setCapsuleDismissed] = useState(false)
+  const [searchQuery, setSearchQuery] = useState('')
+  const [selectedUserId, setSelectedUserId] = useState(null)
+
+  const isWorkspace = mode === 'workspace'
+
+  const otherUsers = sharedEmailUsers.filter(u => u.id !== currentRequester.id)
+
+  const filteredUsers = useMemo(() => {
+    const list = otherUsers.sort((a, b) => a.name.localeCompare(b.name))
+    if (!searchQuery.trim()) return list
+    const q = searchQuery.toLowerCase()
+    return list.filter(u =>
+      u.name.toLowerCase().includes(q) ||
+      u.organization.toLowerCase().includes(q) ||
+      (u.id && String(u.id).includes(q))
+    )
+  }, [searchQuery, otherUsers])
+
+  const handleSetAsRequester = () => {
+    if (!selectedUserId) return
+    const user = otherUsers.find(u => `${u.name}-${u.organization}-${u.id || u.phone || u.notes}` === selectedUserId)
+    if (user && onReassign) {
+      onReassign(user)
+      setCapsuleDismissed(true)
+    }
+  }
+
+  const handleIgnore = () => {
+    setCapsuleDismissed(true)
+    setCapsuleOpen(false)
+  }
+
   return (
     <Container>
       <Header>
@@ -182,17 +383,105 @@ export default function ConversationArea() {
       </ViewSummary>
 
       <Messages>
-        {ticketComments.map(comment => (
+        {ticketComments.map((comment, index) => (
           <MessageBlock key={comment.id}>
             <Avatar $color={comment.authorType === 'agent' ? '#404241' : '#406cc4'}>
-              {comment.author[0]}
+              {comment.authorType === 'requester' ? (
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="#fff" strokeWidth="1.5">
+                  <circle cx="8" cy="5" r="3"/>
+                  <path d="M2 14c0-3 2.7-5 6-5s6 2 6 5"/>
+                </svg>
+              ) : (
+                comment.author.split(' ').map(n => n[0]).join('').substring(0, 2).toUpperCase()
+              )}
             </Avatar>
             <MessageContent>
               <MessageHeader>
                 <MessageAuthor>{comment.author}</MessageAuthor>
                 <MessageTime>{comment.timestamp}</MessageTime>
               </MessageHeader>
-              <MessageBody>{comment.body}</MessageBody>
+
+              {/* Verify shared email Capsule - shows after first requester message header */}
+              {isWorkspace && !capsuleDismissed && index === 0 && comment.authorType === 'requester' && (
+                <>
+                  {!capsuleOpen ? (
+                    <CapsuleCollapsed onClick={() => setCapsuleOpen(true)}>
+                      <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                        <path stroke="#af5626" strokeLinecap="round" d="M6.06 2.27l-4.5 8.5c-.18.33.06.73.44.73h9c.38 0 .62-.4.44-.73l-4.5-8.5a.494.494 0 00-.88 0zM6.5 5v2"/>
+                        <circle cx="6.5" cy="9" r=".8" fill="#af5626"/>
+                      </svg>
+                      Verify shared email
+                      <CapsuleChevron>
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2">
+                          <path d="M4 6l4 4 4-4" strokeLinecap="round" strokeLinejoin="round"/>
+                        </svg>
+                      </CapsuleChevron>
+                    </CapsuleCollapsed>
+                  ) : (
+                    <CapsuleExpanded>
+                      <CapsuleHeader onClick={() => setCapsuleOpen(false)}>
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                          <path stroke="#af5626" strokeLinecap="round" d="M6.06 2.27l-4.5 8.5c-.18.33.06.73.44.73h9c.38 0 .62-.4.44-.73l-4.5-8.5a.494.494 0 00-.88 0zM6.5 5v2"/>
+                          <circle cx="6.5" cy="9" r=".8" fill="#af5626"/>
+                        </svg>
+                        Verify shared email
+                        <CapsuleChevron>
+                          <svg width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2" style={{ transform: 'rotate(180deg)' }}>
+                            <path d="M4 6l4 4 4-4" strokeLinecap="round" strokeLinejoin="round"/>
+                          </svg>
+                        </CapsuleChevron>
+                      </CapsuleHeader>
+                      <CapsuleBody>
+                        <CapsuleSearchWrapper>
+                          <CapsuleSearchIcon>
+                            <svg width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5">
+                              <circle cx="7" cy="7" r="5"/>
+                              <path d="M11 11l3 3" strokeLinecap="round"/>
+                            </svg>
+                          </CapsuleSearchIcon>
+                          <CapsuleSearchInput
+                            value={searchQuery}
+                            onChange={(e) => setSearchQuery(e.target.value)}
+                            placeholder="Search users..."
+                          />
+                        </CapsuleSearchWrapper>
+                        {filteredUsers.map(user => {
+                          const uniqueKey = `${user.name}-${user.organization}-${user.id || user.phone || user.notes}`
+                          return (
+                          <CapsuleUserItem key={uniqueKey} onClick={() => setSelectedUserId(uniqueKey)}>
+                            <RadioWrapper>
+                              <Radio
+                                name="capsule-requester"
+                                checked={selectedUserId === uniqueKey}
+                                onChange={() => setSelectedUserId(uniqueKey)}
+                              >
+                                <Label hidden>Select {user.name}</Label>
+                              </Radio>
+                            </RadioWrapper>
+                            <CapsuleUserAvatar $color={user.avatarColor}>
+                              {user.name.split(' ').map(n => n[0]).join('').substring(0, 2).toUpperCase()}
+                            </CapsuleUserAvatar>
+                            <CapsuleUserInfo>
+                              <CapsuleUserName onClick={(e) => { e.stopPropagation(); if (onOpenProfile) onOpenProfile(user); }}>{user.name}</CapsuleUserName>
+                              {user.email && <CapsuleUserEmail>{user.email}</CapsuleUserEmail>}
+                              <CapsuleUserOrg>{user.organization}</CapsuleUserOrg>
+                              {user.id && <CapsuleUserId>ID: {user.id}</CapsuleUserId>}
+                            </CapsuleUserInfo>
+                          </CapsuleUserItem>
+                          )
+                        })}
+                      </CapsuleBody>
+                      <CapsuleFooter>
+                        <Button size="small" isBasic onClick={handleIgnore}>Ignore</Button>
+                        <Button size="small" isBasic onClick={() => setSelectedUserId(null)} style={{ marginLeft: 'auto' }}>Clear</Button>
+                        <Button size="small" onClick={handleSetAsRequester}>Set as requester</Button>
+                      </CapsuleFooter>
+                    </CapsuleExpanded>
+                  )}
+                </>
+              )}
+
+              <MessageBody $isRequester={comment.authorType === 'requester'}>{comment.body}</MessageBody>
             </MessageContent>
           </MessageBlock>
         ))}

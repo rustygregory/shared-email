@@ -174,7 +174,7 @@ function getInitials(name) {
   return name.split(' ').map(n => n[0]).join('').substring(0, 2).toUpperCase()
 }
 
-export default function CustomerProfilePage({ user }) {
+export default function CustomerProfilePage({ user, mode = 'mvp' }) {
   return (
     <Container>
       <ContextBar>
@@ -193,11 +193,12 @@ export default function CustomerProfilePage({ user }) {
           <SidebarLabel>Primary email</SidebarLabel>
           <SidebarLink>{user.email}</SidebarLink>
           <TagWrapper>
-            <Tag size="small">Shared email</Tag>
+            <Tag size="small">Shared</Tag>
           </TagWrapper>
 
           <SidebarLabel>Phone</SidebarLabel>
-          <SidebarValue>{user.phone}</SidebarValue>
+          <SidebarLink>{user.phone}</SidebarLink>
+          {mode === 'scaled' && user.sharedPhone && <TagWrapper><Tag size="small">Shared</Tag></TagWrapper>}
 
           <SidebarLabel>Tags</SidebarLabel>
           <SidebarValue>—</SidebarValue>

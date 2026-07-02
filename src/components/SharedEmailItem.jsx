@@ -67,19 +67,32 @@ const UserId = styled.div`
   margin-bottom: 3px;
 `
 
+const UserPhone = styled.div`
+  font-size: 12px;
+  color: #646864;
+  margin-bottom: 3px;
+`
+
 const UserOrg = styled.div`
   font-size: 12px;
   color: #646864;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  margin-bottom: 3px;
+`
+
+const UserReason = styled.div`
+  font-size: 12px;
+  color: #646864;
+  font-style: italic;
 `
 
 function getInitials(name) {
   return name.split(' ').map(n => n[0]).join('').substring(0, 2).toUpperCase()
 }
 
-export default function SharedEmailItem({ user, selected, onSelect, onOpenProfile }) {
+export default function SharedEmailItem({ user, selected, onSelect, onOpenProfile, reason, showPhone }) {
   const handleRowClick = (e) => {
     if (e.target.closest('[data-name-link]')) return
     onSelect()
@@ -99,8 +112,10 @@ export default function SharedEmailItem({ user, selected, onSelect, onOpenProfil
       <UserInfo>
         <UserNameLink data-name-link onClick={onOpenProfile}>{user.name}</UserNameLink>
         <UserEmail>{user.email}</UserEmail>
-        <UserId>ID: {user.id}</UserId>
+        {showPhone && user.phone && <UserPhone>{user.phone}</UserPhone>}
         <UserOrg>{user.organization}</UserOrg>
+        <UserId>ID: {user.id}</UserId>
+        {reason && <UserReason>({reason})</UserReason>}
       </UserInfo>
     </ItemRow>
   )

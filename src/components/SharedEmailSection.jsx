@@ -44,6 +44,11 @@ const CollapseButton = styled.button`
   transition: transform 0.2s;
 `
 
+const SearchWrapper = styled.div`
+  position: relative;
+  margin-bottom: 12px;
+`
+
 const SearchInput = styled.input`
   width: 100%;
   height: 32px;
@@ -55,11 +60,6 @@ const SearchInput = styled.input`
   outline: none;
   box-sizing: border-box;
   &:focus { border-color: #406cc4; }
-`
-
-const SearchWrapper = styled.div`
-  position: relative;
-  margin-bottom: 12px;
 `
 
 const SearchIcon = styled.div`
@@ -83,8 +83,14 @@ const SubSectionLabel = styled.div`
 `
 
 
+const ScrollableList = styled.div`
+  max-height: 480px;
+  overflow-y: auto;
+  margin-bottom: 8px;
+`
+
 const SharedList = styled.div`
-  max-height: 185px;
+  max-height: 270px;
   overflow-y: auto;
   margin-bottom: 8px;
 `
@@ -92,17 +98,31 @@ const SharedList = styled.div`
 const ReassignWrapper = styled.div`
   margin-top: 24px;
   display: flex;
+  align-items: center;
   justify-content: flex-end;
+  gap: 24px;
+`
+
+const ClearButton = styled.button`
+  background: none;
+  border: none;
+  font-size: 12px;
+  color: #406cc4;
+  cursor: pointer;
+  padding: 0;
+  &:hover { text-decoration: underline; }
 `
 
 const SuggestedList = styled.div`
   margin-bottom: 12px;
 `
 
-export default function SharedEmailSection({ onOpenProfile, onReassign, onError }) {
+export default function SharedEmailSection({ onOpenProfile, onReassign, onError, mode = 'mvp' }) {
   const [collapsed, setCollapsed] = useState(false)
   const [searchQuery, setSearchQuery] = useState('')
   const [selectedUserId, setSelectedUserId] = useState(null)
+
+  const isScaled = mode === 'scaled'
 
   const otherUsers = sharedEmailUsers.filter(u => u.id !== currentRequester.id)
 
@@ -118,16 +138,18 @@ export default function SharedEmailSection({ onOpenProfile, onReassign, onError 
       .sort((a, b) => a.name.localeCompare(b.name))
   }, [aiSuggestedIds])
 
-  const filteredOthers = useMemo(() => {
-    if (!searchQuery.trim()) return allOthers
+  const filteredAll = useMemo(() => {
+    const list = isScaled ? allOthers : otherUsers.sort((a, b) => a.name.localeCompare(b.name))
+    if (!searchQuery.trim()) return list
     const q = searchQuery.toLowerCase()
-    return allOthers.filter(u =>
+    return list.filter(u =>
       u.name.toLowerCase().includes(q) ||
       u.email.toLowerCase().includes(q) ||
       u.organization.toLowerCase().includes(q) ||
-      String(u.id).includes(q)
+      String(u.id).includes(q) ||
+      (u.phone && u.phone.includes(q))
     )
-  }, [searchQuery, allOthers])
+  }, [searchQuery, allOthers, isScaled, otherUsers])
 
   const handleReassign = () => {
     if (!selectedUserId) {
@@ -140,11 +162,13 @@ export default function SharedEmailSection({ onOpenProfile, onReassign, onError 
     }
   }
 
+  const sectionTitle = isScaled ? 'Shared identity' : 'Shared email'
+
   return (
     <div>
       <SectionHeader>
         <SectionTitle>
-          Shared email
+          {sectionTitle}
           <CountBadge>{otherUsers.length}</CountBadge>
         </SectionTitle>
         <CollapseButton $collapsed={collapsed} onClick={() => setCollapsed(!collapsed)}>
@@ -169,35 +193,56 @@ export default function SharedEmailSection({ onOpenProfile, onReassign, onError 
             />
           </SearchWrapper>
 
-          <SubSectionLabel>Suggested requesters</SubSectionLabel>
-          <SuggestedList>
-            {aiSuggested.map(user => (
-              <SharedEmailItem
-                key={user.id}
-                user={user}
-                selected={selectedUserId === user.id}
-                onSelect={() => setSelectedUserId(user.id)}
-                onOpenProfile={() => onOpenProfile(user)}
-              />
-            ))}
-          </SuggestedList>
+          {isScaled ? (
+            <ScrollableList>
+              <SubSectionLabel>Suggested requesters</SubSectionLabel>
+              <SuggestedList>
+                {aiSuggested.map(user => (
+                  <SharedEmailItem
+                    key={user.id}
+                    user={user}
+                    selected={selectedUserId === user.id}
+                    onSelect={() => setSelectedUserId(user.id)}
+                    onOpenProfile={() => onOpenProfile(user)}
+                    reason={user.reason}
+                    showPhone
+                  />
+                ))}
+              </SuggestedList>
 
-          <SubSectionLabel>{filteredOthers.length} shared email addresses</SubSectionLabel>
-          <SharedList>
-            {filteredOthers.map(user => (
-              <SharedEmailItem
-                key={user.id}
-                user={user}
-                selected={selectedUserId === user.id}
-                onSelect={() => setSelectedUserId(user.id)}
-                onOpenProfile={() => onOpenProfile(user)}
-              />
-            ))}
-          </SharedList>
+              <SubSectionLabel>{filteredAll.length} requesters</SubSectionLabel>
+              {filteredAll.map(user => (
+                <SharedEmailItem
+                  key={user.id}
+                  user={user}
+                  selected={selectedUserId === user.id}
+                  onSelect={() => setSelectedUserId(user.id)}
+                  onOpenProfile={() => onOpenProfile(user)}
+                  showPhone
+                />
+              ))}
+            </ScrollableList>
+          ) : (
+            <SharedList>
+              {filteredAll.map(user => (
+                <SharedEmailItem
+                  key={user.id}
+                  user={user}
+                  selected={selectedUserId === user.id}
+                  onSelect={() => setSelectedUserId(user.id)}
+                  onOpenProfile={() => onOpenProfile(user)}
+                  showPhone
+                />
+              ))}
+            </SharedList>
+          )}
 
           <ReassignWrapper>
+            <ClearButton onClick={() => setSelectedUserId(null)}>
+              Clear selection
+            </ClearButton>
             <Button size="small" onClick={handleReassign}>
-              Reassign ticket
+              Set as requester
             </Button>
           </ReassignWrapper>
         </>

@@ -117,7 +117,7 @@ const SubmitChevron = styled.button`
   &:hover { background: #404241; }
 `
 
-export default function TicketView({ onOpenProfile }) {
+export default function TicketView({ onOpenProfile, mode }) {
   const [requester, setRequester] = useState(ticketData.requester)
   const [reassigned, setReassigned] = useState(false)
   const { addToast } = useToast()
@@ -151,11 +151,11 @@ export default function TicketView({ onOpenProfile }) {
         <TicketLabel>Ticket #{ticketData.id}</TicketLabel>
       </ContextBar>
       <Body>
-        <PropertiesPanel requester={requester} onReassign={handleReassign} showWarning={!reassigned} />
+        <PropertiesPanel requester={requester} onReassign={handleReassign} showWarning={!reassigned} mode={mode} />
         <MainSection>
-          <ConversationArea />
+          <ConversationArea mode={mode} onReassign={handleReassign} onOpenProfile={onOpenProfile} />
         </MainSection>
-        <RightPanel onOpenProfile={onOpenProfile} onReassign={handleReassign} onError={handleError} />
+        <RightPanel onOpenProfile={onOpenProfile} onReassign={handleReassign} onError={handleError} mode={mode} />
       </Body>
 
       <Footer>

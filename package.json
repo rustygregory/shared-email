@@ -13,6 +13,7 @@
     "@zendeskgarden/react-accordions": "^9.15.5",
     "@zendeskgarden/react-avatars": "^9.15.5",
     "@zendeskgarden/react-buttons": "^9.15.5",
+    "@zendeskgarden/react-dropdowns": "^9.15.6",
     "@zendeskgarden/react-forms": "^9.15.5",
     "@zendeskgarden/react-notifications": "^9.15.5",
     "@zendeskgarden/react-tabs": "^9.15.5",

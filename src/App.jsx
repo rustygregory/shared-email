@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { ThemeProvider } from './flora-theme/elements/ThemeProvider'
 import { ToastProvider } from '@zendeskgarden/react-notifications'
+import { Combobox, Field, Option } from '@zendeskgarden/react-dropdowns'
 import { TopBar, MainNav } from 'zendesk-globalnav-template'
 import styled from 'styled-components'
 import TicketView from './components/TicketView'
@@ -51,6 +52,20 @@ const TabBarOverlay = styled.div`
   z-index: 10;
 `
 
+const ToggleOverlay = styled.div`
+  position: absolute;
+  top: 0;
+  right: 380px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  z-index: 10;
+`
+
+const ModeFieldWrapper = styled.div`
+  min-width: 160px;
+`
+
 const ViewArea = styled.div`
   flex: 1;
   overflow: hidden;
@@ -60,6 +75,12 @@ export default function App() {
   const [currentProduct, setCurrentProduct] = useState('support')
   const [activeNavItem, setActiveNavItem] = useState(0)
   const [isSubnavExpanded, setIsSubnavExpanded] = useState(false)
+  const [mode, setMode] = useState(() => localStorage.getItem('shared-email-mode') || 'mvp')
+
+  const handleModeChange = (newMode) => {
+    setMode(newMode)
+    localStorage.setItem('shared-email-mode', newMode)
+  }
   const [openTabs, setOpenTabs] = useState([
     { id: 'ticket-4872', type: 'ticket', title: 'Order #GR-29104 not rec...', ticketId: '4872' }
   ])
@@ -99,6 +120,24 @@ export default function App() {
               onTabClose={handleCloseTab}
             />
           </TabBarOverlay>
+          <ToggleOverlay>
+            <ModeFieldWrapper>
+              <Field>
+                <Combobox
+                  isCompact
+                  isEditable={false}
+                  inputValue={mode === 'mvp' ? 'MVP' : mode === 'mvp2' ? 'MVP v2' : mode === 'scaled' ? 'Scaled' : 'Workspace'}
+                  selectionValue={mode}
+                  onChange={({ selectionValue }) => { if (selectionValue) handleModeChange(selectionValue) }}
+                >
+                  <Option value="mvp">MVP</Option>
+                  <Option value="mvp2">MVP v2</Option>
+                  <Option value="scaled">Scaled</Option>
+                  <Option value="workspace">Workspace</Option>
+                </Combobox>
+              </Field>
+            </ModeFieldWrapper>
+          </ToggleOverlay>
         </TopBarRow>
         <ContentRow>
           <MainNav
@@ -110,11 +149,11 @@ export default function App() {
           />
           <MainContent>
             <ViewArea>
-              {activeTabData?.type === 'ticket' && (
-                <TicketView onOpenProfile={handleOpenProfile} />
-              )}
+              <div style={{ display: activeTabData?.type === 'ticket' ? 'contents' : 'none' }}>
+                <TicketView onOpenProfile={handleOpenProfile} mode={mode} />
+              </div>
               {activeTabData?.type === 'profile' && (
-                <CustomerProfilePage user={activeTabData.user} />
+                <CustomerProfilePage user={activeTabData.user} mode={mode} />
               )}
             </ViewArea>
           </MainContent>

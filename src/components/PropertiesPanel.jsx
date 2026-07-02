@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from 'react'
 import styled from 'styled-components'
+import { Tooltip } from '@zendeskgarden/react-tooltips'
 import { sharedEmailUsers } from '../data/mockUsers'
 
 const Panel = styled.div`
@@ -105,9 +106,17 @@ const WarningText = styled.div`
   align-items: center;
   gap: 4px;
   font-size: 12px;
-  color: #af5626;
+  color: ${props => props.$info ? '#646864' : '#af5626'};
   margin-top: 4px;
   padding: 2px 0;
+  cursor: ${props => props.$hasTooltip ? 'default' : 'auto'};
+`
+
+const TooltipAnchor = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  position: relative;
 `
 
 const PropRow = styled.div`
@@ -201,7 +210,7 @@ const DropdownEmail = styled.div`
   color: #646864;
 `
 
-export default function PropertiesPanel({ requester, onReassign, showWarning = true }) {
+export default function PropertiesPanel({ requester, onReassign, showWarning = true, mode = 'mvp' }) {
   const [dropdownOpen, setDropdownOpen] = useState(false)
   const [search, setSearch] = useState('')
   const dropdownRef = useRef(null)
@@ -242,13 +251,36 @@ export default function PropertiesPanel({ requester, onReassign, showWarning = t
         </PropSelectChevron>
       </PropSelect>
 
-      <PropLabel>Requester</PropLabel>
+      <PropLabel style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
+        Requester
+        {(mode === 'mvp2' || mode === 'workspace') && (
+          <Tooltip content="Shared email" placement="top">
+            <span style={{ display: 'inline-flex', alignItems: 'center', cursor: 'default', color: '#68737d' }}>
+              <svg width="12" height="12" viewBox="0 0 12 12">
+                <g stroke="currentColor">
+                  <circle cx="5.5" cy="6.5" r="5" fill="none"/>
+                  <path strokeLinecap="round" d="M5.5 9.5v-3"/>
+                </g>
+                <circle cx="5.5" cy="4" r="1" fill="currentColor"/>
+              </svg>
+            </span>
+          </Tooltip>
+        )}
+      </PropLabel>
       <RequesterWrapper ref={dropdownRef}>
         <PropSelect onClick={() => { if (!dropdownOpen) { setDropdownOpen(true); setSearch(''); } }}>
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="#68737d" strokeWidth="1.5">
-            <circle cx="8" cy="5" r="3"/>
-            <path d="M2 14c0-3 2.7-5 6-5s6 2 6 5"/>
-          </svg>
+          {(mode === 'mvp2' || mode === 'workspace') ? (
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="#68737d">
+              <circle cx="11" cy="6" r="2.5"/>
+              <circle cx="4.5" cy="3.5" r="2"/>
+              <path strokeLinecap="round" d="M15.5 14.5c-.2-2.2-2.2-4-4.5-4s-4.3 1.8-4.5 4m1-5c-.4-1.2-1.7-2-3-2s-2.6.8-3 2"/>
+            </svg>
+          ) : (
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="#68737d" strokeWidth="1.5">
+              <circle cx="8" cy="5" r="3"/>
+              <path d="M2 14c0-3 2.7-5 6-5s6 2 6 5"/>
+            </svg>
+          )}
           {dropdownOpen ? (
             <RequesterInput
               value={search}
@@ -281,15 +313,47 @@ export default function PropertiesPanel({ requester, onReassign, showWarning = t
           </Dropdown>
         )}
       </RequesterWrapper>
-      {showWarning && (
-        <WarningText>
-          <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
-            <path stroke="#af5626" strokeLinecap="round" d="M5.06 1.27l-4.5 8.5c-.18.33.06.73.44.73h9c.38 0 .62-.4.44-.73l-4.5-8.5a.494.494 0 00-.88 0zM5.5 4v2"/>
-            <circle cx="5.5" cy="8" r=".8" fill="#af5626"/>
-          </svg>
-          Shared email, verify requester
+      {mode === 'scaled' ? (
+        showWarning ? (
+          <Tooltip content="Email, Phone number" placement="bottom-start">
+            <WarningText $hasTooltip style={{ width: 'fit-content' }}>
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                <path stroke="#af5626" strokeLinecap="round" d="M5.06 1.27l-4.5 8.5c-.18.33.06.73.44.73h9c.38 0 .62-.4.44-.73l-4.5-8.5a.494.494 0 00-.88 0zM5.5 4v2"/>
+                <circle cx="5.5" cy="8" r=".8" fill="#af5626"/>
+              </svg>
+              Shared identity, verify requester
+            </WarningText>
+          </Tooltip>
+        ) : (
+          <Tooltip content="Email, Phone number" placement="bottom-start">
+            <WarningText $info $hasTooltip style={{ width: 'fit-content' }}>
+              <span style={{ display: 'inline-flex', alignItems: 'center', flexShrink: 0 }}>
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                  <g stroke="#646864">
+                    <circle cx="5.5" cy="6.5" r="5" fill="none"/>
+                    <path strokeLinecap="round" d="M5.5 9.5v-3"/>
+                  </g>
+                  <circle cx="5.5" cy="4" r="1" fill="#646864"/>
+                </svg>
+              </span>
+              Shared identity
+            </WarningText>
+          </Tooltip>
+        )
+      ) : mode === 'mvp' ? (
+        <WarningText $info>
+          <span style={{ display: 'inline-flex', alignItems: 'center', flexShrink: 0 }}>
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+              <g stroke="#646864">
+                <circle cx="5.5" cy="6.5" r="5" fill="none"/>
+                <path strokeLinecap="round" d="M5.5 9.5v-3"/>
+              </g>
+              <circle cx="5.5" cy="4" r="1" fill="#646864"/>
+            </svg>
+          </span>
+          Shared email
         </WarningText>
-      )}
+      ) : null}
 
       <PropLabelRow>
         <PropLabel style={{ margin: 0 }}>Assignee*</PropLabel>

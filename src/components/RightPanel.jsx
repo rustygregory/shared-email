@@ -62,10 +62,10 @@ const CustomerHeader = styled.div`
 `
 
 const CustomerAvatar = styled.div`
-  width: 36px;
-  height: 36px;
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
-  background: #406cc4;
+  background: #87929d;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -76,7 +76,7 @@ const CustomerAvatar = styled.div`
 `
 
 const CustomerName = styled.span`
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 600;
   color: #2f3130;
 `
@@ -84,7 +84,7 @@ const CustomerName = styled.span`
 const InfoGrid = styled.div`
   display: grid;
   grid-template-columns: auto 1fr;
-  gap: 12px 12px;
+  gap: 16px 80px;
   font-size: 14px;
 `
 
@@ -145,7 +145,7 @@ const CollapseButton = styled.button`
   transition: transform 0.2s;
 `
 
-export default function RightPanel({ onOpenProfile, onReassign, onError }) {
+export default function RightPanel({ onOpenProfile, onReassign, onError, mode }) {
   const [contextCollapsed, setContextCollapsed] = useState(false)
   const [historyCollapsed, setHistoryCollapsed] = useState(false)
 
@@ -157,7 +157,15 @@ export default function RightPanel({ onOpenProfile, onReassign, onError }) {
         <SidePanelContent>
           {/* Customer Context */}
           <SectionHeader>
-            <SectionTitle>{ticketData.requester}</SectionTitle>
+            <SectionTitle>
+              <CustomerAvatar>
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="#fff" strokeWidth="1.5">
+                  <circle cx="8" cy="5" r="3"/>
+                  <path d="M2 14c0-3 2.7-5 6-5s6 2 6 5"/>
+                </svg>
+              </CustomerAvatar>
+              <CustomerName>{ticketData.requester}</CustomerName>
+            </SectionTitle>
             <CollapseButton $collapsed={contextCollapsed} onClick={() => setContextCollapsed(!contextCollapsed)}>
               <svg width="12" height="12" viewBox="0 0 12 12" fill="currentColor">
                 <path d="M1.646 3.646a.5.5 0 01.638-.057l.07.057L6 7.293l3.646-3.647a.5.5 0 01.638-.057l.07.057a.5.5 0 01.057.638l-.057.07-4 4a.5.5 0 01-.638.057l-.07-.057-4-4a.5.5 0 010-.708z"/>
@@ -170,6 +178,8 @@ export default function RightPanel({ onOpenProfile, onReassign, onError }) {
               <InfoGrid>
                 <InfoLabel>Email</InfoLabel>
                 <InfoLink>{requesterUser?.email || 'support@globalretail.com'}</InfoLink>
+                <InfoLabel>Phone</InfoLabel>
+                <InfoLink>{requesterUser?.phone || '+1 (404) 555-0104'}</InfoLink>
                 <InfoLabel>Org.</InfoLabel>
                 <InfoLink>{requesterUser?.organization || 'Global Retail South'}</InfoLink>
                 <InfoLabel>Local time</InfoLabel>
@@ -184,10 +194,13 @@ export default function RightPanel({ onOpenProfile, onReassign, onError }) {
 
           <Divider />
 
-          {/* Shared Email Section */}
-          <SharedEmailSection onOpenProfile={onOpenProfile} onReassign={onReassign} onError={onError} />
-
-          <Divider />
+          {/* Shared Email Section - hidden in workspace mode since it's in the capsule */}
+          {mode !== 'workspace' && (
+            <>
+              <SharedEmailSection onOpenProfile={onOpenProfile} onReassign={onReassign} onError={onError} mode={mode} />
+              <Divider />
+            </>
+          )}
 
           {/* Interaction History */}
           <SectionHeader>

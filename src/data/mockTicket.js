@@ -16,7 +16,7 @@ export const ticketData = {
 export const ticketComments = [
   {
     id: 1,
-    author: 'End User',
+    author: '#10001',
     authorType: 'requester',
     timestamp: 'Jun 24 09:15',
     body: `Hi there,
@@ -44,7 +44,7 @@ Roger`,
   },
   {
     id: 3,
-    author: 'End User',
+    author: '#10001',
     authorType: 'requester',
     timestamp: 'Jun 24 14:33',
     body: `Yes the address is correct - 500 Market St, Suite 400, San Francisco CA 94105. That's our main office. But I checked with our mail room and they don't have it either.
