@@ -2,6 +2,7 @@ import { useState, useMemo } from 'react'
 import styled from 'styled-components'
 import { Button } from '@zendeskgarden/react-buttons'
 import { Radio, Field, Label } from '@zendeskgarden/react-forms'
+import { Tooltip } from '@zendeskgarden/react-tooltips'
 import { ticketData, ticketComments } from '../data/mockTicket'
 import { sharedEmailUsers, currentRequester } from '../data/mockUsers'
 
@@ -135,6 +136,25 @@ const ComposerReplyType = styled.span`
 
 const ComposerTo = styled.span`
   color: #8b8e89;
+`
+
+const RequesterChip = styled.span`
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #eae9e8;
+  border-radius: 100px;
+  padding: 4px 10px 4px 6px;
+  font-size: 13px;
+  color: #2f3130;
+  font-weight: 400;
+  cursor: default;
+`
+
+const ChipIcon = styled.span`
+  display: inline-flex;
+  align-items: center;
+  color: #68737d;
 `
 
 const ComposerCC = styled.span`
@@ -328,13 +348,54 @@ const CapsuleFooter = styled.div`
 
 
 
-export default function ConversationArea({ mode, onReassign, onOpenProfile }) {
+const SuggestionBanner = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 20px;
+  height: 60px;
+  background: #fef7ed;
+  border-top: 1px solid #FED6A8;
+  font-size: 14px;
+  color: #2f3130;
+  flex-shrink: 0;
+`
+
+const BannerBold = styled.span`
+  font-weight: 600;
+  color: #703815;
+`
+
+const BannerLink = styled.span`
+  color: #1f73b7;
+  cursor: pointer;
+  text-decoration: underline;
+  &:hover { color: #144a75; }
+`
+
+const BannerClose = styled.button`
+  margin-left: auto;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #68737d;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  &:hover { color: #2f3130; }
+`
+
+export default function ConversationArea({ mode, onReassign, onOpenProfile, rightPanelOpen, onOpenRightPanel, bannerDismissed, onDismissBanner, requester, reassigned, onComposerEditClick }) {
   const [capsuleOpen, setCapsuleOpen] = useState(false)
   const [capsuleDismissed, setCapsuleDismissed] = useState(false)
   const [searchQuery, setSearchQuery] = useState('')
   const [selectedUserId, setSelectedUserId] = useState(null)
 
   const isWorkspace = mode === 'workspace'
+  const isWorkspace2 = mode === 'workspace2'
+  const isWorkspace3 = mode === 'workspace3'
+
+  const showCapsule = isWorkspace && !capsuleDismissed && !reassigned
 
   const otherUsers = sharedEmailUsers.filter(u => u.id !== currentRequester.id)
 
@@ -402,7 +463,7 @@ export default function ConversationArea({ mode, onReassign, onOpenProfile }) {
               </MessageHeader>
 
               {/* Verify shared email Capsule - shows after first requester message header */}
-              {isWorkspace && !capsuleDismissed && index === 0 && comment.authorType === 'requester' && (
+              {showCapsule && index === 0 && comment.authorType === 'requester' && (
                 <>
                   {!capsuleOpen ? (
                     <CapsuleCollapsed onClick={() => setCapsuleOpen(true)}>
@@ -442,7 +503,7 @@ export default function ConversationArea({ mode, onReassign, onOpenProfile }) {
                           <CapsuleSearchInput
                             value={searchQuery}
                             onChange={(e) => setSearchQuery(e.target.value)}
-                            placeholder="Search users..."
+                            placeholder=""
                           />
                         </CapsuleSearchWrapper>
                         {filteredUsers.map(user => {
@@ -487,6 +548,25 @@ export default function ConversationArea({ mode, onReassign, onOpenProfile }) {
         ))}
       </Messages>
 
+      {(isWorkspace2 || isWorkspace3) && !bannerDismissed && (
+        <SuggestionBanner>
+          <svg width="20" height="20" viewBox="0 0 16 16" fill="none">
+            <path d="M8 1.5L1 14h14L8 1.5z" stroke="#AD5918" strokeWidth="1.3" strokeLinejoin="round" strokeLinecap="round" fill="none"/>
+            <path d="M8 6v4" stroke="#AD5918" strokeWidth="1.5" strokeLinecap="round"/>
+            <circle cx="8" cy="12" r=".85" fill="#AD5918"/>
+          </svg>
+          <BannerBold>Shared email</BannerBold>
+          <BannerLink onClick={onOpenRightPanel}>Change requester</BannerLink>
+          <Tooltip content="Ignore and close" placement="top">
+            <BannerClose onClick={onDismissBanner}>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="#703815" strokeWidth="1.5">
+                <path d="M4 4l8 8M12 4l-8 8" strokeLinecap="round"/>
+              </svg>
+            </BannerClose>
+          </Tooltip>
+        </SuggestionBanner>
+      )}
+
       <ComposerArea>
         <ComposerHeader>
           <ComposerReplyType>
@@ -499,7 +579,20 @@ export default function ConversationArea({ mode, onReassign, onOpenProfile }) {
             </svg>
           </ComposerReplyType>
           <ComposerTo>To</ComposerTo>
-          <span style={{ fontSize: 13 }}>{ticketData.requester}</span>
+          <RequesterChip>
+            <ChipIcon>
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5">
+                <circle cx="8" cy="5" r="3"/>
+                <path d="M2 14c0-3 2.7-5 6-5s6 2 6 5"/>
+              </svg>
+            </ChipIcon>
+            {requester || ticketData.requester}
+            <ChipIcon style={{ cursor: 'pointer' }} onClick={onComposerEditClick}>
+              <svg width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.5">
+                <path d="M11.5 1.5l3 3-8 8H3.5v-3l8-8z" strokeLinejoin="round"/>
+              </svg>
+            </ChipIcon>
+          </RequesterChip>
           <ComposerCC>CC</ComposerCC>
         </ComposerHeader>
         <ComposerBody>Type your reply here...</ComposerBody>

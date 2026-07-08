@@ -145,14 +145,18 @@ const CollapseButton = styled.button`
   transition: transform 0.2s;
 `
 
-export default function RightPanel({ onOpenProfile, onReassign, onError, mode }) {
+export default function RightPanel({ onOpenProfile, onReassign, onError, mode, panelOpen, onTogglePanel, sharedSearchFocusCount, requesterUser: reassignedUser }) {
   const [contextCollapsed, setContextCollapsed] = useState(false)
   const [historyCollapsed, setHistoryCollapsed] = useState(false)
 
-  const requesterUser = sharedEmailUsers.find(u => u.id === ticketData.requesterId)
+  const defaultUser = sharedEmailUsers.find(u => u.id === ticketData.requesterId)
+  const requesterUser = reassignedUser || defaultUser
+
+  const showPanel = panelOpen !== undefined ? panelOpen : true
 
   return (
     <RightSection>
+      {showPanel && (
       <SidePanel>
         <SidePanelContent>
           {/* Customer Context */}
@@ -164,7 +168,7 @@ export default function RightPanel({ onOpenProfile, onReassign, onError, mode })
                   <path d="M2 14c0-3 2.7-5 6-5s6 2 6 5"/>
                 </svg>
               </CustomerAvatar>
-              <CustomerName>{ticketData.requester}</CustomerName>
+              <CustomerName>{requesterUser?.name || ticketData.requester}</CustomerName>
             </SectionTitle>
             <CollapseButton $collapsed={contextCollapsed} onClick={() => setContextCollapsed(!contextCollapsed)}>
               <svg width="12" height="12" viewBox="0 0 12 12" fill="currentColor">
@@ -179,25 +183,25 @@ export default function RightPanel({ onOpenProfile, onReassign, onError, mode })
                 <InfoLabel>Email</InfoLabel>
                 <InfoLink>{requesterUser?.email || 'support@globalretail.com'}</InfoLink>
                 <InfoLabel>Phone</InfoLabel>
-                <InfoLink>{requesterUser?.phone || '+1 (404) 555-0104'}</InfoLink>
+                <InfoLink>{requesterUser?.phone || '—'}</InfoLink>
                 <InfoLabel>Org.</InfoLabel>
                 <InfoLink>{requesterUser?.organization || 'Global Retail South'}</InfoLink>
                 <InfoLabel>Local time</InfoLabel>
-                <InfoValue>Thu, 14:08 EDT</InfoValue>
+                <InfoValue>{requesterUser?.timezone || 'Thu, 14:08 EDT'}</InfoValue>
                 <InfoLabel>Language</InfoLabel>
                 <InfoValue>{requesterUser?.language || 'English (United States)'}</InfoValue>
                 <InfoLabel>Notes</InfoLabel>
-                <InfoValue><NotesInput>Add user notes</NotesInput></InfoValue>
+                <InfoValue><NotesInput>{requesterUser?.notes || 'Add user notes'}</NotesInput></InfoValue>
               </InfoGrid>
             </CustomerContext>
           )}
 
           <Divider />
 
-          {/* Shared Email Section - hidden in workspace mode since it's in the capsule */}
-          {mode !== 'workspace' && (
+          {/* Shared Email Section - hidden in workspace mode (capsule) and workspace3 (banner only) */}
+          {mode !== 'workspace' && mode !== 'workspace3' && (
             <>
-              <SharedEmailSection onOpenProfile={onOpenProfile} onReassign={onReassign} onError={onError} mode={mode} />
+              <SharedEmailSection onOpenProfile={onOpenProfile} onReassign={onReassign} onError={onError} mode={mode} searchFocusCount={sharedSearchFocusCount} />
               <Divider />
             </>
           )}
@@ -220,9 +224,10 @@ export default function RightPanel({ onOpenProfile, onReassign, onError, mode })
           {!historyCollapsed && <InteractionHistory />}
         </SidePanelContent>
       </SidePanel>
+      )}
 
       <IconNav>
-        <NavIcon $active>
+        <NavIcon $active={showPanel} onClick={onTogglePanel}>
           <svg width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.5">
             <circle cx="10" cy="6" r="3"/>
             <path d="M4 18c0-3.3 2.7-6 6-6s6 2.7 6 6"/>

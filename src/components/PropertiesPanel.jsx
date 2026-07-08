@@ -39,15 +39,16 @@ const PropSelect = styled.div`
   display: flex;
   align-items: center;
   gap: 8px;
-  padding: 8px 10px;
-  border: 1px solid #dcdcda;
+  padding: 0 10px;
+  border: 1px solid ${props => props.$focused ? '#406cc4' : '#dcdcda'};
   border-radius: 4px;
   font-size: 13px;
   color: #2f3130;
   cursor: pointer;
-  min-height: 36px;
+  height: 32px;
   box-sizing: border-box;
-  &:hover { border-color: #b7b7b3; }
+  box-shadow: ${props => props.$focused ? '0 0 0 2px #fff, 0 0 0 4px #406cc4' : 'none'};
+  &:hover { border-color: ${props => props.$focused ? '#406cc4' : '#b7b7b3'}; }
 `
 
 const PropSelectChevron = styled.span`
@@ -58,21 +59,27 @@ const PropSelectChevron = styled.span`
 `
 
 const PropInput = styled.div`
-  padding: 6px 8px;
+  display: flex;
+  align-items: center;
+  padding: 0 8px;
   border: 1px solid #dcdcda;
   border-radius: 4px;
   font-size: 13px;
   color: #8b8e89;
-  min-height: 18px;
+  height: 32px;
+  box-sizing: border-box;
 `
 
 const TagsContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   gap: 4px;
-  padding: 8px;
+  padding: 4px 8px;
   border: 1px solid #dcdcda;
   border-radius: 4px;
+  min-height: 32px;
+  box-sizing: border-box;
+  align-items: center;
 `
 
 const Tag = styled.span`
@@ -132,13 +139,15 @@ const ApplyMacro = styled.div`
   display: flex;
   align-items: center;
   gap: 8px;
-  padding: 8px 12px;
+  padding: 0 12px;
   border: 1px solid #dcdcda;
   border-radius: 4px;
   font-size: 13px;
   color: #2f3130;
   cursor: pointer;
   margin-top: 16px;
+  height: 32px;
+  box-sizing: border-box;
   &:hover { background: #f7f7f7; }
 `
 
@@ -210,26 +219,35 @@ const DropdownEmail = styled.div`
   color: #646864;
 `
 
-export default function PropertiesPanel({ requester, onReassign, showWarning = true, mode = 'mvp' }) {
+export default function PropertiesPanel({ requester, onReassign, showWarning = true, mode = 'mvp', requesterFocused, onRequesterBlur }) {
   const [dropdownOpen, setDropdownOpen] = useState(false)
   const [search, setSearch] = useState('')
   const dropdownRef = useRef(null)
+  const inputRef = useRef(null)
+
+  useEffect(() => {
+    if (requesterFocused) {
+      setDropdownOpen(false)
+      setSearch('')
+    }
+  }, [requesterFocused])
 
   useEffect(() => {
     const handleClickOutside = (e) => {
       if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
         setDropdownOpen(false)
         setSearch('')
+        if (onRequesterBlur) onRequesterBlur()
       }
     }
     document.addEventListener('mousedown', handleClickOutside)
     return () => document.removeEventListener('mousedown', handleClickOutside)
-  }, [])
+  }, [onRequesterBlur])
 
   const filteredUsers = sharedEmailUsers.filter(u => {
     if (!search.trim()) return true
     const q = search.toLowerCase()
-    return u.name.toLowerCase().includes(q) || u.email.toLowerCase().includes(q)
+    return u.name.toLowerCase().includes(q) || u.email.toLowerCase().includes(q) || u.organization.toLowerCase().includes(q) || (u.phone && u.phone.includes(q)) || (u.id && String(u.id).includes(q))
   }).sort((a, b) => a.name.localeCompare(b.name))
 
   const handleSelectUser = (user) => {
@@ -253,7 +271,7 @@ export default function PropertiesPanel({ requester, onReassign, showWarning = t
 
       <PropLabel style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
         Requester
-        {(mode === 'mvp2' || mode === 'workspace') && (
+        {(mode === 'mvp2' || mode === 'workspace' || mode === 'workspace2' || mode === 'workspace3') && (
           <Tooltip content="Shared email" placement="top">
             <span style={{ display: 'inline-flex', alignItems: 'center', cursor: 'default', color: '#68737d' }}>
               <svg width="12" height="12" viewBox="0 0 12 12">
@@ -268,8 +286,8 @@ export default function PropertiesPanel({ requester, onReassign, showWarning = t
         )}
       </PropLabel>
       <RequesterWrapper ref={dropdownRef}>
-        <PropSelect onClick={() => { if (!dropdownOpen) { setDropdownOpen(true); setSearch(''); } }}>
-          {(mode === 'mvp2' || mode === 'workspace') ? (
+        <PropSelect $focused={dropdownOpen || requesterFocused} onClick={() => { if (!dropdownOpen) { setDropdownOpen(true); setSearch(''); setTimeout(() => inputRef.current?.focus(), 0); } }}>
+          {(mode === 'mvp2' || mode === 'workspace' || mode === 'workspace2' || mode === 'workspace3') ? (
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="#68737d">
               <circle cx="11" cy="6" r="2.5"/>
               <circle cx="4.5" cy="3.5" r="2"/>
@@ -283,6 +301,7 @@ export default function PropertiesPanel({ requester, onReassign, showWarning = t
           )}
           {dropdownOpen ? (
             <RequesterInput
+              ref={inputRef}
               value={search}
               onChange={(e) => setSearch(e.target.value)}
               autoFocus
@@ -291,7 +310,7 @@ export default function PropertiesPanel({ requester, onReassign, showWarning = t
           ) : (
             <span style={{ flex: 1 }}>{requester}</span>
           )}
-          <PropSelectChevron onClick={(e) => { e.stopPropagation(); setDropdownOpen(!dropdownOpen); setSearch(''); }}>
+          <PropSelectChevron onClick={(e) => { e.stopPropagation(); setDropdownOpen(!dropdownOpen); setSearch(''); if (onRequesterBlur) onRequesterBlur(); }}>
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2" style={{ transform: dropdownOpen ? 'rotate(180deg)' : 'none' }}>
               <path d="M4 6l4 4 4-4" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
@@ -299,8 +318,8 @@ export default function PropertiesPanel({ requester, onReassign, showWarning = t
         </PropSelect>
         {dropdownOpen && (
           <Dropdown>
-            {filteredUsers.map(user => (
-              <DropdownItem key={user.id} onClick={() => handleSelectUser(user)}>
+            {filteredUsers.map((user, index) => (
+              <DropdownItem key={user.id || `user-${index}`} onClick={() => handleSelectUser(user)}>
                 <DropdownAvatar $color={user.avatarColor}>
                   {user.name.split(' ').map(n => n[0]).join('').substring(0, 2).toUpperCase()}
                 </DropdownAvatar>

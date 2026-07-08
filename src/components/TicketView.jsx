@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import styled from 'styled-components'
 import { useToast, Notification, Title, Close } from '@zendeskgarden/react-notifications'
 import PropertiesPanel from './PropertiesPanel'
@@ -120,11 +120,38 @@ const SubmitChevron = styled.button`
 export default function TicketView({ onOpenProfile, mode }) {
   const [requester, setRequester] = useState(ticketData.requester)
   const [reassigned, setReassigned] = useState(false)
+  const [rightPanelOpen, setRightPanelOpen] = useState(mode !== 'workspace2' && mode !== 'workspace3')
   const { addToast } = useToast()
+
+  useEffect(() => {
+    setRightPanelOpen(mode !== 'workspace2' && mode !== 'workspace3')
+    setBannerDismissed(false)
+  }, [mode])
+
+  const [bannerDismissed, setBannerDismissed] = useState(false)
+  const [requesterFocused, setRequesterFocused] = useState(false)
+  const [sharedSearchFocusCount, setSharedSearchFocusCount] = useState(0)
+
+  const handleComposerEditClick = () => {
+    setRequesterFocused(true)
+  }
+
+  const handleChangeRequester = () => {
+    if (mode === 'workspace3') {
+      setRequesterFocused(true)
+    } else {
+      setRightPanelOpen(true)
+      setSharedSearchFocusCount(c => c + 1)
+    }
+  }
+
+  const [requesterUser, setRequesterUser] = useState(null)
 
   const handleReassign = (user) => {
     setRequester(user.name)
+    setRequesterUser(user)
     setReassigned(true)
+    setBannerDismissed(true)
     addToast(({ close }) => (
       <Notification type="success" style={{ maxWidth: 400 }}>
         <Title>Requester successfully reassigned</Title>
@@ -151,11 +178,20 @@ export default function TicketView({ onOpenProfile, mode }) {
         <TicketLabel>Ticket #{ticketData.id}</TicketLabel>
       </ContextBar>
       <Body>
-        <PropertiesPanel requester={requester} onReassign={handleReassign} showWarning={!reassigned} mode={mode} />
+        <PropertiesPanel requester={requester} onReassign={handleReassign} showWarning={!reassigned} mode={mode} requesterFocused={requesterFocused} onRequesterBlur={() => setRequesterFocused(false)} />
         <MainSection>
-          <ConversationArea mode={mode} onReassign={handleReassign} onOpenProfile={onOpenProfile} />
+          <ConversationArea mode={mode} onReassign={handleReassign} onOpenProfile={onOpenProfile} rightPanelOpen={rightPanelOpen} onOpenRightPanel={handleChangeRequester} bannerDismissed={bannerDismissed} onDismissBanner={() => setBannerDismissed(true)} requester={requester} reassigned={reassigned} onComposerEditClick={handleComposerEditClick} />
         </MainSection>
-        <RightPanel onOpenProfile={onOpenProfile} onReassign={handleReassign} onError={handleError} mode={mode} />
+        <RightPanel
+          onOpenProfile={onOpenProfile}
+          onReassign={handleReassign}
+          onError={handleError}
+          mode={mode}
+          panelOpen={(mode === 'workspace2' || mode === 'workspace3') ? rightPanelOpen : undefined}
+          onTogglePanel={(mode === 'workspace2' || mode === 'workspace3') ? () => setRightPanelOpen(prev => !prev) : undefined}
+          sharedSearchFocusCount={sharedSearchFocusCount}
+          requesterUser={requesterUser}
+        />
       </Body>
 
       <Footer>

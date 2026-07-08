@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react'
+import { useState, useMemo, useEffect, useRef } from 'react'
 import styled from 'styled-components'
 import { Button } from '@zendeskgarden/react-buttons'
 import SharedEmailItem from './SharedEmailItem'
@@ -59,7 +59,10 @@ const SearchInput = styled.input`
   color: #2f3130;
   outline: none;
   box-sizing: border-box;
-  &:focus { border-color: #406cc4; }
+  &:focus {
+    border-color: #406cc4;
+    box-shadow: 0 0 0 2px #fff, 0 0 0 4px #406cc4;
+  }
 `
 
 const SearchIcon = styled.div`
@@ -117,10 +120,18 @@ const SuggestedList = styled.div`
   margin-bottom: 12px;
 `
 
-export default function SharedEmailSection({ onOpenProfile, onReassign, onError, mode = 'mvp' }) {
+export default function SharedEmailSection({ onOpenProfile, onReassign, onError, mode = 'mvp', searchFocusCount }) {
   const [collapsed, setCollapsed] = useState(false)
   const [searchQuery, setSearchQuery] = useState('')
   const [selectedUserId, setSelectedUserId] = useState(null)
+  const searchInputRef = useRef(null)
+
+  useEffect(() => {
+    if (searchFocusCount > 0) {
+      if (collapsed) setCollapsed(false)
+      setTimeout(() => searchInputRef.current?.focus(), 50)
+    }
+  }, [searchFocusCount])
 
   const isScaled = mode === 'scaled'
 
@@ -156,7 +167,9 @@ export default function SharedEmailSection({ onOpenProfile, onReassign, onError,
       if (onError) onError('Select a requester before reassigning')
       return
     }
-    const user = sharedEmailUsers.find(u => u.id === selectedUserId)
+    const user = isScaled
+      ? sharedEmailUsers.find(u => u.id === selectedUserId)
+      : filteredAll.find((u, i) => `${u.name}-${u.organization}-${u.id || i}` === selectedUserId)
     if (user && onReassign) {
       onReassign(user)
     }
@@ -188,8 +201,10 @@ export default function SharedEmailSection({ onOpenProfile, onReassign, onError,
               </svg>
             </SearchIcon>
             <SearchInput
+              ref={searchInputRef}
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
+              placeholder=""
             />
           </SearchWrapper>
 
@@ -224,16 +239,19 @@ export default function SharedEmailSection({ onOpenProfile, onReassign, onError,
             </ScrollableList>
           ) : (
             <SharedList>
-              {filteredAll.map(user => (
-                <SharedEmailItem
-                  key={user.id}
-                  user={user}
-                  selected={selectedUserId === user.id}
-                  onSelect={() => setSelectedUserId(user.id)}
-                  onOpenProfile={() => onOpenProfile(user)}
-                  showPhone
-                />
-              ))}
+              {filteredAll.map((user, index) => {
+                const uniqueKey = `${user.name}-${user.organization}-${user.id || index}`
+                return (
+                  <SharedEmailItem
+                    key={uniqueKey}
+                    user={user}
+                    selected={selectedUserId === uniqueKey}
+                    onSelect={() => setSelectedUserId(uniqueKey)}
+                    onOpenProfile={() => onOpenProfile(user)}
+                    showPhone
+                  />
+                )
+              })}
             </SharedList>
           )}
 

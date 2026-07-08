@@ -42,34 +42,6 @@ Could you confirm the shipping address we have on file is correct?
 Thanks,
 Roger`,
   },
-  {
-    id: 3,
-    author: '#10001',
-    authorType: 'requester',
-    timestamp: 'Jun 24 14:33',
-    body: `Yes the address is correct - 500 Market St, Suite 400, San Francisco CA 94105. That's our main office. But I checked with our mail room and they don't have it either.
-
-This is really frustrating because we needed those supplies for a client presentation this week.
-
-Thanks,
-Sarah Chen
-VP of Operations | Global Retail HQ
-(415) 555-0101`,
-  },
-  {
-    id: 4,
-    author: 'Roger Smith',
-    authorType: 'agent',
-    timestamp: 'Jun 25 08:20',
-    body: `Hi Sarah,
-
-I've filed a claim with the carrier and initiated a replacement shipment. You should receive the new order within 3-5 business days. I'll send you the new tracking number once it's available.
-
-Is there anything else I can help with?
-
-Best,
-Roger`,
-  },
 ]
 
 export const interactionHistory = [
