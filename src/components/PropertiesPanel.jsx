@@ -271,7 +271,7 @@ export default function PropertiesPanel({ requester, onReassign, showWarning = t
 
       <PropLabel style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
         Requester
-        {(mode === 'mvp2' || mode === 'workspace' || mode === 'workspace2' || mode === 'workspace3') && (
+        {(mode === 'mvp2' || mode === 'workspace' || mode === 'workspace2') && (
           <Tooltip content="Shared email" placement="top">
             <span style={{ display: 'inline-flex', alignItems: 'center', cursor: 'default', color: '#68737d' }}>
               <svg width="12" height="12" viewBox="0 0 12 12">
@@ -287,7 +287,7 @@ export default function PropertiesPanel({ requester, onReassign, showWarning = t
       </PropLabel>
       <RequesterWrapper ref={dropdownRef}>
         <PropSelect $focused={dropdownOpen || requesterFocused} onClick={() => { if (!dropdownOpen) { setDropdownOpen(true); setSearch(''); setTimeout(() => inputRef.current?.focus(), 0); } }}>
-          {(mode === 'mvp2' || mode === 'workspace' || mode === 'workspace2' || mode === 'workspace3') ? (
+          {(mode === 'mvp2' || mode === 'workspace' || mode === 'workspace2') ? (
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="#68737d">
               <circle cx="11" cy="6" r="2.5"/>
               <circle cx="4.5" cy="3.5" r="2"/>

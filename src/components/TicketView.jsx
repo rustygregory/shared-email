@@ -120,11 +120,11 @@ const SubmitChevron = styled.button`
 export default function TicketView({ onOpenProfile, mode }) {
   const [requester, setRequester] = useState(ticketData.requester)
   const [reassigned, setReassigned] = useState(false)
-  const [rightPanelOpen, setRightPanelOpen] = useState(mode !== 'workspace2' && mode !== 'workspace3')
+  const [rightPanelOpen, setRightPanelOpen] = useState(mode !== 'workspace2')
   const { addToast } = useToast()
 
   useEffect(() => {
-    setRightPanelOpen(mode !== 'workspace2' && mode !== 'workspace3')
+    setRightPanelOpen(mode !== 'workspace2')
     setBannerDismissed(false)
   }, [mode])
 
@@ -137,12 +137,8 @@ export default function TicketView({ onOpenProfile, mode }) {
   }
 
   const handleChangeRequester = () => {
-    if (mode === 'workspace3') {
-      setRequesterFocused(true)
-    } else {
-      setRightPanelOpen(true)
-      setSharedSearchFocusCount(c => c + 1)
-    }
+    setRightPanelOpen(true)
+    setSharedSearchFocusCount(c => c + 1)
   }
 
   const [requesterUser, setRequesterUser] = useState(null)
@@ -187,8 +183,8 @@ export default function TicketView({ onOpenProfile, mode }) {
           onReassign={handleReassign}
           onError={handleError}
           mode={mode}
-          panelOpen={(mode === 'workspace2' || mode === 'workspace3') ? rightPanelOpen : undefined}
-          onTogglePanel={(mode === 'workspace2' || mode === 'workspace3') ? () => setRightPanelOpen(prev => !prev) : undefined}
+          panelOpen={mode === 'workspace2' ? rightPanelOpen : undefined}
+          onTogglePanel={mode === 'workspace2' ? () => setRightPanelOpen(prev => !prev) : undefined}
           sharedSearchFocusCount={sharedSearchFocusCount}
           requesterUser={requesterUser}
         />

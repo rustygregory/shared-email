@@ -198,8 +198,8 @@ export default function RightPanel({ onOpenProfile, onReassign, onError, mode, p
 
           <Divider />
 
-          {/* Shared Email Section - hidden in workspace mode (capsule) and workspace3 (banner only) */}
-          {mode !== 'workspace' && mode !== 'workspace3' && (
+          {/* Shared Email Section - hidden in workspace mode since it's in the capsule */}
+          {mode !== 'workspace' && (
             <>
               <SharedEmailSection onOpenProfile={onOpenProfile} onReassign={onReassign} onError={onError} mode={mode} searchFocusCount={sharedSearchFocusCount} />
               <Divider />

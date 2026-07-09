@@ -393,7 +393,6 @@ export default function ConversationArea({ mode, onReassign, onOpenProfile, righ
 
   const isWorkspace = mode === 'workspace'
   const isWorkspace2 = mode === 'workspace2'
-  const isWorkspace3 = mode === 'workspace3'
 
   const showCapsule = isWorkspace && !capsuleDismissed && !reassigned
 
@@ -548,7 +547,7 @@ export default function ConversationArea({ mode, onReassign, onOpenProfile, righ
         ))}
       </Messages>
 
-      {(isWorkspace2 || isWorkspace3) && !bannerDismissed && (
+      {isWorkspace2 && !bannerDismissed && (
         <SuggestionBanner>
           <svg width="20" height="20" viewBox="0 0 16 16" fill="none">
             <path d="M8 1.5L1 14h14L8 1.5z" stroke="#AD5918" strokeWidth="1.3" strokeLinejoin="round" strokeLinecap="round" fill="none"/>
@@ -556,7 +555,7 @@ export default function ConversationArea({ mode, onReassign, onOpenProfile, righ
             <circle cx="8" cy="12" r=".85" fill="#AD5918"/>
           </svg>
           <BannerBold>Shared email</BannerBold>
-          <BannerLink onClick={onOpenRightPanel}>Change requester</BannerLink>
+          <BannerLink onClick={onOpenRightPanel}>Check requester</BannerLink>
           <Tooltip content="Ignore and close" placement="top">
             <BannerClose onClick={onDismissBanner}>
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="#703815" strokeWidth="1.5">
