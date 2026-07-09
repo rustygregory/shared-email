@@ -354,8 +354,8 @@ const SuggestionBanner = styled.div`
   gap: 10px;
   padding: 0 20px;
   height: 60px;
-  background: #fef7ed;
-  border-top: 1px solid #FED6A8;
+  background: #f7f7f7;
+  border-top: 1px solid #dcdcda;
   font-size: 14px;
   color: #2f3130;
   flex-shrink: 0;
@@ -363,7 +363,7 @@ const SuggestionBanner = styled.div`
 
 const BannerBold = styled.span`
   font-weight: 600;
-  color: #703815;
+  color: #2f3130;
 `
 
 const BannerLink = styled.span`
@@ -378,7 +378,7 @@ const BannerClose = styled.button`
   background: none;
   border: none;
   cursor: pointer;
-  color: #68737d;
+  color: #646864;
   padding: 4px;
   display: flex;
   align-items: center;
@@ -549,16 +549,18 @@ export default function ConversationArea({ mode, onReassign, onOpenProfile, righ
 
       {isWorkspace2 && !bannerDismissed && (
         <SuggestionBanner>
-          <svg width="20" height="20" viewBox="0 0 16 16" fill="none">
-            <path d="M8 1.5L1 14h14L8 1.5z" stroke="#AD5918" strokeWidth="1.3" strokeLinejoin="round" strokeLinecap="round" fill="none"/>
-            <path d="M8 6v4" stroke="#AD5918" strokeWidth="1.5" strokeLinecap="round"/>
-            <circle cx="8" cy="12" r=".85" fill="#AD5918"/>
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <g stroke="#646864">
+              <circle cx="7.5" cy="8.5" r="7" fill="none"/>
+              <path strokeLinecap="round" d="M7.5 12.5V8"/>
+            </g>
+            <circle cx="7.5" cy="5" r="1" fill="#646864"/>
           </svg>
           <BannerBold>Shared email</BannerBold>
           <BannerLink onClick={onOpenRightPanel}>Check requester</BannerLink>
           <Tooltip content="Ignore and close" placement="top">
             <BannerClose onClick={onDismissBanner}>
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="#703815" strokeWidth="1.5">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="#646864" strokeWidth="1.5">
                 <path d="M4 4l8 8M12 4l-8 8" strokeLinecap="round"/>
               </svg>
             </BannerClose>
