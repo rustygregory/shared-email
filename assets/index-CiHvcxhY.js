@@ -1458,7 +1458,7 @@ Roger`}],_b=[{id:4872,subject:`Order #GR-29104 not received`,date:`Jun 24 09:15`
   align-items: center;
   gap: 10px;
   padding: 0 20px;
-  height: 60px;
+  height: 40px;
   background: #f7f7f7;
   border-top: 1px solid #dcdcda;
   font-size: 14px;
