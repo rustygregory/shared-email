@@ -75,7 +75,7 @@ export default function App() {
   const [currentProduct, setCurrentProduct] = useState('support')
   const [activeNavItem, setActiveNavItem] = useState(0)
   const [isSubnavExpanded, setIsSubnavExpanded] = useState(false)
-  const [mode, setMode] = useState(() => localStorage.getItem('shared-email-mode') || 'mvp')
+  const [mode, setMode] = useState(() => localStorage.getItem('shared-email-mode') || 'workspace2')
 
   const handleModeChange = (newMode) => {
     setMode(newMode)
