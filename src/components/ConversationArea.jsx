@@ -353,7 +353,7 @@ const SuggestionBanner = styled.div`
   align-items: center;
   gap: 10px;
   padding: 0 20px;
-  height: 60px;
+  height: 40px;
   background: #f7f7f7;
   border-top: 1px solid #dcdcda;
   font-size: 14px;
