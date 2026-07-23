@@ -126,7 +126,7 @@ export default function App() {
                 <Combobox
                   isCompact
                   isEditable={false}
-                  inputValue={mode === 'mvp' ? 'MVP' : mode === 'mvp2' ? 'MVP v2' : mode === 'scaled' ? 'Scaled' : mode === 'workspace2' ? 'Workspace V2' : 'Workspace'}
+                  inputValue={mode === 'mvp' ? 'MVP' : mode === 'mvp2' ? 'MVP v2' : mode === 'scaled' ? 'Scaled' : mode === 'workspace2' ? 'Workspace V2' : mode === 'workspace3' ? 'Workspace V3' : 'Workspace'}
                   selectionValue={mode}
                   onChange={({ selectionValue }) => { if (selectionValue) handleModeChange(selectionValue) }}
                 >
@@ -135,6 +135,7 @@ export default function App() {
                   <Option value="scaled">Scaled</Option>
                   <Option value="workspace">Workspace</Option>
                   <Option value="workspace2">Workspace V2</Option>
+                  <Option value="workspace3">Workspace V3</Option>
                 </Combobox>
               </Field>
             </ModeFieldWrapper>

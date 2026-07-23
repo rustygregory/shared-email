@@ -392,7 +392,7 @@ export default function ConversationArea({ mode, onReassign, onOpenProfile, righ
   const [selectedUserId, setSelectedUserId] = useState(null)
 
   const isWorkspace = mode === 'workspace'
-  const isWorkspace2 = mode === 'workspace2'
+  const isWorkspace2 = mode === 'workspace2' || mode === 'workspace3'
 
   const showCapsule = isWorkspace && !capsuleDismissed && !reassigned
 
