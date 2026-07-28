@@ -32,6 +32,14 @@ const CountBadge = styled.span`
   border-radius: 10px;
 `
 
+const TriggerEmail = styled.div`
+  font-size: 14px;
+  font-weight: 400;
+  color: #2f3130;
+  margin-top: -6px;
+  margin-bottom: 12px;
+`
+
 const CollapseButton = styled.button`
   background: none;
   border: none;
@@ -124,10 +132,12 @@ const BundleGroup = styled.div`
   border: 1px solid #e9ebed;
   border-radius: 6px;
   margin-bottom: 8px;
-  overflow: hidden;
 `
 
 const BundleHeader = styled.button`
+  position: sticky;
+  top: 0;
+  z-index: 2;
   width: 100%;
   display: flex;
   align-items: center;
@@ -136,6 +146,7 @@ const BundleHeader = styled.button`
   background: #f7f7f7;
   border: none;
   border-bottom: ${props => props.$open ? '1px solid #e9ebed' : 'none'};
+  border-radius: ${props => props.$open ? '6px 6px 0 0' : '6px'};
   cursor: pointer;
   text-align: left;
   &:hover { background: #f0f1f2; }
@@ -148,7 +159,36 @@ const BundleEmail = styled.span`
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+
+  mark {
+    background: #fff0c2;
+    color: inherit;
+    padding: 0;
+    border-radius: 2px;
+  }
 `
+
+// Wrap the portions of `text` that match `query` in a highlight <mark>
+function highlightText(text, query) {
+  const q = (query || '').trim()
+  if (!q || text == null) return text
+  const str = String(text)
+  const lower = str.toLowerCase()
+  const needle = q.toLowerCase()
+  const parts = []
+  let i = 0
+  let start = lower.indexOf(needle)
+  if (start === -1) return str
+  let key = 0
+  while (start !== -1) {
+    if (start > i) parts.push(str.slice(i, start))
+    parts.push(<mark key={key++}>{str.slice(start, start + needle.length)}</mark>)
+    i = start + needle.length
+    start = lower.indexOf(needle, i)
+  }
+  if (i < str.length) parts.push(str.slice(i))
+  return parts
+}
 
 const BundleCount = styled.span`
   background: #eae9e8;
@@ -189,9 +229,12 @@ export default function SharedEmailSection({ onOpenProfile, onReassign, onError,
 
   const isScaled = mode === 'scaled'
   const isBundles = mode === 'workspace3'
+  const isWorkspace2 = mode === 'workspace2'
 
-  // Bundles: which email groups are expanded. First one open by default.
-  const [openBundles, setOpenBundles] = useState(() => ({ [emailBundles[0].email]: true }))
+  // Bundles: which email groups are expanded. All open by default.
+  const [openBundles, setOpenBundles] = useState(() =>
+    Object.fromEntries(emailBundles.map(b => [b.email, true]))
+  )
   const toggleBundle = (email) => setOpenBundles(prev => ({ ...prev, [email]: !prev[email] }))
 
   // Total requesters across all bundles (counts a person once per bundle they're in)
@@ -200,9 +243,12 @@ export default function SharedEmailSection({ onOpenProfile, onReassign, onError,
     []
   )
 
-  // Filter each bundle's requesters by the search query
+  // Filter each bundle's requesters by the search query, names alphabetized
   const filteredBundles = useMemo(() => {
-    if (!searchQuery.trim()) return emailBundles
+    const byName = (a, b) => a.name.localeCompare(b.name)
+    if (!searchQuery.trim()) {
+      return emailBundles.map(b => ({ ...b, requesters: [...b.requesters].sort(byName) }))
+    }
     const q = searchQuery.toLowerCase()
     return emailBundles
       .map(b => ({
@@ -213,7 +259,7 @@ export default function SharedEmailSection({ onOpenProfile, onReassign, onError,
           u.organization.toLowerCase().includes(q) ||
           String(u.id).includes(q) ||
           (u.phone && u.phone.includes(q))
-        ),
+        ).sort(byName),
       }))
       .filter(b => b.requesters.length > 0)
   }, [searchQuery])
@@ -283,6 +329,10 @@ export default function SharedEmailSection({ onOpenProfile, onReassign, onError,
         </CollapseButton>
       </SectionHeader>
 
+      {!collapsed && (isBundles || isWorkspace2) && (
+        <TriggerEmail>support@globalretail.com</TriggerEmail>
+      )}
+
       {!collapsed && (
         <>
           <SearchWrapper>
@@ -303,11 +353,12 @@ export default function SharedEmailSection({ onOpenProfile, onReassign, onError,
           {isBundles ? (
             <SharedList>
               {filteredBundles.map((bundle) => {
-                const isOpen = !!openBundles[bundle.email]
+                // While searching, force every matching bundle open so results are visible
+                const isOpen = !!searchQuery.trim() || !!openBundles[bundle.email]
                 return (
                   <BundleGroup key={bundle.email}>
                     <BundleHeader $open={isOpen} onClick={() => toggleBundle(bundle.email)}>
-                      <BundleEmail>{bundle.email}</BundleEmail>
+                      <BundleEmail>{highlightText(bundle.email, searchQuery)}</BundleEmail>
                       <BundleCount>{bundle.requesters.length}</BundleCount>
                       <BundleCaret $open={isOpen}>
                         <svg width="12" height="12" viewBox="0 0 12 12" fill="currentColor">
@@ -328,6 +379,7 @@ export default function SharedEmailSection({ onOpenProfile, onReassign, onError,
                               onOpenProfile={() => onOpenProfile({ ...user, email: bundle.email })}
                               showPhone
                               hideEmail
+                              query={searchQuery}
                             />
                           )
                         })}

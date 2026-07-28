@@ -88,11 +88,41 @@ const UserReason = styled.div`
   font-style: italic;
 `
 
+const Mark = styled.mark`
+  background: #fff0c2;
+  color: inherit;
+  padding: 0;
+  border-radius: 2px;
+`
+
 function getInitials(name) {
   return name.split(' ').map(n => n[0]).join('').substring(0, 2).toUpperCase()
 }
 
-export default function SharedEmailItem({ user, selected, onSelect, onOpenProfile, reason, showPhone, hideEmail }) {
+// Wrap the portions of `text` that match `query` in a highlight <mark>
+function highlight(text, query) {
+  if (query == null || text == null) return text
+  const q = String(query).trim()
+  if (!q) return text
+  const str = String(text)
+  const lower = str.toLowerCase()
+  const needle = q.toLowerCase()
+  const parts = []
+  let i = 0
+  let start = lower.indexOf(needle)
+  if (start === -1) return str
+  let key = 0
+  while (start !== -1) {
+    if (start > i) parts.push(str.slice(i, start))
+    parts.push(<Mark key={key++}>{str.slice(start, start + needle.length)}</Mark>)
+    i = start + needle.length
+    start = lower.indexOf(needle, i)
+  }
+  if (i < str.length) parts.push(str.slice(i))
+  return parts
+}
+
+export default function SharedEmailItem({ user, selected, onSelect, onOpenProfile, reason, showPhone, hideEmail, query }) {
   const handleRowClick = (e) => {
     if (e.target.closest('[data-name-link]')) return
     onSelect()
@@ -110,11 +140,11 @@ export default function SharedEmailItem({ user, selected, onSelect, onOpenProfil
         {getInitials(user.name)}
       </AvatarCircle>
       <UserInfo>
-        <UserNameLink data-name-link onClick={onOpenProfile}>{user.name}</UserNameLink>
-        {!hideEmail && <UserEmail>{user.email}</UserEmail>}
-        {showPhone && user.phone && <UserPhone>{user.phone}</UserPhone>}
-        <UserOrg>{user.organization}</UserOrg>
-        <UserId>ID: {user.id}</UserId>
+        <UserNameLink data-name-link onClick={onOpenProfile}>{highlight(user.name, query)}</UserNameLink>
+        {!hideEmail && <UserEmail>{highlight(user.email, query)}</UserEmail>}
+        {showPhone && user.phone && <UserPhone>{highlight(user.phone, query)}</UserPhone>}
+        <UserOrg>{highlight(user.organization, query)}</UserOrg>
+        <UserId>ID: {highlight(String(user.id), query)}</UserId>
         {reason && <UserReason>({reason})</UserReason>}
       </UserInfo>
     </ItemRow>

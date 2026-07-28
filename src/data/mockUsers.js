@@ -112,6 +112,9 @@ export const emailBundles = [
       makeRequester(10043, 'Joseph Anderson', 'Global Retail East', '+1 (908) 555-0143'),
       makeRequester(10044, 'Emily Chen', 'Global Retail West', '+1 (510) 555-0144', { language: 'Mandarin' }),
       makeRequester(10048, 'Diana Walker', 'Global Retail East', '+1 (203) 555-0148'),
+      makeRequester(10047, 'Andrew Lewis', 'Global Retail HQ', '+1 (415) 555-0147'),
+      makeRequester(10038, 'Olivia Scott', 'Global Retail East', '+1 (267) 555-0138'),
+      makeRequester(10019, 'Kevin Brown', 'Global Retail West', ''),
     ],
   },
   {
@@ -127,6 +130,13 @@ export const emailBundles = [
       makeRequester(10045, 'Michael Robinson', 'Global Retail South', '+1 (404) 555-0145'),
       makeRequester(10050, 'Victoria King', 'Global Retail South', '+1 (214) 555-0150'),
       makeRequester(10052, 'Aaron Mitchell', 'Global Retail West', '+1 (503) 555-0152', { notes: 'Sales Associate', avatarColor: '#40787a' }),
+      makeRequester(10016, 'Brian O\'Connor', 'Global Retail North', '+1 (414) 555-0116'),
+      makeRequester(10021, 'Anthony Martinez', 'Global Retail North', '+1 (216) 555-0121'),
+      makeRequester(10023, 'Omar Hassan', 'Global Retail East', '+1 (973) 555-0123', { language: 'Arabic' }),
+      makeRequester(10026, 'Nadia Petrov', 'Global Retail North', '+1 (651) 555-0126', { language: 'Russian' }),
+      makeRequester(10028, 'Angela Thompson', 'Global Retail East', '+1 (202) 555-0128'),
+      makeRequester(10030, 'Grace Kim', 'Global Retail South', '+1 (615) 555-0130', { language: 'Korean' }),
+      makeRequester(10035, 'Benjamin Clark', 'Global Retail South', '+1 (504) 555-0135'),
     ],
   },
 ]
