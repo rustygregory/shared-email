@@ -56,3 +56,77 @@ export const sharedEmailUsers = [
 ]
 
 export const currentRequester = sharedEmailUsers[3]
+
+// --- Workspace V3 "bundles" data -------------------------------------------
+// Requesters grouped under a shared email address. The same person can appear
+// under more than one email (e.g. they use both support@ and sales@).
+const bundleColors = ['#406cc4', '#4b7d04', '#8d59b1', '#c63f46', '#af5626', '#2770c3', '#b34496', '#40787a', '#4c67d3', '#649c28', '#be4938', '#d46f74']
+
+function makeRequester(id, name, org, phone, extra = {}) {
+  return {
+    id,
+    name,
+    organization: org,
+    phone,
+    avatarColor: bundleColors[id % bundleColors.length],
+    userType: 'End user',
+    language: 'English (United States)',
+    timezone: '(GMT-08:00) Pacific Time',
+    notes: '',
+    ...extra,
+  }
+}
+
+// People who appear in more than one bundle (same person, shared across emails)
+const aaronEast = makeRequester(10051, 'Aaron Mitchell', 'Global Retail East', '+1 (646) 555-0151', { notes: 'Warehouse Manager', avatarColor: '#8d59b1' })
+const sarahHQ = makeRequester(10001, 'Sarah Chen', 'Global Retail HQ', '+1 (415) 555-0101', { notes: 'VP of Operations', avatarColor: '#406cc4' })
+const priyaWest = makeRequester(10003, 'Priya Patel', 'Global Retail West', '+1 (310) 555-0103', { notes: 'Store Director', avatarColor: '#8d59b1' })
+const marcusEast = makeRequester(10002, 'Marcus Johnson', 'Global Retail East', '+1 (212) 555-0102', { notes: 'Regional Manager', avatarColor: '#4b7d04' })
+
+export const emailBundles = [
+  {
+    email: 'support@globalretail.com',
+    requesters: [
+      sarahHQ,
+      marcusEast,
+      priyaWest,
+      makeRequester(10004, 'James Wilson', 'Global Retail South', ''),
+      makeRequester(10005, 'Aisha Mohammed', 'Global Retail HQ', '+1 (415) 555-0105', { notes: 'Procurement Lead' }),
+      makeRequester(10007, 'Elena Rodriguez', 'Global Retail West', '+1 (602) 555-0107', { language: 'Spanish' }),
+      makeRequester(10008, 'Robert Taylor', 'Global Retail East', '+1 (617) 555-0108'),
+      makeRequester(10009, 'Mei Lin Wang', 'Global Retail HQ', '+1 (415) 555-0109', { notes: 'Finance Department' }),
+      aaronEast,
+      makeRequester(10017, 'Yuki Tanaka', 'Global Retail HQ', '+1 (415) 555-0117', { language: 'Japanese' }),
+    ],
+  },
+  {
+    email: 'sales@globalretail.com',
+    requesters: [
+      sarahHQ,
+      aaronEast,
+      makeRequester(10024, 'Jennifer Lee', 'Global Retail West', '+1 (408) 555-0124'),
+      makeRequester(10029, 'Samuel Jackson', 'Global Retail West', '+1 (503) 555-0129'),
+      makeRequester(10032, 'Sofia Reyes', 'Global Retail HQ', '+1 (415) 555-0132', { language: 'Spanish' }),
+      makeRequester(10037, 'Alex Turner', 'Global Retail HQ', '+1 (415) 555-0137'),
+      makeRequester(10040, 'Rachel Green', 'Global Retail South', '+1 (713) 555-0140'),
+      makeRequester(10043, 'Joseph Anderson', 'Global Retail East', '+1 (908) 555-0143'),
+      makeRequester(10044, 'Emily Chen', 'Global Retail West', '+1 (510) 555-0144', { language: 'Mandarin' }),
+      makeRequester(10048, 'Diana Walker', 'Global Retail East', '+1 (203) 555-0148'),
+    ],
+  },
+  {
+    email: 'orders@globalretail.com',
+    requesters: [
+      priyaWest,
+      marcusEast,
+      makeRequester(10015, 'Fatima Al-Hassan', 'Global Retail South', '+1 (713) 555-0115', { language: 'Arabic' }),
+      makeRequester(10020, 'Lisa Park', 'Global Retail South', '+1 (512) 555-0120', { language: 'Korean' }),
+      makeRequester(10025, 'Christopher Davis', 'Global Retail South', '+1 (901) 555-0125'),
+      makeRequester(10031, 'Ryan Mitchell', 'Global Retail North', '+1 (612) 555-0131'),
+      makeRequester(10036, 'Maria Santos', 'Global Retail North', '+1 (414) 555-0136', { language: 'Portuguese' }),
+      makeRequester(10045, 'Michael Robinson', 'Global Retail South', '+1 (404) 555-0145'),
+      makeRequester(10050, 'Victoria King', 'Global Retail South', '+1 (214) 555-0150'),
+      makeRequester(10052, 'Aaron Mitchell', 'Global Retail West', '+1 (503) 555-0152', { notes: 'Sales Associate', avatarColor: '#40787a' }),
+    ],
+  },
+]

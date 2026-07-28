@@ -92,7 +92,7 @@ function getInitials(name) {
   return name.split(' ').map(n => n[0]).join('').substring(0, 2).toUpperCase()
 }
 
-export default function SharedEmailItem({ user, selected, onSelect, onOpenProfile, reason, showPhone }) {
+export default function SharedEmailItem({ user, selected, onSelect, onOpenProfile, reason, showPhone, hideEmail }) {
   const handleRowClick = (e) => {
     if (e.target.closest('[data-name-link]')) return
     onSelect()
@@ -111,7 +111,7 @@ export default function SharedEmailItem({ user, selected, onSelect, onOpenProfil
       </AvatarCircle>
       <UserInfo>
         <UserNameLink data-name-link onClick={onOpenProfile}>{user.name}</UserNameLink>
-        <UserEmail>{user.email}</UserEmail>
+        {!hideEmail && <UserEmail>{user.email}</UserEmail>}
         {showPhone && user.phone && <UserPhone>{user.phone}</UserPhone>}
         <UserOrg>{user.organization}</UserOrg>
         <UserId>ID: {user.id}</UserId>
