@@ -32,13 +32,6 @@ const CountBadge = styled.span`
   border-radius: 10px;
 `
 
-const TriggerEmail = styled.div`
-  font-size: 14px;
-  font-weight: 400;
-  color: #2f3130;
-  margin-top: -6px;
-  margin-bottom: 12px;
-`
 
 const CollapseButton = styled.button`
   background: none;
@@ -229,7 +222,6 @@ export default function SharedEmailSection({ onOpenProfile, onReassign, onError,
 
   const isScaled = mode === 'scaled'
   const isBundles = mode === 'workspace3'
-  const isWorkspace2 = mode === 'workspace2'
 
   // Bundles: which email groups are expanded. All open by default.
   const [openBundles, setOpenBundles] = useState(() =>
@@ -328,10 +320,6 @@ export default function SharedEmailSection({ onOpenProfile, onReassign, onError,
           </svg>
         </CollapseButton>
       </SectionHeader>
-
-      {!collapsed && (isBundles || isWorkspace2) && (
-        <TriggerEmail>support@globalretail.com</TriggerEmail>
-      )}
 
       {!collapsed && (
         <>
