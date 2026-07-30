@@ -1014,7 +1014,7 @@ Error generating stack: `+e.message+`
   border-radius: 8px 0px 0px 0px;
   flex: 1;
   align-self: stretch;
-`;var Wy=[{id:10001,name:`Sarah Chen`,email:`support@globalretail.com`,organization:`Global Retail HQ`,avatarColor:`#406cc4`,phone:`+1 (415) 555-0101`,sharedPhone:!0,userType:`End user`,language:`English (United States)`,timezone:`(GMT-08:00) Pacific Time`,notes:`VP of Operations`},{id:84205,name:`Sarah Chen`,email:`support@globalretail.com`,organization:`Global Retail HQ`,avatarColor:`#406cc4`,phone:`+1 (415) 555-0188`,userType:`End user`,language:`English (United States)`,timezone:`(GMT-08:00) Pacific Time`,notes:`Accounts Receivable`},{id:10002,name:`Marcus Johnson`,email:`support@globalretail.com`,organization:`Global Retail East`,avatarColor:`#4b7d04`,phone:`+1 (212) 555-0102`,sharedPhone:!0,userType:`End user`,language:`English (United States)`,timezone:`(GMT-05:00) Eastern Time`,notes:`Regional Manager`},{id:10003,name:`Priya Patel`,email:`support@globalretail.com`,organization:`Global Retail West`,avatarColor:`#8d59b1`,phone:`+1 (310) 555-0103`,userType:`End user`,language:`English (United States)`,timezone:`(GMT-08:00) Pacific Time`,notes:`Store Director`},{id:10004,name:`James Wilson`,email:`support@globalretail.com`,organization:`Global Retail South`,avatarColor:`#c63f46`,phone:``,userType:`End user`,language:`English (United States)`,timezone:`(GMT-05:00) Eastern Time`,notes:``},{id:10005,name:`Aisha Mohammed`,email:`support@globalretail.com`,organization:`Global Retail HQ`,avatarColor:`#af5626`,phone:`+1 (415) 555-0105`,sharedPhone:!0,userType:`End user`,language:`English (United States)`,timezone:`(GMT-08:00) Pacific Time`,notes:`Procurement Lead`},{id:null,name:`David Kim`,email:`support@globalretail.com`,organization:`Global Retail North`,avatarColor:`#2770c3`,phone:``,userType:`End user`,language:`English (United States)`,timezone:`(GMT-06:00) Central Time`,notes:``},{id:10007,name:`Elena Rodriguez`,email:`support@globalretail.com`,organization:`Global Retail West`,avatarColor:`#b34496`,phone:`+1 (602) 555-0107`,userType:`End user`,language:`Spanish`,timezone:`(GMT-07:00) Mountain Time`,notes:`Bilingual support contact`},{id:10008,name:`Robert Taylor`,email:`support@globalretail.com`,organization:`Global Retail East`,avatarColor:`#40787a`,phone:`+1 (617) 555-0108`,userType:`End user`,language:`English (United States)`,timezone:`(GMT-05:00) Eastern Time`,notes:``},{id:10009,name:`Mei Lin Wang`,email:`support@globalretail.com`,organization:`Global Retail HQ`,avatarColor:`#4c67d3`,phone:`+1 (415) 555-0109`,sharedPhone:!0,userType:`End user`,language:`English (United States)`,timezone:`(GMT-08:00) Pacific Time`,notes:`Finance Department`},{id:10010,name:`Carlos Gutierrez`,email:`support@globalretail.com`,organization:`Global Retail South`,avatarColor:`#649c28`,phone:``,userType:`End user`,language:`Spanish`,timezone:`(GMT-05:00) Eastern Time`,notes:``},{id:null,name:`Amanda Foster`,email:`support@globalretail.com`,organization:`Global Retail North`,avatarColor:`#d46f74`,phone:``,userType:`End user`,language:`English (United States)`,timezone:`(GMT-06:00) Central Time`,notes:``},{id:10012,name:`Raj Krishnamurthy`,email:`support@globalretail.com`,organization:`Global Retail HQ`,avatarColor:`#7f7004`,phone:`+1 (415) 555-0112`,userType:`End user`,language:`English (United States)`,timezone:`(GMT-08:00) Pacific Time`,notes:`IT Department`},{id:10013,name:`Nicole Baker`,email:`support@globalretail.com`,organization:`Global Retail East`,avatarColor:`#be4938`,phone:`+1 (215) 555-0113`,userType:`End user`,language:`English (United States)`,timezone:`(GMT-05:00) Eastern Time`,notes:``},{id:null,name:`Thomas Nguyen`,email:`support@globalretail.com`,organization:`Global Retail West`,avatarColor:`#406cc4`,phone:``,userType:`End user`,language:`English (United States)`,timezone:`(GMT-08:00) Pacific Time`,notes:``},{id:10015,name:`Fatima Al-Hassan`,email:`support@globalretail.com`,organization:`Global Retail South`,avatarColor:`#8d59b1`,phone:`+1 (713) 555-0115`,userType:`End user`,language:`Arabic`,timezone:`(GMT-06:00) Central Time`,notes:``},{id:10016,name:`Brian O'Connor`,email:`support@globalretail.com`,organization:`Global Retail North`,avatarColor:`#2770c3`,phone:`+1 (414) 555-0116`,userType:`End user`,language:`English (United States)`,timezone:`(GMT-06:00) Central Time`,notes:``},{id:10017,name:`Yuki Tanaka`,email:`support@globalretail.com`,organization:`Global Retail HQ`,avatarColor:`#b34496`,phone:`+1 (415) 555-0117`,userType:`End user`,language:`Japanese`,timezone:`(GMT-08:00) Pacific Time`,notes:`International Liaison`},{id:10018,name:`Stephanie Adams`,email:`support@globalretail.com`,organization:`Global Retail East`,avatarColor:`#c63f46`,phone:`+1 (646) 555-0118`,userType:`End user`,language:`English (United States)`,timezone:`(GMT-05:00) Eastern Time`,notes:``},{id:10019,name:`Kevin Brown`,email:`support@globalretail.com`,organization:`Global Retail West`,avatarColor:`#40787a`,phone:``,userType:`End user`,language:`English (United States)`,timezone:`(GMT-08:00) Pacific Time`,notes:``},{id:10020,name:`Lisa Park`,email:`support@globalretail.com`,organization:`Global Retail South`,avatarColor:`#649c28`,phone:`+1 (512) 555-0120`,userType:`End user`,language:`Korean`,timezone:`(GMT-06:00) Central Time`,notes:``},{id:10021,name:`Anthony Martinez`,email:`support@globalretail.com`,organization:`Global Retail North`,avatarColor:`#af5626`,phone:`+1 (216) 555-0121`,userType:`End user`,language:`English (United States)`,timezone:`(GMT-05:00) Eastern Time`,notes:``},{id:null,name:`Hannah Wright`,email:`support@globalretail.com`,organization:`Global Retail HQ`,avatarColor:`#4c67d3`,phone:``,userType:`End user`,language:`English (United States)`,timezone:`(GMT-08:00) Pacific Time`,notes:``},{id:10023,name:`Omar Hassan`,email:`support@globalretail.com`,organization:`Global Retail East`,avatarColor:`#d46f74`,phone:`+1 (973) 555-0123`,userType:`End user`,language:`Arabic`,timezone:`(GMT-05:00) Eastern Time`,notes:``},{id:10024,name:`Jennifer Lee`,email:`support@globalretail.com`,organization:`Global Retail West`,avatarColor:`#4b7d04`,phone:`+1 (408) 555-0124`,userType:`End user`,language:`English (United States)`,timezone:`(GMT-08:00) Pacific Time`,notes:``},{id:10025,name:`Christopher Davis`,email:`support@globalretail.com`,organization:`Global Retail South`,avatarColor:`#be4938`,phone:`+1 (901) 555-0125`,userType:`End user`,language:`English (United States)`,timezone:`(GMT-06:00) Central Time`,notes:``},{id:10026,name:`Nadia Petrov`,email:`support@globalretail.com`,organization:`Global Retail North`,avatarColor:`#406cc4`,phone:`+1 (651) 555-0126`,userType:`End user`,language:`Russian`,timezone:`(GMT-06:00) Central Time`,notes:``},{id:null,name:`Daniel White`,email:`support@globalretail.com`,organization:`Global Retail HQ`,avatarColor:`#8d59b1`,phone:``,userType:`End user`,language:`English (United States)`,timezone:`(GMT-08:00) Pacific Time`,notes:``},{id:10028,name:`Angela Thompson`,email:`support@globalretail.com`,organization:`Global Retail East`,avatarColor:`#2770c3`,phone:`+1 (202) 555-0128`,userType:`End user`,language:`English (United States)`,timezone:`(GMT-05:00) Eastern Time`,notes:``},{id:10029,name:`Samuel Jackson`,email:`support@globalretail.com`,organization:`Global Retail West`,avatarColor:`#b34496`,phone:`+1 (503) 555-0129`,userType:`End user`,language:`English (United States)`,timezone:`(GMT-08:00) Pacific Time`,notes:``},{id:10030,name:`Grace Kim`,email:`support@globalretail.com`,organization:`Global Retail South`,avatarColor:`#c63f46`,phone:`+1 (615) 555-0130`,userType:`End user`,language:`Korean`,timezone:`(GMT-06:00) Central Time`,notes:``},{id:10031,name:`Ryan Mitchell`,email:`support@globalretail.com`,organization:`Global Retail North`,avatarColor:`#40787a`,phone:`+1 (612) 555-0131`,userType:`End user`,language:`English (United States)`,timezone:`(GMT-06:00) Central Time`,notes:``},{id:10032,name:`Sofia Reyes`,email:`support@globalretail.com`,organization:`Global Retail HQ`,avatarColor:`#649c28`,phone:`+1 (415) 555-0132`,userType:`End user`,language:`Spanish`,timezone:`(GMT-08:00) Pacific Time`,notes:``},{id:10033,name:`Patrick O'Brien`,email:`support@globalretail.com`,organization:`Global Retail East`,avatarColor:`#af5626`,phone:`+1 (617) 555-0133`,userType:`End user`,language:`English (United States)`,timezone:`(GMT-05:00) Eastern Time`,notes:``},{id:null,name:`Jasmine Williams`,email:`support@globalretail.com`,organization:`Global Retail West`,avatarColor:`#4c67d3`,phone:``,userType:`End user`,language:`English (United States)`,timezone:`(GMT-08:00) Pacific Time`,notes:``},{id:10035,name:`Benjamin Clark`,email:`support@globalretail.com`,organization:`Global Retail South`,avatarColor:`#d46f74`,phone:`+1 (504) 555-0135`,userType:`End user`,language:`English (United States)`,timezone:`(GMT-06:00) Central Time`,notes:``},{id:10036,name:`Maria Santos`,email:`support@globalretail.com`,organization:`Global Retail North`,avatarColor:`#4b7d04`,phone:`+1 (414) 555-0136`,userType:`End user`,language:`Portuguese`,timezone:`(GMT-06:00) Central Time`,notes:``},{id:10037,name:`Alex Turner`,email:`support@globalretail.com`,organization:`Global Retail HQ`,avatarColor:`#be4938`,phone:`+1 (415) 555-0137`,userType:`End user`,language:`English (United States)`,timezone:`(GMT-08:00) Pacific Time`,notes:``},{id:10038,name:`Olivia Scott`,email:`support@globalretail.com`,organization:`Global Retail East`,avatarColor:`#406cc4`,phone:`+1 (267) 555-0138`,userType:`End user`,language:`English (United States)`,timezone:`(GMT-05:00) Eastern Time`,notes:``},{id:10039,name:`Mohammed Ali`,email:`support@globalretail.com`,organization:`Global Retail West`,avatarColor:`#8d59b1`,phone:`+1 (619) 555-0139`,userType:`End user`,language:`Arabic`,timezone:`(GMT-08:00) Pacific Time`,notes:``},{id:10040,name:`Rachel Green`,email:`support@globalretail.com`,organization:`Global Retail South`,avatarColor:`#2770c3`,phone:`+1 (713) 555-0140`,userType:`End user`,language:`English (United States)`,timezone:`(GMT-06:00) Central Time`,notes:``},{id:null,name:`William Harris`,email:`support@globalretail.com`,organization:`Global Retail North`,avatarColor:`#b34496`,phone:`+1 (312) 555-0141`,userType:`End user`,language:`English (United States)`,timezone:`(GMT-06:00) Central Time`,notes:``},{id:10042,name:`Catherine Young`,email:`support@globalretail.com`,organization:`Global Retail HQ`,avatarColor:`#c63f46`,phone:`+1 (415) 555-0142`,userType:`End user`,language:`English (United States)`,timezone:`(GMT-08:00) Pacific Time`,notes:``},{id:10043,name:`Joseph Anderson`,email:`support@globalretail.com`,organization:`Global Retail East`,avatarColor:`#40787a`,phone:`+1 (908) 555-0143`,userType:`End user`,language:`English (United States)`,timezone:`(GMT-05:00) Eastern Time`,notes:``},{id:10044,name:`Emily Chen`,email:`support@globalretail.com`,organization:`Global Retail West`,avatarColor:`#649c28`,phone:`+1 (510) 555-0144`,userType:`End user`,language:`Mandarin`,timezone:`(GMT-08:00) Pacific Time`,notes:``},{id:10045,name:`Michael Robinson`,email:`support@globalretail.com`,organization:`Global Retail South`,avatarColor:`#af5626`,phone:`+1 (404) 555-0145`,userType:`End user`,language:`English (United States)`,timezone:`(GMT-05:00) Eastern Time`,notes:``},{id:10046,name:`Laura Martinez`,email:`support@globalretail.com`,organization:`Global Retail North`,avatarColor:`#4c67d3`,phone:`+1 (651) 555-0146`,userType:`End user`,language:`Spanish`,timezone:`(GMT-06:00) Central Time`,notes:``},{id:10047,name:`Andrew Lewis`,email:`support@globalretail.com`,organization:`Global Retail HQ`,avatarColor:`#d46f74`,phone:`+1 (415) 555-0147`,userType:`End user`,language:`English (United States)`,timezone:`(GMT-08:00) Pacific Time`,notes:``},{id:10048,name:`Diana Walker`,email:`support@globalretail.com`,organization:`Global Retail East`,avatarColor:`#4b7d04`,phone:`+1 (203) 555-0148`,userType:`End user`,language:`English (United States)`,timezone:`(GMT-05:00) Eastern Time`,notes:``},{id:10049,name:`George Hall`,email:`support@globalretail.com`,organization:`Global Retail West`,avatarColor:`#be4938`,phone:`+1 (805) 555-0149`,userType:`End user`,language:`English (United States)`,timezone:`(GMT-08:00) Pacific Time`,notes:``},{id:10050,name:`Victoria King`,email:`support@globalretail.com`,organization:`Global Retail South`,avatarColor:`#406cc4`,phone:`+1 (214) 555-0150`,userType:`End user`,language:`English (United States)`,timezone:`(GMT-06:00) Central Time`,notes:``},{id:10051,name:`Aaron Mitchell`,email:`support@globalretail.com`,organization:`Global Retail East`,avatarColor:`#8d59b1`,phone:`+1 (646) 555-0151`,userType:`End user`,language:`English (United States)`,timezone:`(GMT-05:00) Eastern Time`,notes:`Warehouse Manager`},{id:10052,name:`Aaron Mitchell`,email:`support@globalretail.com`,organization:`Global Retail West`,avatarColor:`#40787a`,phone:`+1 (503) 555-0152`,userType:`End user`,language:`English (United States)`,timezone:`(GMT-08:00) Pacific Time`,notes:`Sales Associate`},{id:10053,name:`Aaron Mitchell`,email:`support@globalretail.com`,organization:`Global Retail North`,avatarColor:`#649c28`,phone:`+1 (312) 555-0153`,userType:`End user`,language:`English (United States)`,timezone:`(GMT-06:00) Central Time`,notes:`Returns Specialist`}],Gy=Wy[3],Ky=[`#406cc4`,`#4b7d04`,`#8d59b1`,`#c63f46`,`#af5626`,`#2770c3`,`#b34496`,`#40787a`,`#4c67d3`,`#649c28`,`#be4938`,`#d46f74`];function $(e,t,n,r,i={}){return{id:e,name:t,organization:n,phone:r,avatarColor:Ky[e%Ky.length],userType:`End user`,language:`English (United States)`,timezone:`(GMT-08:00) Pacific Time`,notes:``,...i}}var qy=$(10051,`Aaron Mitchell`,`Global Retail East`,`+1 (646) 555-0151`,{notes:`Warehouse Manager`,avatarColor:`#8d59b1`}),Jy=$(10001,`Sarah Chen`,`Global Retail HQ`,`+1 (415) 555-0101`,{notes:`VP of Operations`,avatarColor:`#406cc4`}),Yy=$(10003,`Priya Patel`,`Global Retail West`,`+1 (310) 555-0103`,{notes:`Store Director`,avatarColor:`#8d59b1`}),Xy=$(10002,`Marcus Johnson`,`Global Retail East`,`+1 (212) 555-0102`,{notes:`Regional Manager`,avatarColor:`#4b7d04`}),Zy=[{email:`support@globalretail.com`,requesters:[Jy,Xy,Yy,$(10004,`James Wilson`,`Global Retail South`,``),$(10005,`Aisha Mohammed`,`Global Retail HQ`,`+1 (415) 555-0105`,{notes:`Procurement Lead`}),$(10007,`Elena Rodriguez`,`Global Retail West`,`+1 (602) 555-0107`,{language:`Spanish`}),$(10008,`Robert Taylor`,`Global Retail East`,`+1 (617) 555-0108`),$(10009,`Mei Lin Wang`,`Global Retail HQ`,`+1 (415) 555-0109`,{notes:`Finance Department`}),qy,$(10017,`Yuki Tanaka`,`Global Retail HQ`,`+1 (415) 555-0117`,{language:`Japanese`})]},{email:`sales@globalretail.com`,requesters:[Jy,qy,$(10024,`Jennifer Lee`,`Global Retail West`,`+1 (408) 555-0124`),$(10029,`Samuel Jackson`,`Global Retail West`,`+1 (503) 555-0129`),$(10032,`Sofia Reyes`,`Global Retail HQ`,`+1 (415) 555-0132`,{language:`Spanish`}),$(10037,`Alex Turner`,`Global Retail HQ`,`+1 (415) 555-0137`),$(10040,`Rachel Green`,`Global Retail South`,`+1 (713) 555-0140`),$(10043,`Joseph Anderson`,`Global Retail East`,`+1 (908) 555-0143`),$(10044,`Emily Chen`,`Global Retail West`,`+1 (510) 555-0144`,{language:`Mandarin`}),$(10048,`Diana Walker`,`Global Retail East`,`+1 (203) 555-0148`),$(10047,`Andrew Lewis`,`Global Retail HQ`,`+1 (415) 555-0147`),$(10038,`Olivia Scott`,`Global Retail East`,`+1 (267) 555-0138`),$(10019,`Kevin Brown`,`Global Retail West`,``)]},{email:`orders@globalretail.com`,requesters:[Yy,Xy,$(10015,`Fatima Al-Hassan`,`Global Retail South`,`+1 (713) 555-0115`,{language:`Arabic`}),$(10020,`Lisa Park`,`Global Retail South`,`+1 (512) 555-0120`,{language:`Korean`}),$(10025,`Christopher Davis`,`Global Retail South`,`+1 (901) 555-0125`),$(10031,`Ryan Mitchell`,`Global Retail North`,`+1 (612) 555-0131`),$(10036,`Maria Santos`,`Global Retail North`,`+1 (414) 555-0136`,{language:`Portuguese`}),$(10045,`Michael Robinson`,`Global Retail South`,`+1 (404) 555-0145`),$(10050,`Victoria King`,`Global Retail South`,`+1 (214) 555-0150`),$(10052,`Aaron Mitchell`,`Global Retail West`,`+1 (503) 555-0152`,{notes:`Sales Associate`,avatarColor:`#40787a`}),$(10016,`Brian O'Connor`,`Global Retail North`,`+1 (414) 555-0116`),$(10021,`Anthony Martinez`,`Global Retail North`,`+1 (216) 555-0121`),$(10023,`Omar Hassan`,`Global Retail East`,`+1 (973) 555-0123`,{language:`Arabic`}),$(10026,`Nadia Petrov`,`Global Retail North`,`+1 (651) 555-0126`,{language:`Russian`}),$(10028,`Angela Thompson`,`Global Retail East`,`+1 (202) 555-0128`),$(10030,`Grace Kim`,`Global Retail South`,`+1 (615) 555-0130`,{language:`Korean`}),$(10035,`Benjamin Clark`,`Global Retail South`,`+1 (504) 555-0135`)]}],Qy=V.div`
+`;var Wy=[{id:10001,name:`Sarah Chen`,email:`support@globalretail.com`,organization:`Global Retail HQ`,avatarColor:`#406cc4`,phone:`+1 (415) 555-0101`,sharedPhone:!0,userType:`End user`,language:`English (United States)`,timezone:`(GMT-08:00) Pacific Time`,notes:`VP of Operations`},{id:84205,name:`Sarah Chen`,email:`support@globalretail.com`,organization:`Global Retail HQ`,avatarColor:`#406cc4`,phone:`+1 (415) 555-0188`,userType:`End user`,language:`English (United States)`,timezone:`(GMT-08:00) Pacific Time`,notes:`Accounts Receivable`},{id:10002,name:`Marcus Johnson`,email:`support@globalretail.com`,organization:`Global Retail East`,avatarColor:`#4b7d04`,phone:`+1 (212) 555-0102`,sharedPhone:!0,userType:`End user`,language:`English (United States)`,timezone:`(GMT-05:00) Eastern Time`,notes:`Regional Manager`},{id:10003,name:`Priya Patel`,email:`support@globalretail.com`,organization:`Global Retail West`,avatarColor:`#8d59b1`,phone:`+1 (310) 555-0103`,userType:`End user`,language:`English (United States)`,timezone:`(GMT-08:00) Pacific Time`,notes:`Store Director`},{id:10004,name:`James Wilson`,email:`support@globalretail.com`,organization:`Global Retail South`,avatarColor:`#c63f46`,phone:``,userType:`End user`,language:`English (United States)`,timezone:`(GMT-05:00) Eastern Time`,notes:``},{id:10005,name:`Aisha Mohammed`,email:`support@globalretail.com`,organization:`Global Retail HQ`,avatarColor:`#af5626`,phone:`+1 (415) 555-0105`,sharedPhone:!0,userType:`End user`,language:`English (United States)`,timezone:`(GMT-08:00) Pacific Time`,notes:`Procurement Lead`},{id:null,name:`David Kim`,email:`support@globalretail.com`,organization:`Global Retail North`,avatarColor:`#2770c3`,phone:``,userType:`End user`,language:`English (United States)`,timezone:`(GMT-06:00) Central Time`,notes:``},{id:10007,name:`Elena Rodriguez`,email:`support@globalretail.com`,organization:`Global Retail West`,avatarColor:`#b34496`,phone:`+1 (602) 555-0107`,userType:`End user`,language:`Spanish`,timezone:`(GMT-07:00) Mountain Time`,notes:`Bilingual support contact`},{id:10008,name:`Robert Taylor`,email:`support@globalretail.com`,organization:`Global Retail East`,avatarColor:`#40787a`,phone:`+1 (617) 555-0108`,userType:`End user`,language:`English (United States)`,timezone:`(GMT-05:00) Eastern Time`,notes:``},{id:10009,name:`Mei Lin Wang`,email:`support@globalretail.com`,organization:`Global Retail HQ`,avatarColor:`#4c67d3`,phone:`+1 (415) 555-0109`,sharedPhone:!0,userType:`End user`,language:`English (United States)`,timezone:`(GMT-08:00) Pacific Time`,notes:`Finance Department`},{id:10010,name:`Carlos Gutierrez`,email:`support@globalretail.com`,organization:`Global Retail South`,avatarColor:`#649c28`,phone:``,userType:`End user`,language:`Spanish`,timezone:`(GMT-05:00) Eastern Time`,notes:``},{id:null,name:`Amanda Foster`,email:`support@globalretail.com`,organization:`Global Retail North`,avatarColor:`#d46f74`,phone:``,userType:`End user`,language:`English (United States)`,timezone:`(GMT-06:00) Central Time`,notes:``},{id:10012,name:`Raj Krishnamurthy`,email:`support@globalretail.com`,organization:`Global Retail HQ`,avatarColor:`#7f7004`,phone:`+1 (415) 555-0112`,userType:`End user`,language:`English (United States)`,timezone:`(GMT-08:00) Pacific Time`,notes:`IT Department`},{id:10013,name:`Nicole Baker`,email:`support@globalretail.com`,organization:`Global Retail East`,avatarColor:`#be4938`,phone:`+1 (215) 555-0113`,userType:`End user`,language:`English (United States)`,timezone:`(GMT-05:00) Eastern Time`,notes:``},{id:null,name:`Thomas Nguyen`,email:`support@globalretail.com`,organization:`Global Retail West`,avatarColor:`#406cc4`,phone:``,userType:`End user`,language:`English (United States)`,timezone:`(GMT-08:00) Pacific Time`,notes:``},{id:10015,name:`Fatima Al-Hassan`,email:`support@globalretail.com`,organization:`Global Retail South`,avatarColor:`#8d59b1`,phone:`+1 (713) 555-0115`,userType:`End user`,language:`Arabic`,timezone:`(GMT-06:00) Central Time`,notes:``},{id:10016,name:`Brian O'Connor`,email:`support@globalretail.com`,organization:`Global Retail North`,avatarColor:`#2770c3`,phone:`+1 (414) 555-0116`,userType:`End user`,language:`English (United States)`,timezone:`(GMT-06:00) Central Time`,notes:``},{id:10017,name:`Yuki Tanaka`,email:`support@globalretail.com`,organization:`Global Retail HQ`,avatarColor:`#b34496`,phone:`+1 (415) 555-0117`,userType:`End user`,language:`Japanese`,timezone:`(GMT-08:00) Pacific Time`,notes:`International Liaison`},{id:10018,name:`Stephanie Adams`,email:`support@globalretail.com`,organization:`Global Retail East`,avatarColor:`#c63f46`,phone:`+1 (646) 555-0118`,userType:`End user`,language:`English (United States)`,timezone:`(GMT-05:00) Eastern Time`,notes:``},{id:10019,name:`Kevin Brown`,email:`support@globalretail.com`,organization:`Global Retail West`,avatarColor:`#40787a`,phone:``,userType:`End user`,language:`English (United States)`,timezone:`(GMT-08:00) Pacific Time`,notes:``},{id:10020,name:`Lisa Park`,email:`support@globalretail.com`,organization:`Global Retail South`,avatarColor:`#649c28`,phone:`+1 (512) 555-0120`,userType:`End user`,language:`Korean`,timezone:`(GMT-06:00) Central Time`,notes:``},{id:10021,name:`Anthony Martinez`,email:`support@globalretail.com`,organization:`Global Retail North`,avatarColor:`#af5626`,phone:`+1 (216) 555-0121`,userType:`End user`,language:`English (United States)`,timezone:`(GMT-05:00) Eastern Time`,notes:``},{id:null,name:`Hannah Wright`,email:`support@globalretail.com`,organization:`Global Retail HQ`,avatarColor:`#4c67d3`,phone:``,userType:`End user`,language:`English (United States)`,timezone:`(GMT-08:00) Pacific Time`,notes:``},{id:10023,name:`Omar Hassan`,email:`support@globalretail.com`,organization:`Global Retail East`,avatarColor:`#d46f74`,phone:`+1 (973) 555-0123`,userType:`End user`,language:`Arabic`,timezone:`(GMT-05:00) Eastern Time`,notes:``},{id:10024,name:`Jennifer Lee`,email:`support@globalretail.com`,organization:`Global Retail West`,avatarColor:`#4b7d04`,phone:`+1 (408) 555-0124`,userType:`End user`,language:`English (United States)`,timezone:`(GMT-08:00) Pacific Time`,notes:``},{id:10025,name:`Christopher Davis`,email:`support@globalretail.com`,organization:`Global Retail South`,avatarColor:`#be4938`,phone:`+1 (901) 555-0125`,userType:`End user`,language:`English (United States)`,timezone:`(GMT-06:00) Central Time`,notes:``},{id:10026,name:`Nadia Petrov`,email:`support@globalretail.com`,organization:`Global Retail North`,avatarColor:`#406cc4`,phone:`+1 (651) 555-0126`,userType:`End user`,language:`Russian`,timezone:`(GMT-06:00) Central Time`,notes:``},{id:null,name:`Daniel White`,email:`support@globalretail.com`,organization:`Global Retail HQ`,avatarColor:`#8d59b1`,phone:``,userType:`End user`,language:`English (United States)`,timezone:`(GMT-08:00) Pacific Time`,notes:``},{id:10028,name:`Angela Thompson`,email:`support@globalretail.com`,organization:`Global Retail East`,avatarColor:`#2770c3`,phone:`+1 (202) 555-0128`,userType:`End user`,language:`English (United States)`,timezone:`(GMT-05:00) Eastern Time`,notes:``},{id:10029,name:`Samuel Jackson`,email:`support@globalretail.com`,organization:`Global Retail West`,avatarColor:`#b34496`,phone:`+1 (503) 555-0129`,userType:`End user`,language:`English (United States)`,timezone:`(GMT-08:00) Pacific Time`,notes:``},{id:10030,name:`Grace Kim`,email:`support@globalretail.com`,organization:`Global Retail South`,avatarColor:`#c63f46`,phone:`+1 (615) 555-0130`,userType:`End user`,language:`Korean`,timezone:`(GMT-06:00) Central Time`,notes:``},{id:10031,name:`Ryan Mitchell`,email:`support@globalretail.com`,organization:`Global Retail North`,avatarColor:`#40787a`,phone:`+1 (612) 555-0131`,userType:`End user`,language:`English (United States)`,timezone:`(GMT-06:00) Central Time`,notes:``},{id:10032,name:`Sofia Reyes`,email:`support@globalretail.com`,organization:`Global Retail HQ`,avatarColor:`#649c28`,phone:`+1 (415) 555-0132`,userType:`End user`,language:`Spanish`,timezone:`(GMT-08:00) Pacific Time`,notes:``},{id:10033,name:`Patrick O'Brien`,email:`support@globalretail.com`,organization:`Global Retail East`,avatarColor:`#af5626`,phone:`+1 (617) 555-0133`,userType:`End user`,language:`English (United States)`,timezone:`(GMT-05:00) Eastern Time`,notes:``},{id:null,name:`Jasmine Williams`,email:`support@globalretail.com`,organization:`Global Retail West`,avatarColor:`#4c67d3`,phone:``,userType:`End user`,language:`English (United States)`,timezone:`(GMT-08:00) Pacific Time`,notes:``},{id:10035,name:`Benjamin Clark`,email:`support@globalretail.com`,organization:`Global Retail South`,avatarColor:`#d46f74`,phone:`+1 (504) 555-0135`,userType:`End user`,language:`English (United States)`,timezone:`(GMT-06:00) Central Time`,notes:``},{id:10036,name:`Maria Santos`,email:`support@globalretail.com`,organization:`Global Retail North`,avatarColor:`#4b7d04`,phone:`+1 (414) 555-0136`,userType:`End user`,language:`Portuguese`,timezone:`(GMT-06:00) Central Time`,notes:``},{id:10037,name:`Alex Turner`,email:`support@globalretail.com`,organization:`Global Retail HQ`,avatarColor:`#be4938`,phone:`+1 (415) 555-0137`,userType:`End user`,language:`English (United States)`,timezone:`(GMT-08:00) Pacific Time`,notes:``},{id:10038,name:`Olivia Scott`,email:`support@globalretail.com`,organization:`Global Retail East`,avatarColor:`#406cc4`,phone:`+1 (267) 555-0138`,userType:`End user`,language:`English (United States)`,timezone:`(GMT-05:00) Eastern Time`,notes:``},{id:10039,name:`Mohammed Ali`,email:`support@globalretail.com`,organization:`Global Retail West`,avatarColor:`#8d59b1`,phone:`+1 (619) 555-0139`,userType:`End user`,language:`Arabic`,timezone:`(GMT-08:00) Pacific Time`,notes:``},{id:10040,name:`Rachel Green`,email:`support@globalretail.com`,organization:`Global Retail South`,avatarColor:`#2770c3`,phone:`+1 (713) 555-0140`,userType:`End user`,language:`English (United States)`,timezone:`(GMT-06:00) Central Time`,notes:``},{id:null,name:`William Harris`,email:`support@globalretail.com`,organization:`Global Retail North`,avatarColor:`#b34496`,phone:`+1 (312) 555-0141`,userType:`End user`,language:`English (United States)`,timezone:`(GMT-06:00) Central Time`,notes:``},{id:10042,name:`Catherine Young`,email:`support@globalretail.com`,organization:`Global Retail HQ`,avatarColor:`#c63f46`,phone:`+1 (415) 555-0142`,userType:`End user`,language:`English (United States)`,timezone:`(GMT-08:00) Pacific Time`,notes:``},{id:10043,name:`Joseph Anderson`,email:`support@globalretail.com`,organization:`Global Retail East`,avatarColor:`#40787a`,phone:`+1 (908) 555-0143`,userType:`End user`,language:`English (United States)`,timezone:`(GMT-05:00) Eastern Time`,notes:``},{id:10044,name:`Emily Chen`,email:`support@globalretail.com`,organization:`Global Retail West`,avatarColor:`#649c28`,phone:`+1 (510) 555-0144`,userType:`End user`,language:`Mandarin`,timezone:`(GMT-08:00) Pacific Time`,notes:``},{id:10045,name:`Michael Robinson`,email:`support@globalretail.com`,organization:`Global Retail South`,avatarColor:`#af5626`,phone:`+1 (404) 555-0145`,userType:`End user`,language:`English (United States)`,timezone:`(GMT-05:00) Eastern Time`,notes:``},{id:10046,name:`Laura Martinez`,email:`support@globalretail.com`,organization:`Global Retail North`,avatarColor:`#4c67d3`,phone:`+1 (651) 555-0146`,userType:`End user`,language:`Spanish`,timezone:`(GMT-06:00) Central Time`,notes:``},{id:10047,name:`Andrew Lewis`,email:`support@globalretail.com`,organization:`Global Retail HQ`,avatarColor:`#d46f74`,phone:`+1 (415) 555-0147`,userType:`End user`,language:`English (United States)`,timezone:`(GMT-08:00) Pacific Time`,notes:``},{id:10048,name:`Diana Walker`,email:`support@globalretail.com`,organization:`Global Retail East`,avatarColor:`#4b7d04`,phone:`+1 (203) 555-0148`,userType:`End user`,language:`English (United States)`,timezone:`(GMT-05:00) Eastern Time`,notes:``},{id:10049,name:`George Hall`,email:`support@globalretail.com`,organization:`Global Retail West`,avatarColor:`#be4938`,phone:`+1 (805) 555-0149`,userType:`End user`,language:`English (United States)`,timezone:`(GMT-08:00) Pacific Time`,notes:``},{id:10050,name:`Victoria King`,email:`support@globalretail.com`,organization:`Global Retail South`,avatarColor:`#406cc4`,phone:`+1 (214) 555-0150`,userType:`End user`,language:`English (United States)`,timezone:`(GMT-06:00) Central Time`,notes:``},{id:10051,name:`Aaron Mitchell`,email:`support@globalretail.com`,organization:`Global Retail East`,avatarColor:`#8d59b1`,phone:`+1 (646) 555-0151`,userType:`End user`,language:`English (United States)`,timezone:`(GMT-05:00) Eastern Time`,notes:`Warehouse Manager`},{id:10052,name:`Aaron Mitchell`,email:`support@globalretail.com`,organization:`Global Retail West`,avatarColor:`#40787a`,phone:`+1 (503) 555-0152`,userType:`End user`,language:`English (United States)`,timezone:`(GMT-08:00) Pacific Time`,notes:`Sales Associate`},{id:10053,name:`Aaron Mitchell`,email:`support@globalretail.com`,organization:`Global Retail North`,avatarColor:`#649c28`,phone:`+1 (312) 555-0153`,userType:`End user`,language:`English (United States)`,timezone:`(GMT-06:00) Central Time`,notes:`Returns Specialist`}],Gy=Wy[3],Ky=[`#406cc4`,`#4b7d04`,`#8d59b1`,`#c63f46`,`#af5626`,`#2770c3`,`#b34496`,`#40787a`,`#4c67d3`,`#649c28`,`#be4938`,`#d46f74`];function $(e,t,n,r,i={}){return{id:e,name:t,organization:n,phone:r,avatarColor:Ky[e%Ky.length],userType:`End user`,language:`English (United States)`,timezone:`(GMT-08:00) Pacific Time`,notes:``,...i}}var qy=$(10051,`Aaron Mitchell`,`Global Retail East`,`+1 (646) 555-0151`,{notes:`Warehouse Manager`,avatarColor:`#8d59b1`}),Jy=$(10001,`Sarah Chen`,`Global Retail HQ`,`+1 (415) 555-0101`,{notes:`VP of Operations`,avatarColor:`#406cc4`}),Yy=$(10003,`Priya Patel`,`Global Retail West`,`+1 (310) 555-0103`,{notes:`Store Director`,avatarColor:`#8d59b1`}),Xy=$(10002,`Marcus Johnson`,`Global Retail East`,`+1 (212) 555-0102`,{notes:`Regional Manager`,avatarColor:`#4b7d04`}),Zy=[{email:`support@globalretail.com`,requesters:[Jy,Xy,Yy,$(10004,`James Wilson`,`Global Retail South`,``),$(10005,`Aisha Mohammed`,`Global Retail HQ`,`+1 (415) 555-0105`,{notes:`Procurement Lead`}),$(10007,`Elena Rodriguez`,`Global Retail West`,`+1 (602) 555-0107`,{language:`Spanish`}),$(10008,`Robert Taylor`,`Global Retail East`,`+1 (617) 555-0108`),$(10009,`Mei Lin Wang`,`Global Retail HQ`,`+1 (415) 555-0109`,{notes:`Finance Department`}),qy,$(10017,`Yuki Tanaka`,`Global Retail HQ`,`+1 (415) 555-0117`,{language:`Japanese`}),$(10012,`Raj Krishnamurthy`,`Global Retail HQ`,`+1 (415) 555-0112`,{notes:`IT Department`}),$(10018,`Stephanie Adams`,`Global Retail East`,`+1 (646) 555-0118`),$(10049,`George Hall`,`Global Retail West`,`+1 (805) 555-0149`)]},{email:`sales@globalretail.com`,requesters:[Jy,qy,$(10024,`Jennifer Lee`,`Global Retail West`,`+1 (408) 555-0124`),$(10029,`Samuel Jackson`,`Global Retail West`,`+1 (503) 555-0129`),$(10032,`Sofia Reyes`,`Global Retail HQ`,`+1 (415) 555-0132`,{language:`Spanish`}),$(10037,`Alex Turner`,`Global Retail HQ`,`+1 (415) 555-0137`),$(10040,`Rachel Green`,`Global Retail South`,`+1 (713) 555-0140`),$(10043,`Joseph Anderson`,`Global Retail East`,`+1 (908) 555-0143`),$(10044,`Emily Chen`,`Global Retail West`,`+1 (510) 555-0144`,{language:`Mandarin`}),$(10048,`Diana Walker`,`Global Retail East`,`+1 (203) 555-0148`),$(10047,`Andrew Lewis`,`Global Retail HQ`,`+1 (415) 555-0147`),$(10038,`Olivia Scott`,`Global Retail East`,`+1 (267) 555-0138`),$(10019,`Kevin Brown`,`Global Retail West`,``),$(10013,`Nicole Baker`,`Global Retail East`,`+1 (215) 555-0113`),$(10046,`Laura Martinez`,`Global Retail North`,`+1 (651) 555-0146`,{language:`Spanish`})]},{email:`orders@globalretail.com`,requesters:[Yy,Xy,$(10015,`Fatima Al-Hassan`,`Global Retail South`,`+1 (713) 555-0115`,{language:`Arabic`}),$(10020,`Lisa Park`,`Global Retail South`,`+1 (512) 555-0120`,{language:`Korean`}),$(10025,`Christopher Davis`,`Global Retail South`,`+1 (901) 555-0125`),$(10031,`Ryan Mitchell`,`Global Retail North`,`+1 (612) 555-0131`),$(10036,`Maria Santos`,`Global Retail North`,`+1 (414) 555-0136`,{language:`Portuguese`}),$(10045,`Michael Robinson`,`Global Retail South`,`+1 (404) 555-0145`),$(10050,`Victoria King`,`Global Retail South`,`+1 (214) 555-0150`),$(10052,`Aaron Mitchell`,`Global Retail West`,`+1 (503) 555-0152`,{notes:`Sales Associate`,avatarColor:`#40787a`}),$(10016,`Brian O'Connor`,`Global Retail North`,`+1 (414) 555-0116`),$(10021,`Anthony Martinez`,`Global Retail North`,`+1 (216) 555-0121`),$(10023,`Omar Hassan`,`Global Retail East`,`+1 (973) 555-0123`,{language:`Arabic`}),$(10026,`Nadia Petrov`,`Global Retail North`,`+1 (651) 555-0126`,{language:`Russian`}),$(10028,`Angela Thompson`,`Global Retail East`,`+1 (202) 555-0128`),$(10030,`Grace Kim`,`Global Retail South`,`+1 (615) 555-0130`,{language:`Korean`}),$(10035,`Benjamin Clark`,`Global Retail South`,`+1 (504) 555-0135`)]}],Qy=V.div`
   width: 312px;
   border-right: 1px solid #eae9e8;
   overflow-y: auto;
@@ -1577,13 +1577,7 @@ Roger`}],wb=[{id:4872,subject:`Order #GR-29104 not received`,date:`Jun 24 09:15`
   font-weight: 600;
   padding: 1px 5px;
   border-radius: 10px;
-`,Fx=V.div`
-  font-size: 14px;
-  font-weight: 400;
-  color: #2f3130;
-  margin-top: -6px;
-  margin-bottom: 12px;
-`,Ix=V.button`
+`,Fx=V.button`
   background: none;
   border: none;
   cursor: pointer;
@@ -1593,10 +1587,10 @@ Roger`}],wb=[{id:4872,subject:`Order #GR-29104 not received`,date:`Jun 24 09:15`
   align-items: center;
   transform: ${e=>e.$collapsed?`rotate(0deg)`:`rotate(180deg)`};
   transition: transform 0.2s;
-`,Lx=V.div`
+`,Ix=V.div`
   position: relative;
   margin-bottom: 12px;
-`,Rx=V.input`
+`,Lx=V.input`
   width: 100%;
   height: 32px;
   padding: 0 10px 0 32px;
@@ -1610,7 +1604,7 @@ Roger`}],wb=[{id:4872,subject:`Order #GR-29104 not received`,date:`Jun 24 09:15`
     border-color: #406cc4;
     box-shadow: 0 0 0 2px #fff, 0 0 0 4px #406cc4;
   }
-`,zx=V.div`
+`,Rx=V.div`
   position: absolute;
   left: 10px;
   top: 0;
@@ -1618,7 +1612,7 @@ Roger`}],wb=[{id:4872,subject:`Order #GR-29104 not received`,date:`Jun 24 09:15`
   display: flex;
   align-items: center;
   color: #646864;
-`,Bx=V.div`
+`,zx=V.div`
   font-size: 12px;
   font-weight: 600;
   color: #646864;
@@ -1626,21 +1620,21 @@ Roger`}],wb=[{id:4872,subject:`Order #GR-29104 not received`,date:`Jun 24 09:15`
   display: flex;
   align-items: center;
   gap: 6px;
-`,Vx=V.div`
+`,Bx=V.div`
   max-height: 480px;
   overflow-y: auto;
   margin-bottom: 8px;
-`,Hx=V.div`
+`,Vx=V.div`
   max-height: 270px;
   overflow-y: auto;
   margin-bottom: 8px;
-`,Ux=V.div`
+`,Hx=V.div`
   margin-top: 24px;
   display: flex;
   align-items: center;
   justify-content: flex-end;
   gap: 24px;
-`,Wx=V.button`
+`,Ux=V.button`
   background: none;
   border: none;
   font-size: 12px;
@@ -1648,13 +1642,13 @@ Roger`}],wb=[{id:4872,subject:`Order #GR-29104 not received`,date:`Jun 24 09:15`
   cursor: pointer;
   padding: 0;
   &:hover { text-decoration: underline; }
-`,Gx=V.div`
+`,Wx=V.div`
   margin-bottom: 12px;
-`,Kx=V.div`
+`,Gx=V.div`
   border: 1px solid #e9ebed;
   border-radius: 6px;
   margin-bottom: 8px;
-`,qx=V.button`
+`,Kx=V.button`
   position: sticky;
   top: 0;
   z-index: 2;
@@ -1670,7 +1664,7 @@ Roger`}],wb=[{id:4872,subject:`Order #GR-29104 not received`,date:`Jun 24 09:15`
   cursor: pointer;
   text-align: left;
   &:hover { background: #f0f1f2; }
-`,Jx=V.span`
+`,qx=V.span`
   font-size: 13px;
   font-weight: 600;
   color: #2f3130;
@@ -1684,7 +1678,7 @@ Roger`}],wb=[{id:4872,subject:`Order #GR-29104 not received`,date:`Jun 24 09:15`
     padding: 0;
     border-radius: 2px;
   }
-`;function Yx(e,t){let n=(t||``).trim();if(!n||e==null)return e;let r=String(e),i=r.toLowerCase(),a=n.toLowerCase(),o=[],s=0,c=i.indexOf(a);if(c===-1)return r;let l=0;for(;c!==-1;)c>s&&o.push(r.slice(s,c)),o.push((0,K.jsx)(`mark`,{children:r.slice(c,c+a.length)},l++)),s=c+a.length,c=i.indexOf(a,s);return s<r.length&&o.push(r.slice(s)),o}var Xx=V.span`
+`;function Jx(e,t){let n=(t||``).trim();if(!n||e==null)return e;let r=String(e),i=r.toLowerCase(),a=n.toLowerCase(),o=[],s=0,c=i.indexOf(a);if(c===-1)return r;let l=0;for(;c!==-1;)c>s&&o.push(r.slice(s,c)),o.push((0,K.jsx)(`mark`,{children:r.slice(c,c+a.length)},l++)),s=c+a.length,c=i.indexOf(a,s);return s<r.length&&o.push(r.slice(s)),o}var Yx=V.span`
   background: #eae9e8;
   color: #2f3130;
   font-size: 10px;
@@ -1692,7 +1686,7 @@ Roger`}],wb=[{id:4872,subject:`Order #GR-29104 not received`,date:`Jun 24 09:15`
   padding: 1px 5px;
   border-radius: 10px;
   flex-shrink: 0;
-`,Zx=V.span`
+`,Xx=V.span`
   margin-left: auto;
   display: flex;
   align-items: center;
@@ -1700,19 +1694,19 @@ Roger`}],wb=[{id:4872,subject:`Order #GR-29104 not received`,date:`Jun 24 09:15`
   flex-shrink: 0;
   transform: ${e=>e.$open?`rotate(180deg)`:`rotate(0deg)`};
   transition: transform 0.2s;
-`,Qx=V.div`
+`,Zx=V.div`
   padding: 4px;
-`;function $x({onOpenProfile:e,onReassign:t,onError:n,mode:r=`mvp`,searchFocusCount:i}){let[a,o]=(0,g.useState)(!1),[s,c]=(0,g.useState)(``),[l,u]=(0,g.useState)(null),d=(0,g.useRef)(null);(0,g.useEffect)(()=>{i>0&&(a&&o(!1),setTimeout(()=>d.current?.focus(),50))},[i]);let f=r===`scaled`,p=r===`workspace3`,m=r===`workspace2`,[h,_]=(0,g.useState)(()=>Object.fromEntries(Zy.map(e=>[e.email,!0]))),v=e=>_(t=>({...t,[e]:!t[e]})),y=(0,g.useMemo)(()=>Zy.reduce((e,t)=>e+t.requesters.length,0),[]),b=(0,g.useMemo)(()=>{let e=(e,t)=>e.name.localeCompare(t.name);if(!s.trim())return Zy.map(t=>({...t,requesters:[...t.requesters].sort(e)}));let t=s.toLowerCase();return Zy.map(n=>({...n,requesters:n.requesters.filter(e=>e.name.toLowerCase().includes(t)||n.email.toLowerCase().includes(t)||e.organization.toLowerCase().includes(t)||String(e.id).includes(t)||e.phone&&e.phone.includes(t)).sort(e)})).filter(e=>e.requesters.length>0)},[s]),x=Wy.filter(e=>e.id!==Gy.id),S=(0,g.useMemo)(()=>jx(Cb,x),[]),C=S.map(e=>e.id),w=(0,g.useMemo)(()=>x.filter(e=>!C.includes(e.id)).sort((e,t)=>e.name.localeCompare(t.name)),[C]),T=(0,g.useMemo)(()=>{let e=f?w:x.sort((e,t)=>e.name.localeCompare(t.name));if(!s.trim())return e;let t=s.toLowerCase();return e.filter(e=>e.name.toLowerCase().includes(t)||e.email.toLowerCase().includes(t)||e.organization.toLowerCase().includes(t)||String(e.id).includes(t)||e.phone&&e.phone.includes(t))},[s,w,f,x]);return(0,K.jsxs)(`div`,{children:[(0,K.jsxs)(Mx,{children:[(0,K.jsxs)(Nx,{children:[f?`Shared identity`:`Shared email`,(0,K.jsx)(Px,{children:p?y:x.length})]}),(0,K.jsx)(Ix,{$collapsed:a,onClick:()=>o(!a),children:(0,K.jsx)(`svg`,{width:`12`,height:`12`,viewBox:`0 0 12 12`,fill:`currentColor`,children:(0,K.jsx)(`path`,{d:`M1.646 3.646a.5.5 0 01.638-.057l.07.057L6 7.293l3.646-3.647a.5.5 0 01.638-.057l.07.057a.5.5 0 01.057.638l-.057.07-4 4a.5.5 0 01-.638.057l-.07-.057-4-4a.5.5 0 010-.708z`})})})]}),!a&&(p||m)&&(0,K.jsx)(Fx,{children:`support@globalretail.com`}),!a&&(0,K.jsxs)(K.Fragment,{children:[(0,K.jsxs)(Lx,{children:[(0,K.jsx)(zx,{children:(0,K.jsxs)(`svg`,{width:`12`,height:`12`,viewBox:`0 0 16 16`,fill:`none`,stroke:`currentColor`,strokeWidth:`1.5`,children:[(0,K.jsx)(`circle`,{cx:`7`,cy:`7`,r:`5`}),(0,K.jsx)(`path`,{d:`M11 11l3 3`,strokeLinecap:`round`})]})}),(0,K.jsx)(Rx,{ref:d,value:s,onChange:e=>c(e.target.value),placeholder:``})]}),p?(0,K.jsx)(Hx,{children:b.map(t=>{let n=!!s.trim()||!!h[t.email];return(0,K.jsxs)(Kx,{children:[(0,K.jsxs)(qx,{$open:n,onClick:()=>v(t.email),children:[(0,K.jsx)(Jx,{children:Yx(t.email,s)}),(0,K.jsx)(Xx,{children:t.requesters.length}),(0,K.jsx)(Zx,{$open:n,children:(0,K.jsx)(`svg`,{width:`12`,height:`12`,viewBox:`0 0 12 12`,fill:`currentColor`,children:(0,K.jsx)(`path`,{d:`M1.646 3.646a.5.5 0 01.638-.057l.07.057L6 7.293l3.646-3.647a.5.5 0 01.638-.057l.07.057a.5.5 0 01.057.638l-.057.07-4 4a.5.5 0 01-.638.057l-.07-.057-4-4a.5.5 0 010-.708z`})})})]}),n&&(0,K.jsx)(Qx,{children:t.requesters.map(n=>{let r=`${t.email}-${n.id}`;return(0,K.jsx)(Ax,{user:n,selected:l===r,onSelect:()=>u(r),onOpenProfile:()=>e({...n,email:t.email}),showPhone:!0,hideEmail:!0,query:s},r)})})]},t.email)})}):f?(0,K.jsxs)(Vx,{children:[(0,K.jsx)(Bx,{children:`Suggested requesters`}),(0,K.jsx)(Gx,{children:S.map(t=>(0,K.jsx)(Ax,{user:t,selected:l===t.id,onSelect:()=>u(t.id),onOpenProfile:()=>e(t),reason:t.reason,showPhone:!0},t.id))}),(0,K.jsxs)(Bx,{children:[T.length,` requesters`]}),T.map(t=>(0,K.jsx)(Ax,{user:t,selected:l===t.id,onSelect:()=>u(t.id),onOpenProfile:()=>e(t),showPhone:!0},t.id))]}):(0,K.jsx)(Hx,{children:T.map((t,n)=>{let r=`${t.name}-${t.organization}-${t.id||n}`;return(0,K.jsx)(Ax,{user:t,selected:l===r,onSelect:()=>u(r),onOpenProfile:()=>e(t),showPhone:!0},r)})}),(0,K.jsxs)(Ux,{children:[(0,K.jsx)(Wx,{onClick:()=>u(null),children:`Clear selection`}),(0,K.jsx)(Cs,{size:`small`,onClick:()=>{if(!l){n&&n(`Select a requester before reassigning`);return}let e;if(p)for(let t of Zy){let n=t.requesters.find(e=>`${t.email}-${e.id}`===l);if(n){e={...n,email:t.email};break}}else e=f?Wy.find(e=>e.id===l):T.find((e,t)=>`${e.name}-${e.organization}-${e.id||t}`===l);e&&t&&t(e)},children:`Set as requester`})]})]})]})}var eS=V.div`
+`;function Qx({onOpenProfile:e,onReassign:t,onError:n,mode:r=`mvp`,searchFocusCount:i}){let[a,o]=(0,g.useState)(!1),[s,c]=(0,g.useState)(``),[l,u]=(0,g.useState)(null),d=(0,g.useRef)(null);(0,g.useEffect)(()=>{i>0&&(a&&o(!1),setTimeout(()=>d.current?.focus(),50))},[i]);let f=r===`scaled`,p=r===`workspace3`,[m,h]=(0,g.useState)(()=>Object.fromEntries(Zy.map(e=>[e.email,!0]))),_=e=>h(t=>({...t,[e]:!t[e]})),v=(0,g.useMemo)(()=>Zy.reduce((e,t)=>e+t.requesters.length,0),[]),y=(0,g.useMemo)(()=>{let e=(e,t)=>e.name.localeCompare(t.name);if(!s.trim())return Zy.map(t=>({...t,requesters:[...t.requesters].sort(e)}));let t=s.toLowerCase();return Zy.map(n=>({...n,requesters:n.requesters.filter(e=>e.name.toLowerCase().includes(t)||n.email.toLowerCase().includes(t)||e.organization.toLowerCase().includes(t)||String(e.id).includes(t)||e.phone&&e.phone.includes(t)).sort(e)})).filter(e=>e.requesters.length>0)},[s]),b=Wy.filter(e=>e.id!==Gy.id),x=(0,g.useMemo)(()=>jx(Cb,b),[]),S=x.map(e=>e.id),C=(0,g.useMemo)(()=>b.filter(e=>!S.includes(e.id)).sort((e,t)=>e.name.localeCompare(t.name)),[S]),w=(0,g.useMemo)(()=>{let e=f?C:b.sort((e,t)=>e.name.localeCompare(t.name));if(!s.trim())return e;let t=s.toLowerCase();return e.filter(e=>e.name.toLowerCase().includes(t)||e.email.toLowerCase().includes(t)||e.organization.toLowerCase().includes(t)||String(e.id).includes(t)||e.phone&&e.phone.includes(t))},[s,C,f,b]);return(0,K.jsxs)(`div`,{children:[(0,K.jsxs)(Mx,{children:[(0,K.jsxs)(Nx,{children:[f?`Shared identity`:`Shared email`,(0,K.jsx)(Px,{children:p?v:b.length})]}),(0,K.jsx)(Fx,{$collapsed:a,onClick:()=>o(!a),children:(0,K.jsx)(`svg`,{width:`12`,height:`12`,viewBox:`0 0 12 12`,fill:`currentColor`,children:(0,K.jsx)(`path`,{d:`M1.646 3.646a.5.5 0 01.638-.057l.07.057L6 7.293l3.646-3.647a.5.5 0 01.638-.057l.07.057a.5.5 0 01.057.638l-.057.07-4 4a.5.5 0 01-.638.057l-.07-.057-4-4a.5.5 0 010-.708z`})})})]}),!a&&(0,K.jsxs)(K.Fragment,{children:[(0,K.jsxs)(Ix,{children:[(0,K.jsx)(Rx,{children:(0,K.jsxs)(`svg`,{width:`12`,height:`12`,viewBox:`0 0 16 16`,fill:`none`,stroke:`currentColor`,strokeWidth:`1.5`,children:[(0,K.jsx)(`circle`,{cx:`7`,cy:`7`,r:`5`}),(0,K.jsx)(`path`,{d:`M11 11l3 3`,strokeLinecap:`round`})]})}),(0,K.jsx)(Lx,{ref:d,value:s,onChange:e=>c(e.target.value),placeholder:``})]}),p?(0,K.jsx)(Vx,{children:y.map(t=>{let n=!!s.trim()||!!m[t.email];return(0,K.jsxs)(Gx,{children:[(0,K.jsxs)(Kx,{$open:n,onClick:()=>_(t.email),children:[(0,K.jsx)(qx,{children:Jx(t.email,s)}),(0,K.jsx)(Yx,{children:t.requesters.length}),(0,K.jsx)(Xx,{$open:n,children:(0,K.jsx)(`svg`,{width:`12`,height:`12`,viewBox:`0 0 12 12`,fill:`currentColor`,children:(0,K.jsx)(`path`,{d:`M1.646 3.646a.5.5 0 01.638-.057l.07.057L6 7.293l3.646-3.647a.5.5 0 01.638-.057l.07.057a.5.5 0 01.057.638l-.057.07-4 4a.5.5 0 01-.638.057l-.07-.057-4-4a.5.5 0 010-.708z`})})})]}),n&&(0,K.jsx)(Zx,{children:t.requesters.map(n=>{let r=`${t.email}-${n.id}`;return(0,K.jsx)(Ax,{user:n,selected:l===r,onSelect:()=>u(r),onOpenProfile:()=>e({...n,email:t.email}),showPhone:!0,hideEmail:!0,query:s},r)})})]},t.email)})}):f?(0,K.jsxs)(Bx,{children:[(0,K.jsx)(zx,{children:`Suggested requesters`}),(0,K.jsx)(Wx,{children:x.map(t=>(0,K.jsx)(Ax,{user:t,selected:l===t.id,onSelect:()=>u(t.id),onOpenProfile:()=>e(t),reason:t.reason,showPhone:!0},t.id))}),(0,K.jsxs)(zx,{children:[w.length,` requesters`]}),w.map(t=>(0,K.jsx)(Ax,{user:t,selected:l===t.id,onSelect:()=>u(t.id),onOpenProfile:()=>e(t),showPhone:!0},t.id))]}):(0,K.jsx)(Vx,{children:w.map((t,n)=>{let r=`${t.name}-${t.organization}-${t.id||n}`;return(0,K.jsx)(Ax,{user:t,selected:l===r,onSelect:()=>u(r),onOpenProfile:()=>e(t),showPhone:!0},r)})}),(0,K.jsxs)(Hx,{children:[(0,K.jsx)(Ux,{onClick:()=>u(null),children:`Clear selection`}),(0,K.jsx)(Cs,{size:`small`,onClick:()=>{if(!l){n&&n(`Select a requester before reassigning`);return}let e;if(p)for(let t of Zy){let n=t.requesters.find(e=>`${t.email}-${e.id}`===l);if(n){e={...n,email:t.email};break}}else e=f?Wy.find(e=>e.id===l):w.find((e,t)=>`${e.name}-${e.organization}-${e.id||t}`===l);e&&t&&t(e)},children:`Set as requester`})]})]})]})}var $x=V.div`
   display: flex;
   flex-direction: column;
-`,tS=V.div`
+`,eS=V.div`
   display: flex;
   align-items: flex-start;
   gap: 8px;
   padding: 8px 0;
   border-bottom: 1px solid #f7f7f7;
   &:last-child { border-bottom: none; }
-`,nS=V.span`
+`,tS=V.span`
   width: 16px;
   height: 16px;
   border-radius: 3px;
@@ -1722,34 +1716,34 @@ Roger`}],wb=[{id:4872,subject:`Order #GR-29104 not received`,date:`Jun 24 09:15`
   justify-content: center;
   flex-shrink: 0;
   margin-top: 2px;
-`,rS=V.div`
+`,nS=V.div`
   flex: 1;
   min-width: 0;
-`,iS=V.div`
+`,rS=V.div`
   font-size: 12px;
   font-weight: 500;
   color: #2f3130;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-`,aS=V.div`
+`,iS=V.div`
   font-size: 11px;
   color: #999b97;
-`;function oS(){return(0,K.jsx)(eS,{children:wb.map(e=>(0,K.jsxs)(tS,{children:[(0,K.jsx)(nS,{$status:e.status}),(0,K.jsxs)(rS,{children:[(0,K.jsx)(iS,{children:e.subject}),(0,K.jsxs)(aS,{children:[e.date,` · Status `,e.status]})]})]},e.id))})}var sS=V.div`
+`;function aS(){return(0,K.jsx)($x,{children:wb.map(e=>(0,K.jsxs)(eS,{children:[(0,K.jsx)(tS,{$status:e.status}),(0,K.jsxs)(nS,{children:[(0,K.jsx)(rS,{children:e.subject}),(0,K.jsxs)(iS,{children:[e.date,` · Status `,e.status]})]})]},e.id))})}var oS=V.div`
   display: flex;
   flex-shrink: 0;
-`,cS=V.div`
+`,sS=V.div`
   width: 380px;
   display: flex;
   flex-direction: column;
   overflow: hidden;
   border-left: 1px solid #eae9e8;
   flex-shrink: 0;
-`,lS=V.div`
+`,cS=V.div`
   flex: 1;
   overflow-y: auto;
   padding: 16px;
-`,uS=V.div`
+`,lS=V.div`
   width: 44px;
   display: flex;
   flex-direction: column;
@@ -1758,7 +1752,7 @@ Roger`}],wb=[{id:4872,subject:`Order #GR-29104 not received`,date:`Jun 24 09:15`
   gap: 4px;
   border-left: 1px solid #eae9e8;
   flex-shrink: 0;
-`,dS=V.button`
+`,uS=V.button`
   width: 32px;
   height: 32px;
   border: none;
@@ -1770,14 +1764,14 @@ Roger`}],wb=[{id:4872,subject:`Order #GR-29104 not received`,date:`Jun 24 09:15`
   justify-content: center;
   color: ${e=>e.$active?`#2f3130`:`#8b8e89`};
   &:hover { background: #eae9e8; }
-`,fS=V.div`
+`,dS=V.div`
   margin-bottom: 16px;
 `;V.div`
   display: flex;
   align-items: center;
   gap: 10px;
   margin-bottom: 12px;
-`;var pS=V.div`
+`;var fS=V.div`
   width: 32px;
   height: 32px;
   border-radius: 50%;
@@ -1789,39 +1783,39 @@ Roger`}],wb=[{id:4872,subject:`Order #GR-29104 not received`,date:`Jun 24 09:15`
   font-size: 14px;
   font-weight: 600;
   flex-shrink: 0;
-`,mS=V.span`
+`,pS=V.span`
   font-size: 16px;
   font-weight: 600;
   color: #2f3130;
-`,hS=V.div`
+`,mS=V.div`
   display: grid;
   grid-template-columns: auto 1fr;
   gap: 16px 80px;
   font-size: 14px;
-`,gS=V.span`
+`,hS=V.span`
   color: #646864;
-`,_S=V.span`
+`,gS=V.span`
   color: #2f3130;
-`,vS=V.span`
+`,_S=V.span`
   color: #406cc4;
   cursor: pointer;
-`,yS=V.div`
+`,vS=V.div`
   padding: 8px;
   border: 1px solid #dcdcda;
   border-radius: 4px;
   font-size: 14px;
   color: #999b97;
   min-height: 40px;
-`,bS=V.div`
+`,yS=V.div`
   height: 1px;
   background: #eae9e8;
   margin: 16px 0;
-`,xS=V.div`
+`,bS=V.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 8px;
-`,SS=V.h3`
+`,xS=V.h3`
   font-size: 13px;
   font-weight: 600;
   color: #2f3130;
@@ -1829,7 +1823,7 @@ Roger`}],wb=[{id:4872,subject:`Order #GR-29104 not received`,date:`Jun 24 09:15`
   display: flex;
   align-items: center;
   gap: 8px;
-`,CS=V.button`
+`,SS=V.button`
   background: none;
   border: none;
   cursor: pointer;
@@ -1839,12 +1833,12 @@ Roger`}],wb=[{id:4872,subject:`Order #GR-29104 not received`,date:`Jun 24 09:15`
   align-items: center;
   transform: ${e=>e.$collapsed?`rotate(0deg)`:`rotate(180deg)`};
   transition: transform 0.2s;
-`;function wS({onOpenProfile:e,onReassign:t,onError:n,mode:r,panelOpen:i,onTogglePanel:a,sharedSearchFocusCount:o,requesterUser:s}){let[c,l]=(0,g.useState)(!1),[u,d]=(0,g.useState)(!1),f=Wy.find(e=>e.id===Sb.requesterId),p=s||f,m=i===void 0?!0:i;return(0,K.jsxs)(sS,{children:[m&&(0,K.jsx)(cS,{children:(0,K.jsxs)(lS,{children:[(0,K.jsxs)(xS,{children:[(0,K.jsxs)(SS,{children:[(0,K.jsx)(pS,{children:(0,K.jsxs)(`svg`,{width:`16`,height:`16`,viewBox:`0 0 16 16`,fill:`none`,stroke:`#fff`,strokeWidth:`1.5`,children:[(0,K.jsx)(`circle`,{cx:`8`,cy:`5`,r:`3`}),(0,K.jsx)(`path`,{d:`M2 14c0-3 2.7-5 6-5s6 2 6 5`})]})}),(0,K.jsx)(mS,{children:p?.name||Sb.requester})]}),(0,K.jsx)(CS,{$collapsed:c,onClick:()=>l(!c),children:(0,K.jsx)(`svg`,{width:`12`,height:`12`,viewBox:`0 0 12 12`,fill:`currentColor`,children:(0,K.jsx)(`path`,{d:`M1.646 3.646a.5.5 0 01.638-.057l.07.057L6 7.293l3.646-3.647a.5.5 0 01.638-.057l.07.057a.5.5 0 01.057.638l-.057.07-4 4a.5.5 0 01-.638.057l-.07-.057-4-4a.5.5 0 010-.708z`})})})]}),!c&&(0,K.jsx)(fS,{children:(0,K.jsxs)(hS,{children:[(0,K.jsx)(gS,{children:`Email`}),(0,K.jsx)(vS,{children:p?.email||`support@globalretail.com`}),(0,K.jsx)(gS,{children:`Phone`}),(0,K.jsx)(vS,{children:p?.phone||`—`}),(0,K.jsx)(gS,{children:`Org.`}),(0,K.jsx)(vS,{children:p?.organization||`Global Retail South`}),(0,K.jsx)(gS,{children:`Local time`}),(0,K.jsx)(_S,{children:p?.timezone||`Thu, 14:08 EDT`}),(0,K.jsx)(gS,{children:`Language`}),(0,K.jsx)(_S,{children:p?.language||`English (United States)`}),(0,K.jsx)(gS,{children:`Notes`}),(0,K.jsx)(_S,{children:(0,K.jsx)(yS,{children:p?.notes||`Add user notes`})})]})}),(0,K.jsx)(bS,{}),r!==`workspace`&&(0,K.jsxs)(K.Fragment,{children:[(0,K.jsx)($x,{onOpenProfile:e,onReassign:t,onError:n,mode:r,searchFocusCount:o}),(0,K.jsx)(bS,{})]}),(0,K.jsxs)(xS,{children:[(0,K.jsxs)(SS,{children:[`Interaction history`,(0,K.jsx)(`svg`,{width:`14`,height:`14`,viewBox:`0 0 16 16`,fill:`none`,stroke:`#8b8e89`,strokeWidth:`1.5`,children:(0,K.jsx)(`path`,{d:`M2 4l6 4 6-4M2 4v8l6 4 6-4V4`,strokeLinejoin:`round`})})]}),(0,K.jsx)(CS,{$collapsed:u,onClick:()=>d(!u),children:(0,K.jsx)(`svg`,{width:`12`,height:`12`,viewBox:`0 0 12 12`,fill:`currentColor`,children:(0,K.jsx)(`path`,{d:`M1.646 3.646a.5.5 0 01.638-.057l.07.057L6 7.293l3.646-3.647a.5.5 0 01.638-.057l.07.057a.5.5 0 01.057.638l-.057.07-4 4a.5.5 0 01-.638.057l-.07-.057-4-4a.5.5 0 010-.708z`})})})]}),!u&&(0,K.jsx)(oS,{})]})}),(0,K.jsxs)(uS,{children:[(0,K.jsx)(dS,{$active:m,onClick:a,children:(0,K.jsxs)(`svg`,{width:`18`,height:`18`,viewBox:`0 0 20 20`,fill:`none`,stroke:`currentColor`,strokeWidth:`1.5`,children:[(0,K.jsx)(`circle`,{cx:`10`,cy:`6`,r:`3`}),(0,K.jsx)(`path`,{d:`M4 18c0-3.3 2.7-6 6-6s6 2.7 6 6`})]})}),(0,K.jsx)(dS,{children:(0,K.jsxs)(`svg`,{width:`18`,height:`18`,viewBox:`0 0 20 20`,fill:`none`,stroke:`currentColor`,strokeWidth:`1.5`,children:[(0,K.jsx)(`rect`,{x:`3`,y:`3`,width:`14`,height:`14`,rx:`2`}),(0,K.jsx)(`path`,{d:`M7 7h6M7 10h6M7 13h4`})]})}),(0,K.jsx)(dS,{children:(0,K.jsx)(`svg`,{width:`18`,height:`18`,viewBox:`0 0 20 20`,fill:`none`,stroke:`currentColor`,strokeWidth:`1.5`,children:(0,K.jsx)(`path`,{d:`M3 5c0-1 1-2 2-2h2a2 2 0 012 1.5l.5 1.5h5a2 2 0 012 2v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5z`})})}),(0,K.jsx)(dS,{children:(0,K.jsxs)(`svg`,{width:`18`,height:`18`,viewBox:`0 0 20 20`,fill:`none`,stroke:`currentColor`,strokeWidth:`1.5`,children:[(0,K.jsx)(`rect`,{x:`3`,y:`3`,width:`5`,height:`5`,rx:`1`}),(0,K.jsx)(`rect`,{x:`12`,y:`3`,width:`5`,height:`5`,rx:`1`}),(0,K.jsx)(`rect`,{x:`3`,y:`12`,width:`5`,height:`5`,rx:`1`}),(0,K.jsx)(`rect`,{x:`12`,y:`12`,width:`5`,height:`5`,rx:`1`})]})}),(0,K.jsx)(dS,{style:{marginTop:`auto`},children:(0,K.jsx)(`svg`,{width:`18`,height:`18`,viewBox:`0 0 20 20`,fill:`none`,stroke:`currentColor`,strokeWidth:`1.5`,children:(0,K.jsx)(`path`,{d:`M10 3v14M3 10h14`,strokeLinecap:`round`})})})]})]})}var TS=V.div`
+`;function CS({onOpenProfile:e,onReassign:t,onError:n,mode:r,panelOpen:i,onTogglePanel:a,sharedSearchFocusCount:o,requesterUser:s}){let[c,l]=(0,g.useState)(!1),[u,d]=(0,g.useState)(!1),f=Wy.find(e=>e.id===Sb.requesterId),p=s||f,m=i===void 0?!0:i;return(0,K.jsxs)(oS,{children:[m&&(0,K.jsx)(sS,{children:(0,K.jsxs)(cS,{children:[(0,K.jsxs)(bS,{children:[(0,K.jsxs)(xS,{children:[(0,K.jsx)(fS,{children:(0,K.jsxs)(`svg`,{width:`16`,height:`16`,viewBox:`0 0 16 16`,fill:`none`,stroke:`#fff`,strokeWidth:`1.5`,children:[(0,K.jsx)(`circle`,{cx:`8`,cy:`5`,r:`3`}),(0,K.jsx)(`path`,{d:`M2 14c0-3 2.7-5 6-5s6 2 6 5`})]})}),(0,K.jsx)(pS,{children:p?.name||Sb.requester})]}),(0,K.jsx)(SS,{$collapsed:c,onClick:()=>l(!c),children:(0,K.jsx)(`svg`,{width:`12`,height:`12`,viewBox:`0 0 12 12`,fill:`currentColor`,children:(0,K.jsx)(`path`,{d:`M1.646 3.646a.5.5 0 01.638-.057l.07.057L6 7.293l3.646-3.647a.5.5 0 01.638-.057l.07.057a.5.5 0 01.057.638l-.057.07-4 4a.5.5 0 01-.638.057l-.07-.057-4-4a.5.5 0 010-.708z`})})})]}),!c&&(0,K.jsx)(dS,{children:(0,K.jsxs)(mS,{children:[(0,K.jsx)(hS,{children:`Email`}),(0,K.jsx)(_S,{children:p?.email||`support@globalretail.com`}),(0,K.jsx)(hS,{children:`Phone`}),(0,K.jsx)(_S,{children:p?.phone||`—`}),(0,K.jsx)(hS,{children:`Org.`}),(0,K.jsx)(_S,{children:p?.organization||`Global Retail South`}),(0,K.jsx)(hS,{children:`Local time`}),(0,K.jsx)(gS,{children:p?.timezone||`Thu, 14:08 EDT`}),(0,K.jsx)(hS,{children:`Language`}),(0,K.jsx)(gS,{children:p?.language||`English (United States)`}),(0,K.jsx)(hS,{children:`Notes`}),(0,K.jsx)(gS,{children:(0,K.jsx)(vS,{children:p?.notes||`Add user notes`})})]})}),(0,K.jsx)(yS,{}),r!==`workspace`&&(0,K.jsxs)(K.Fragment,{children:[(0,K.jsx)(Qx,{onOpenProfile:e,onReassign:t,onError:n,mode:r,searchFocusCount:o}),(0,K.jsx)(yS,{})]}),(0,K.jsxs)(bS,{children:[(0,K.jsxs)(xS,{children:[`Interaction history`,(0,K.jsx)(`svg`,{width:`14`,height:`14`,viewBox:`0 0 16 16`,fill:`none`,stroke:`#8b8e89`,strokeWidth:`1.5`,children:(0,K.jsx)(`path`,{d:`M2 4l6 4 6-4M2 4v8l6 4 6-4V4`,strokeLinejoin:`round`})})]}),(0,K.jsx)(SS,{$collapsed:u,onClick:()=>d(!u),children:(0,K.jsx)(`svg`,{width:`12`,height:`12`,viewBox:`0 0 12 12`,fill:`currentColor`,children:(0,K.jsx)(`path`,{d:`M1.646 3.646a.5.5 0 01.638-.057l.07.057L6 7.293l3.646-3.647a.5.5 0 01.638-.057l.07.057a.5.5 0 01.057.638l-.057.07-4 4a.5.5 0 01-.638.057l-.07-.057-4-4a.5.5 0 010-.708z`})})})]}),!u&&(0,K.jsx)(aS,{})]})}),(0,K.jsxs)(lS,{children:[(0,K.jsx)(uS,{$active:m,onClick:a,children:(0,K.jsxs)(`svg`,{width:`18`,height:`18`,viewBox:`0 0 20 20`,fill:`none`,stroke:`currentColor`,strokeWidth:`1.5`,children:[(0,K.jsx)(`circle`,{cx:`10`,cy:`6`,r:`3`}),(0,K.jsx)(`path`,{d:`M4 18c0-3.3 2.7-6 6-6s6 2.7 6 6`})]})}),(0,K.jsx)(uS,{children:(0,K.jsxs)(`svg`,{width:`18`,height:`18`,viewBox:`0 0 20 20`,fill:`none`,stroke:`currentColor`,strokeWidth:`1.5`,children:[(0,K.jsx)(`rect`,{x:`3`,y:`3`,width:`14`,height:`14`,rx:`2`}),(0,K.jsx)(`path`,{d:`M7 7h6M7 10h6M7 13h4`})]})}),(0,K.jsx)(uS,{children:(0,K.jsx)(`svg`,{width:`18`,height:`18`,viewBox:`0 0 20 20`,fill:`none`,stroke:`currentColor`,strokeWidth:`1.5`,children:(0,K.jsx)(`path`,{d:`M3 5c0-1 1-2 2-2h2a2 2 0 012 1.5l.5 1.5h5a2 2 0 012 2v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5z`})})}),(0,K.jsx)(uS,{children:(0,K.jsxs)(`svg`,{width:`18`,height:`18`,viewBox:`0 0 20 20`,fill:`none`,stroke:`currentColor`,strokeWidth:`1.5`,children:[(0,K.jsx)(`rect`,{x:`3`,y:`3`,width:`5`,height:`5`,rx:`1`}),(0,K.jsx)(`rect`,{x:`12`,y:`3`,width:`5`,height:`5`,rx:`1`}),(0,K.jsx)(`rect`,{x:`3`,y:`12`,width:`5`,height:`5`,rx:`1`}),(0,K.jsx)(`rect`,{x:`12`,y:`12`,width:`5`,height:`5`,rx:`1`})]})}),(0,K.jsx)(uS,{style:{marginTop:`auto`},children:(0,K.jsx)(`svg`,{width:`18`,height:`18`,viewBox:`0 0 20 20`,fill:`none`,stroke:`currentColor`,strokeWidth:`1.5`,children:(0,K.jsx)(`path`,{d:`M10 3v14M3 10h14`,strokeLinecap:`round`})})})]})]})}var wS=V.div`
   display: flex;
   flex-direction: column;
   height: 100%;
   overflow: hidden;
-`,ES=V.div`
+`,TS=V.div`
   display: flex;
   align-items: center;
   height: 40px;
@@ -1854,13 +1848,13 @@ Roger`}],wb=[{id:4872,subject:`Order #GR-29104 not received`,date:`Jun 24 09:15`
   font-size: 13px;
   color: #2f3130;
   gap: 12px;
-`,DS=V.span`
+`,ES=V.span`
   color: #646864;
   cursor: pointer;
   &:hover { color: #2f3130; }
-`,OS=V.span`
+`,DS=V.span`
   font-weight: 500;
-`,kS=V.span`
+`,OS=V.span`
   background: #c63f46;
   color: #fff;
   font-size: 10px;
@@ -1868,20 +1862,20 @@ Roger`}],wb=[{id:4872,subject:`Order #GR-29104 not received`,date:`Jun 24 09:15`
   padding: 2px 6px;
   border-radius: 3px;
   text-transform: uppercase;
-`,AS=V.span`
+`,kS=V.span`
   font-size: 13px;
   color: #646864;
-`,jS=V.div`
+`,AS=V.div`
   display: flex;
   flex: 1;
   overflow: hidden;
-`,MS=V.div`
+`,jS=V.div`
   flex: 1;
   display: flex;
   flex-direction: column;
   overflow: hidden;
   min-width: 0;
-`,NS=V.div`
+`,MS=V.div`
   border-top: 1px solid #dcdcda;
   height: 56px;
   padding: 0 20px;
@@ -1889,7 +1883,7 @@ Roger`}],wb=[{id:4872,subject:`Order #GR-29104 not received`,date:`Jun 24 09:15`
   align-items: center;
   background: #fff;
   flex-shrink: 0;
-`,PS=V.button`
+`,NS=V.button`
   background: none;
   border: none;
   font-size: 13px;
@@ -1898,10 +1892,10 @@ Roger`}],wb=[{id:4872,subject:`Order #GR-29104 not received`,date:`Jun 24 09:15`
   display: flex;
   align-items: center;
   gap: 4px;
-`,FS=V.div`
+`,PS=V.div`
   display: flex;
   margin-left: auto;
-`,IS=V.button`
+`,FS=V.button`
   background: #2f3130;
   color: #fff;
   border: none;
@@ -1911,7 +1905,7 @@ Roger`}],wb=[{id:4872,subject:`Order #GR-29104 not received`,date:`Jun 24 09:15`
   font-weight: 500;
   cursor: pointer;
   &:hover { background: #404241; }
-`,LS=V.button`
+`,IS=V.button`
   background: #2f3130;
   color: #fff;
   border: none;
@@ -1924,12 +1918,12 @@ Roger`}],wb=[{id:4872,subject:`Order #GR-29104 not received`,date:`Jun 24 09:15`
   align-items: center;
   justify-content: center;
   &:hover { background: #404241; }
-`;function RS({onOpenProfile:e,mode:t}){let[n,r]=(0,g.useState)(Sb.requester),[i,a]=(0,g.useState)(!1),[o,s]=(0,g.useState)(t!==`workspace2`&&t!==`workspace3`),{addToast:c}=_c();(0,g.useEffect)(()=>{s(t!==`workspace2`&&t!==`workspace3`),u(!1)},[t]);let[l,u]=(0,g.useState)(!1),[d,f]=(0,g.useState)(!1),[p,m]=(0,g.useState)(0),h=()=>{f(!0)},_=()=>{s(!0),m(e=>e+1)},[v,y]=(0,g.useState)(null),b=e=>{r(e.name),y(e),a(!0),u(!0),c(({close:e})=>(0,K.jsxs)(zs,{type:`success`,style:{maxWidth:400},children:[(0,K.jsx)(As,{children:`Requester successfully reassigned`}),(0,K.jsx)(Ls,{"aria-label":`Close`,onClick:e})]}),{placement:`top-end`,autoDismiss:5e3})};return(0,K.jsxs)(TS,{children:[(0,K.jsxs)(ES,{children:[(0,K.jsx)(DS,{children:`Global Retail`}),(0,K.jsx)(OS,{children:n}),(0,K.jsx)(kS,{children:`Open`}),(0,K.jsxs)(AS,{children:[`Ticket #`,Sb.id]})]}),(0,K.jsxs)(jS,{children:[(0,K.jsx)(xb,{requester:n,onReassign:b,showWarning:!i,mode:t,requesterFocused:d,onRequesterBlur:()=>f(!1)}),(0,K.jsx)(MS,{children:(0,K.jsx)(gx,{mode:t,onReassign:b,onOpenProfile:e,rightPanelOpen:o,onOpenRightPanel:_,bannerDismissed:l,onDismissBanner:()=>u(!0),requester:n,reassigned:i,onComposerEditClick:h})}),(0,K.jsx)(wS,{onOpenProfile:e,onReassign:b,onError:e=>{c(({close:t})=>(0,K.jsxs)(zs,{type:`error`,style:{maxWidth:400},children:[(0,K.jsx)(As,{children:e}),(0,K.jsx)(Ls,{"aria-label":`Close`,onClick:t})]}),{placement:`top-end`,autoDismiss:5e3})},mode:t,panelOpen:t===`workspace2`||t===`workspace3`?o:void 0,onTogglePanel:t===`workspace2`||t===`workspace3`?()=>s(e=>!e):void 0,sharedSearchFocusCount:p,requesterUser:v})]}),(0,K.jsxs)(NS,{children:[(0,K.jsxs)(PS,{children:[`Close tab`,(0,K.jsx)(`svg`,{width:`12`,height:`12`,viewBox:`0 0 16 16`,fill:`none`,stroke:`#2f3130`,strokeWidth:`1.5`,children:(0,K.jsx)(`path`,{d:`M4 6l4 4 4-4`,strokeLinecap:`round`,strokeLinejoin:`round`})})]}),(0,K.jsxs)(FS,{children:[(0,K.jsx)(IS,{children:`Submit as Open`}),(0,K.jsx)(LS,{children:(0,K.jsx)(`svg`,{width:`10`,height:`10`,viewBox:`0 0 16 16`,fill:`none`,stroke:`#fff`,strokeWidth:`2`,children:(0,K.jsx)(`path`,{d:`M4 6l4 4 4-4`,strokeLinecap:`round`,strokeLinejoin:`round`})})})]})]})]})}var zS=V.div`
+`;function LS({onOpenProfile:e,mode:t}){let[n,r]=(0,g.useState)(Sb.requester),[i,a]=(0,g.useState)(!1),[o,s]=(0,g.useState)(t!==`workspace2`&&t!==`workspace3`),{addToast:c}=_c();(0,g.useEffect)(()=>{s(t!==`workspace2`&&t!==`workspace3`),u(!1)},[t]);let[l,u]=(0,g.useState)(!1),[d,f]=(0,g.useState)(!1),[p,m]=(0,g.useState)(0),h=()=>{f(!0)},_=()=>{s(!0),m(e=>e+1)},[v,y]=(0,g.useState)(null),b=e=>{r(e.name),y(e),a(!0),u(!0),c(({close:e})=>(0,K.jsxs)(zs,{type:`success`,style:{maxWidth:400},children:[(0,K.jsx)(As,{children:`Requester successfully reassigned`}),(0,K.jsx)(Ls,{"aria-label":`Close`,onClick:e})]}),{placement:`top-end`,autoDismiss:5e3})};return(0,K.jsxs)(wS,{children:[(0,K.jsxs)(TS,{children:[(0,K.jsx)(ES,{children:`Global Retail`}),(0,K.jsx)(DS,{children:n}),(0,K.jsx)(OS,{children:`Open`}),(0,K.jsxs)(kS,{children:[`Ticket #`,Sb.id]})]}),(0,K.jsxs)(AS,{children:[(0,K.jsx)(xb,{requester:n,onReassign:b,showWarning:!i,mode:t,requesterFocused:d,onRequesterBlur:()=>f(!1)}),(0,K.jsx)(jS,{children:(0,K.jsx)(gx,{mode:t,onReassign:b,onOpenProfile:e,rightPanelOpen:o,onOpenRightPanel:_,bannerDismissed:l,onDismissBanner:()=>u(!0),requester:n,reassigned:i,onComposerEditClick:h})}),(0,K.jsx)(CS,{onOpenProfile:e,onReassign:b,onError:e=>{c(({close:t})=>(0,K.jsxs)(zs,{type:`error`,style:{maxWidth:400},children:[(0,K.jsx)(As,{children:e}),(0,K.jsx)(Ls,{"aria-label":`Close`,onClick:t})]}),{placement:`top-end`,autoDismiss:5e3})},mode:t,panelOpen:t===`workspace2`||t===`workspace3`?o:void 0,onTogglePanel:t===`workspace2`||t===`workspace3`?()=>s(e=>!e):void 0,sharedSearchFocusCount:p,requesterUser:v})]}),(0,K.jsxs)(MS,{children:[(0,K.jsxs)(NS,{children:[`Close tab`,(0,K.jsx)(`svg`,{width:`12`,height:`12`,viewBox:`0 0 16 16`,fill:`none`,stroke:`#2f3130`,strokeWidth:`1.5`,children:(0,K.jsx)(`path`,{d:`M4 6l4 4 4-4`,strokeLinecap:`round`,strokeLinejoin:`round`})})]}),(0,K.jsxs)(PS,{children:[(0,K.jsx)(FS,{children:`Submit as Open`}),(0,K.jsx)(IS,{children:(0,K.jsx)(`svg`,{width:`10`,height:`10`,viewBox:`0 0 16 16`,fill:`none`,stroke:`#fff`,strokeWidth:`2`,children:(0,K.jsx)(`path`,{d:`M4 6l4 4 4-4`,strokeLinecap:`round`,strokeLinejoin:`round`})})})]})]})]})}var RS=V.div`
   display: flex;
   flex-direction: column;
   height: 100%;
   overflow: hidden;
-`,BS=V.div`
+`,zS=V.div`
   display: flex;
   align-items: center;
   height: 40px;
@@ -1939,32 +1933,32 @@ Roger`}],wb=[{id:4872,subject:`Order #GR-29104 not received`,date:`Jun 24 09:15`
   font-size: 13px;
   color: #2f3130;
   gap: 12px;
-`,VS=V.span`
+`,BS=V.span`
   color: #646864;
   cursor: pointer;
   &:hover { color: #2f3130; }
-`,HS=V.span`
+`,VS=V.span`
   font-weight: 500;
-`,US=V.div`
+`,HS=V.div`
   display: flex;
   flex: 1;
   overflow: hidden;
-`,WS=V.div`
+`,US=V.div`
   width: 316px;
   border-right: 1px solid #eae9e8;
   overflow-y: auto;
   padding: 20px 16px;
   flex-shrink: 0;
-`,GS=V.div`
+`,WS=V.div`
   flex: 1;
   overflow-y: auto;
   padding: 24px 32px;
-`,KS=V.div`
+`,GS=V.div`
   display: flex;
   align-items: center;
   gap: 16px;
   margin-bottom: 24px;
-`,qS=V.div`
+`,KS=V.div`
   width: 48px;
   height: 48px;
   border-radius: 50%;
@@ -1976,59 +1970,59 @@ Roger`}],wb=[{id:4872,subject:`Order #GR-29104 not received`,date:`Jun 24 09:15`
   font-size: 18px;
   font-weight: 600;
   flex-shrink: 0;
-`,JS=V.h1`
+`,qS=V.h1`
   font-size: 22px;
   font-weight: 500;
   color: #2f3130;
   margin: 0;
-`,YS=V.div`
+`,JS=V.div`
   display: grid;
   grid-template-columns: auto 1fr;
   gap: 12px 24px;
   align-items: baseline;
-`,XS=V.div`
+`,YS=V.div`
   font-size: 13px;
   color: #8b8e89;
   text-align: right;
   white-space: nowrap;
-`,ZS=V.div`
+`,XS=V.div`
   font-size: 13px;
   color: #2f3130;
-`,QS=V.div`
+`,ZS=V.div`
   font-size: 13px;
   color: #406cc4;
   cursor: pointer;
-`,$S=V.div`
+`,QS=V.div`
   margin-top: -8px;
   grid-column: 2;
-`,eC=V.div`
+`,$S=V.div`
   display: flex;
   gap: 24px;
   border-bottom: 1px solid #eae9e8;
   margin-bottom: 16px;
-`,tC=V.span`
+`,eC=V.span`
   font-size: 14px;
   padding-bottom: 10px;
   cursor: pointer;
   color: ${e=>e.$active?`#406cc4`:`#646864`};
   border-bottom: ${e=>e.$active?`2px solid #406cc4`:`2px solid transparent`};
   font-weight: ${e=>e.$active?`500`:`400`};
-`,nC=V.table`
+`,tC=V.table`
   width: 100%;
   border-collapse: collapse;
   font-size: 13px;
-`,rC=V.th`
+`,nC=V.th`
   text-align: left;
   padding: 8px 12px;
   font-weight: 600;
   color: #2f3130;
   border-bottom: 1px solid #eae9e8;
   font-size: 12px;
-`,iC=V.td`
+`,rC=V.td`
   padding: 10px 12px;
   color: #2f3130;
   border-bottom: 1px solid #f7f7f7;
-`,aC=V.span`
+`,iC=V.span`
   background: ${e=>e.$status===`Open`?`#c63f46`:`#4b7d04`};
   color: #fff;
   font-size: 10px;
@@ -2036,12 +2030,12 @@ Roger`}],wb=[{id:4872,subject:`Order #GR-29104 not received`,date:`Jun 24 09:15`
   padding: 2px 6px;
   border-radius: 3px;
   text-transform: uppercase;
-`,oC=V.span`
+`,aC=V.span`
   font-size: 13px;
   color: #646864;
   margin-bottom: 12px;
   display: block;
-`,sC=[{id:4872,status:`Open`,subject:`Order #GR-29104 not received`,requested:`Jun 24, 2026`,updated:`Jun 25, 2026`},{id:4651,status:`Solved`,subject:`Bulk order pricing inquiry`,requested:`Jun 10, 2026`,updated:`Jun 12, 2026`},{id:4302,status:`Solved`,subject:`Return authorization needed`,requested:`May 15, 2026`,updated:`May 18, 2026`},{id:4101,status:`Solved`,subject:`Account access issue`,requested:`Apr 28, 2026`,updated:`Apr 29, 2026`},{id:3890,status:`Solved`,subject:`Invoice discrepancy`,requested:`Apr 02, 2026`,updated:`Apr 05, 2026`}];function cC(e){return e.split(` `).map(e=>e[0]).join(``).substring(0,2).toUpperCase()}function lC({user:e,mode:t=`mvp`}){return(0,K.jsxs)(zS,{children:[(0,K.jsxs)(BS,{children:[(0,K.jsx)(VS,{children:e.organization}),(0,K.jsx)(HS,{children:e.name})]}),(0,K.jsxs)(US,{children:[(0,K.jsx)(WS,{children:(0,K.jsxs)(YS,{children:[(0,K.jsx)(XS,{children:`User type`}),(0,K.jsxs)(ZS,{children:[e.userType,` ▾`]}),(0,K.jsx)(XS,{children:`Access`}),(0,K.jsx)(ZS,{children:`Can view and edit own... ▾`}),(0,K.jsx)(XS,{children:`Primary email`}),(0,K.jsx)(QS,{children:e.email}),(0,K.jsx)($S,{children:(0,K.jsx)(Zp,{size:`small`,children:`Shared`})}),(0,K.jsx)(XS,{children:`Phone`}),(0,K.jsx)(QS,{children:e.phone}),t===`scaled`&&e.sharedPhone&&(0,K.jsx)($S,{children:(0,K.jsx)(Zp,{size:`small`,children:`Shared`})}),(0,K.jsx)(XS,{children:`Tags`}),(0,K.jsx)(ZS,{children:`—`}),(0,K.jsx)(XS,{children:`Org.`}),(0,K.jsx)(QS,{children:e.organization}),(0,K.jsx)(XS,{children:`User segments`}),(0,K.jsx)(ZS,{children:`—`}),(0,K.jsx)(XS,{children:`Language`}),(0,K.jsx)(ZS,{children:e.language}),(0,K.jsx)(XS,{children:`Time zone`}),(0,K.jsx)(ZS,{children:e.timezone}),(0,K.jsx)(XS,{children:`Details`}),(0,K.jsx)(ZS,{children:`—`}),(0,K.jsx)(XS,{children:`Notes`}),(0,K.jsx)(ZS,{children:e.notes||`—`})]})}),(0,K.jsxs)(GS,{children:[(0,K.jsxs)(KS,{children:[(0,K.jsx)(qS,{$color:e.avatarColor,children:cC(e.name)}),(0,K.jsx)(JS,{children:e.name})]}),(0,K.jsxs)(eC,{children:[(0,K.jsxs)(tC,{$active:!0,children:[`Tickets (`,sC.length,`)`]}),(0,K.jsx)(tC,{children:`Help center (0)`}),(0,K.jsx)(tC,{children:`Related`}),(0,K.jsx)(tC,{children:`Security settings`})]}),(0,K.jsxs)(oC,{children:[`Requested tickets (`,sC.length,`) · `,sC.length,` tickets`]}),(0,K.jsxs)(nC,{children:[(0,K.jsx)(`thead`,{children:(0,K.jsxs)(`tr`,{children:[(0,K.jsx)(rC,{children:`Status`}),(0,K.jsx)(rC,{children:`ID`}),(0,K.jsx)(rC,{children:`Subject`}),(0,K.jsx)(rC,{children:`Requested`}),(0,K.jsx)(rC,{children:`Updated`})]})}),(0,K.jsx)(`tbody`,{children:sC.map(e=>(0,K.jsxs)(`tr`,{children:[(0,K.jsx)(iC,{children:(0,K.jsx)(aC,{$status:e.status,children:e.status})}),(0,K.jsxs)(iC,{children:[`#`,e.id]}),(0,K.jsx)(iC,{children:e.subject}),(0,K.jsx)(iC,{children:e.requested}),(0,K.jsx)(iC,{children:e.updated})]},e.id))})]})]})]})]})}var uC=V.div`
+`,oC=[{id:4872,status:`Open`,subject:`Order #GR-29104 not received`,requested:`Jun 24, 2026`,updated:`Jun 25, 2026`},{id:4651,status:`Solved`,subject:`Bulk order pricing inquiry`,requested:`Jun 10, 2026`,updated:`Jun 12, 2026`},{id:4302,status:`Solved`,subject:`Return authorization needed`,requested:`May 15, 2026`,updated:`May 18, 2026`},{id:4101,status:`Solved`,subject:`Account access issue`,requested:`Apr 28, 2026`,updated:`Apr 29, 2026`},{id:3890,status:`Solved`,subject:`Invoice discrepancy`,requested:`Apr 02, 2026`,updated:`Apr 05, 2026`}];function sC(e){return e.split(` `).map(e=>e[0]).join(``).substring(0,2).toUpperCase()}function cC({user:e,mode:t=`mvp`}){return(0,K.jsxs)(RS,{children:[(0,K.jsxs)(zS,{children:[(0,K.jsx)(BS,{children:e.organization}),(0,K.jsx)(VS,{children:e.name})]}),(0,K.jsxs)(HS,{children:[(0,K.jsx)(US,{children:(0,K.jsxs)(JS,{children:[(0,K.jsx)(YS,{children:`User type`}),(0,K.jsxs)(XS,{children:[e.userType,` ▾`]}),(0,K.jsx)(YS,{children:`Access`}),(0,K.jsx)(XS,{children:`Can view and edit own... ▾`}),(0,K.jsx)(YS,{children:`Primary email`}),(0,K.jsx)(ZS,{children:e.email}),(0,K.jsx)(QS,{children:(0,K.jsx)(Zp,{size:`small`,children:`Shared`})}),(0,K.jsx)(YS,{children:`Phone`}),(0,K.jsx)(ZS,{children:e.phone}),t===`scaled`&&e.sharedPhone&&(0,K.jsx)(QS,{children:(0,K.jsx)(Zp,{size:`small`,children:`Shared`})}),(0,K.jsx)(YS,{children:`Tags`}),(0,K.jsx)(XS,{children:`—`}),(0,K.jsx)(YS,{children:`Org.`}),(0,K.jsx)(ZS,{children:e.organization}),(0,K.jsx)(YS,{children:`User segments`}),(0,K.jsx)(XS,{children:`—`}),(0,K.jsx)(YS,{children:`Language`}),(0,K.jsx)(XS,{children:e.language}),(0,K.jsx)(YS,{children:`Time zone`}),(0,K.jsx)(XS,{children:e.timezone}),(0,K.jsx)(YS,{children:`Details`}),(0,K.jsx)(XS,{children:`—`}),(0,K.jsx)(YS,{children:`Notes`}),(0,K.jsx)(XS,{children:e.notes||`—`})]})}),(0,K.jsxs)(WS,{children:[(0,K.jsxs)(GS,{children:[(0,K.jsx)(KS,{$color:e.avatarColor,children:sC(e.name)}),(0,K.jsx)(qS,{children:e.name})]}),(0,K.jsxs)($S,{children:[(0,K.jsxs)(eC,{$active:!0,children:[`Tickets (`,oC.length,`)`]}),(0,K.jsx)(eC,{children:`Help center (0)`}),(0,K.jsx)(eC,{children:`Related`}),(0,K.jsx)(eC,{children:`Security settings`})]}),(0,K.jsxs)(aC,{children:[`Requested tickets (`,oC.length,`) · `,oC.length,` tickets`]}),(0,K.jsxs)(tC,{children:[(0,K.jsx)(`thead`,{children:(0,K.jsxs)(`tr`,{children:[(0,K.jsx)(nC,{children:`Status`}),(0,K.jsx)(nC,{children:`ID`}),(0,K.jsx)(nC,{children:`Subject`}),(0,K.jsx)(nC,{children:`Requested`}),(0,K.jsx)(nC,{children:`Updated`})]})}),(0,K.jsx)(`tbody`,{children:oC.map(e=>(0,K.jsxs)(`tr`,{children:[(0,K.jsx)(rC,{children:(0,K.jsx)(iC,{$status:e.status,children:e.status})}),(0,K.jsxs)(rC,{children:[`#`,e.id]}),(0,K.jsx)(rC,{children:e.subject}),(0,K.jsx)(rC,{children:e.requested}),(0,K.jsx)(rC,{children:e.updated})]},e.id))})]})]})]})]})}var lC=V.div`
   display: flex;
   align-items: center;
   height: 100%;
@@ -2049,7 +2043,7 @@ Roger`}],wb=[{id:4872,subject:`Order #GR-29104 not received`,date:`Jun 24 09:15`
   font-size: 13px;
   color: #2f3130;
   gap: 8px;
-`,dC=V.div`
+`,uC=V.div`
   display: flex;
   align-items: center;
   gap: 8px;
@@ -2065,30 +2059,30 @@ Roger`}],wb=[{id:4872,subject:`Order #GR-29104 not received`,date:`Jun 24 09:15`
   border: 1px solid ${e=>e.$active?`#2f3130`:`#dcdcda`};
   white-space: nowrap;
   &:hover { background: ${e=>e.$active?`#2f3130`:`#f7f7f7`}; }
-`,fC=V.div`
+`,dC=V.div`
   display: flex;
   flex-direction: column;
   line-height: 1.2;
-`,pC=V.span`
+`,fC=V.span`
   font-size: 12px;
   font-weight: 600;
   white-space: nowrap;
-`,mC=V.span`
+`,pC=V.span`
   font-size: 12px;
   font-weight: 600;
-`,hC=V.span`
+`,mC=V.span`
   font-size: 16px;
   color: ${e=>e.$active?`rgba(255,255,255,0.7)`:`#999b97`};
   cursor: pointer;
   margin-left: 2px;
   line-height: 1;
   &:hover { color: ${e=>e.$active?`#fff`:`#2f3130`}; }
-`,gC=V.span`
+`,hC=V.span`
   display: inline-flex;
   align-items: center;
   justify-content: center;
   color: ${e=>e.$active?`#fff`:`#646864`};
-`,_C=V.button`
+`,gC=V.button`
   width: 32px;
   height: 32px;
   border: none;
@@ -2101,20 +2095,20 @@ Roger`}],wb=[{id:4872,subject:`Order #GR-29104 not received`,date:`Jun 24 09:15`
   color: #8b8e89;
   font-size: 20px;
   &:hover { background: #eae9e8; color: #2f3130; }
-`;function vC({openTabs:e,activeTab:t,onTabClick:n,onTabClose:r}){return(0,K.jsxs)(uC,{children:[e.map(e=>{let i=e.id===t;return(0,K.jsxs)(dC,{$active:i,onClick:()=>n(e.id),children:[(0,K.jsx)(gC,{$active:i,children:e.type===`ticket`?(0,K.jsxs)(`svg`,{width:`14`,height:`14`,viewBox:`0 0 16 16`,fill:`none`,stroke:`currentColor`,strokeWidth:`1.5`,children:[(0,K.jsx)(`circle`,{cx:`8`,cy:`8`,r:`6`}),(0,K.jsx)(`path`,{d:`M8 5v3l2 2`,strokeLinecap:`round`,strokeLinejoin:`round`})]}):(0,K.jsxs)(`svg`,{width:`14`,height:`14`,viewBox:`0 0 16 16`,fill:`none`,stroke:`currentColor`,strokeWidth:`1.5`,children:[(0,K.jsx)(`circle`,{cx:`8`,cy:`5`,r:`3`}),(0,K.jsx)(`path`,{d:`M2 14c0-3 2.7-5 6-5s6 2 6 5`})]})}),(0,K.jsxs)(fC,{children:[(0,K.jsx)(pC,{children:e.title.length>22?e.title.substring(0,22)+`...`:e.title}),e.type===`ticket`&&e.ticketId&&(0,K.jsxs)(mC,{children:[`#`,e.ticketId]})]}),(0,K.jsx)(hC,{$active:i,onClick:t=>{t.stopPropagation(),r(e.id)},children:`×`})]},e.id)}),(0,K.jsx)(_C,{children:`+`})]})}var yC=V.div`
+`;function _C({openTabs:e,activeTab:t,onTabClick:n,onTabClose:r}){return(0,K.jsxs)(lC,{children:[e.map(e=>{let i=e.id===t;return(0,K.jsxs)(uC,{$active:i,onClick:()=>n(e.id),children:[(0,K.jsx)(hC,{$active:i,children:e.type===`ticket`?(0,K.jsxs)(`svg`,{width:`14`,height:`14`,viewBox:`0 0 16 16`,fill:`none`,stroke:`currentColor`,strokeWidth:`1.5`,children:[(0,K.jsx)(`circle`,{cx:`8`,cy:`8`,r:`6`}),(0,K.jsx)(`path`,{d:`M8 5v3l2 2`,strokeLinecap:`round`,strokeLinejoin:`round`})]}):(0,K.jsxs)(`svg`,{width:`14`,height:`14`,viewBox:`0 0 16 16`,fill:`none`,stroke:`currentColor`,strokeWidth:`1.5`,children:[(0,K.jsx)(`circle`,{cx:`8`,cy:`5`,r:`3`}),(0,K.jsx)(`path`,{d:`M2 14c0-3 2.7-5 6-5s6 2 6 5`})]})}),(0,K.jsxs)(dC,{children:[(0,K.jsx)(fC,{children:e.title.length>22?e.title.substring(0,22)+`...`:e.title}),e.type===`ticket`&&e.ticketId&&(0,K.jsxs)(pC,{children:[`#`,e.ticketId]})]}),(0,K.jsx)(mC,{$active:i,onClick:t=>{t.stopPropagation(),r(e.id)},children:`×`})]},e.id)}),(0,K.jsx)(gC,{children:`+`})]})}var vC=V.div`
   display: flex;
   flex-direction: column;
   height: 100vh;
   width: 100vw;
   background-color: #f8f9f9;
   overflow: hidden;
-`,bC=V.div`
+`,yC=V.div`
   display: flex;
   flex: 1;
   min-height: 0;
   width: 100%;
   overflow: hidden;
-`,xC=V.main`
+`,bC=V.main`
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -2124,10 +2118,10 @@ Roger`}],wb=[{id:4872,subject:`Order #GR-29104 not received`,date:`Jun 24 09:15`
   border-radius: 8px 0px 0px 0px;
   box-shadow: 0px 0px 4px rgba(10, 13, 14, 0.16);
   overflow: hidden;
-`,SC=V.div`
+`,xC=V.div`
   position: relative;
   flex-shrink: 0;
-`,CC=V.div`
+`,SC=V.div`
   position: absolute;
   top: 0;
   left: 140px;
@@ -2135,7 +2129,7 @@ Roger`}],wb=[{id:4872,subject:`Order #GR-29104 not received`,date:`Jun 24 09:15`
   display: flex;
   align-items: center;
   z-index: 10;
-`,wC=V.div`
+`,CC=V.div`
   position: absolute;
   top: 0;
   right: 380px;
@@ -2143,9 +2137,9 @@ Roger`}],wb=[{id:4872,subject:`Order #GR-29104 not received`,date:`Jun 24 09:15`
   display: flex;
   align-items: center;
   z-index: 10;
-`,TC=V.div`
+`,wC=V.div`
   min-width: 200px;
-`,EC=V.div`
+`,TC=V.div`
   flex: 1;
   overflow: hidden;
-`;function DC(){let[e,t]=(0,g.useState)(`support`),[n,r]=(0,g.useState)(0),[i,a]=(0,g.useState)(!1),[o,s]=(0,g.useState)(()=>localStorage.getItem(`shared-email-mode`)||`workspace2`),c=e=>{s(e),localStorage.setItem(`shared-email-mode`,e)},[l,u]=(0,g.useState)([{id:`ticket-4872`,type:`ticket`,title:`Order #GR-29104 not rec...`,ticketId:`4872`}]),[d,f]=(0,g.useState)(`ticket-4872`),p=e=>{let t=`user-${e.id}`;l.find(e=>e.id===t)||u(n=>[...n,{id:t,type:`profile`,title:e.name,user:e}]),f(t)},m=e=>{u(t=>t.filter(t=>t.id!==e)),d===e&&f(`ticket-4872`)},h=l.find(e=>e.id===d);return(0,K.jsx)(Po,{children:(0,K.jsx)(wc,{zIndex:1e3,placementProps:{"top-end":{style:{top:`72px`,right:`40px`}}},children:(0,K.jsxs)(yC,{children:[(0,K.jsxs)(SC,{children:[(0,K.jsx)(Ty,{currentProduct:e,onProductChange:t}),(0,K.jsx)(CC,{children:(0,K.jsx)(vC,{openTabs:l,activeTab:d,onTabClick:f,onTabClose:m})}),(0,K.jsx)(wC,{children:(0,K.jsx)(TC,{children:(0,K.jsx)(Mg,{children:(0,K.jsxs)(Dg,{isCompact:!0,isEditable:!1,inputValue:o===`mvp`?`MVP`:o===`mvp2`?`MVP v2`:o===`scaled`?`Scaled`:o===`workspace2`?`Workspace V2 info bar`:o===`workspace3`?`Workspace V3 bundles`:`Workspace`,selectionValue:o,onChange:({selectionValue:e})=>{e&&c(e)},children:[(0,K.jsx)(e_,{value:`mvp`,children:`MVP`}),(0,K.jsx)(e_,{value:`mvp2`,children:`MVP v2`}),(0,K.jsx)(e_,{value:`scaled`,children:`Scaled`}),(0,K.jsx)(e_,{value:`workspace`,children:`Workspace`}),(0,K.jsx)(e_,{value:`workspace2`,children:`Workspace V2 info bar`}),(0,K.jsx)(e_,{value:`workspace3`,children:`Workspace V3 bundles`})]})})})})]}),(0,K.jsxs)(bC,{children:[(0,K.jsx)(Hy,{currentProduct:`support`,activeNavItem:n,setActiveNavItem:r,isSubnavExpanded:i,setIsSubnavExpanded:a}),(0,K.jsx)(xC,{children:(0,K.jsxs)(EC,{children:[(0,K.jsx)(`div`,{style:{display:h?.type===`ticket`?`contents`:`none`},children:(0,K.jsx)(RS,{onOpenProfile:p,mode:o})}),h?.type===`profile`&&(0,K.jsx)(lC,{user:h.user,mode:o})]})})]})]})})})}(0,_.createRoot)(document.getElementById(`root`)).render((0,K.jsx)(g.StrictMode,{children:(0,K.jsx)(DC,{})}));
+`;function EC(){let[e,t]=(0,g.useState)(`support`),[n,r]=(0,g.useState)(0),[i,a]=(0,g.useState)(!1),[o,s]=(0,g.useState)(()=>localStorage.getItem(`shared-email-mode`)||`workspace2`),c=e=>{s(e),localStorage.setItem(`shared-email-mode`,e)},[l,u]=(0,g.useState)([{id:`ticket-4872`,type:`ticket`,title:`Order #GR-29104 not rec...`,ticketId:`4872`}]),[d,f]=(0,g.useState)(`ticket-4872`),p=e=>{let t=`user-${e.id}`;l.find(e=>e.id===t)||u(n=>[...n,{id:t,type:`profile`,title:e.name,user:e}]),f(t)},m=e=>{u(t=>t.filter(t=>t.id!==e)),d===e&&f(`ticket-4872`)},h=l.find(e=>e.id===d);return(0,K.jsx)(Po,{children:(0,K.jsx)(wc,{zIndex:1e3,placementProps:{"top-end":{style:{top:`72px`,right:`40px`}}},children:(0,K.jsxs)(vC,{children:[(0,K.jsxs)(xC,{children:[(0,K.jsx)(Ty,{currentProduct:e,onProductChange:t}),(0,K.jsx)(SC,{children:(0,K.jsx)(_C,{openTabs:l,activeTab:d,onTabClick:f,onTabClose:m})}),(0,K.jsx)(CC,{children:(0,K.jsx)(wC,{children:(0,K.jsx)(Mg,{children:(0,K.jsxs)(Dg,{isCompact:!0,isEditable:!1,inputValue:o===`mvp`?`MVP`:o===`mvp2`?`MVP v2`:o===`scaled`?`Scaled`:o===`workspace2`?`Workspace V2 info bar`:o===`workspace3`?`Workspace V3 bundles`:`Workspace`,selectionValue:o,onChange:({selectionValue:e})=>{e&&c(e)},children:[(0,K.jsx)(e_,{value:`mvp`,children:`MVP`}),(0,K.jsx)(e_,{value:`mvp2`,children:`MVP v2`}),(0,K.jsx)(e_,{value:`scaled`,children:`Scaled`}),(0,K.jsx)(e_,{value:`workspace`,children:`Workspace`}),(0,K.jsx)(e_,{value:`workspace2`,children:`Workspace V2 info bar`}),(0,K.jsx)(e_,{value:`workspace3`,children:`Workspace V3 bundles`})]})})})})]}),(0,K.jsxs)(yC,{children:[(0,K.jsx)(Hy,{currentProduct:`support`,activeNavItem:n,setActiveNavItem:r,isSubnavExpanded:i,setIsSubnavExpanded:a}),(0,K.jsx)(bC,{children:(0,K.jsxs)(TC,{children:[(0,K.jsx)(`div`,{style:{display:h?.type===`ticket`?`contents`:`none`},children:(0,K.jsx)(LS,{onOpenProfile:p,mode:o})}),h?.type===`profile`&&(0,K.jsx)(cC,{user:h.user,mode:o})]})})]})]})})})}(0,_.createRoot)(document.getElementById(`root`)).render((0,K.jsx)(g.StrictMode,{children:(0,K.jsx)(EC,{})}));
