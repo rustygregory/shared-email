@@ -1,18 +1,27 @@
 import { useState } from 'react'
 import { ThemeProvider } from './flora-theme/elements/ThemeProvider'
 import { ToastProvider } from '@zendeskgarden/react-notifications'
-import { Combobox, Field, Option } from '@zendeskgarden/react-dropdowns'
 import { TopBar, MainNav } from 'zendesk-globalnav-template'
 import styled from 'styled-components'
 import TicketView from './components/TicketView'
 import CustomerProfilePage from './components/CustomerProfilePage'
 import TabBar from './components/TabBar'
+import PrototypeBar from './prototype-bar/PrototypeBar'
+
+const Shell = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+`
 
 const PageContainer = styled.div`
   display: flex;
   flex-direction: column;
-  height: 100vh;
-  width: 100vw;
+  flex: 1;
+  min-height: 0;
+  width: 100%;
   background-color: #f8f9f9;
   overflow: hidden;
 `
@@ -52,24 +61,19 @@ const TabBarOverlay = styled.div`
   z-index: 10;
 `
 
-const ToggleOverlay = styled.div`
-  position: absolute;
-  top: 0;
-  right: 380px;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  z-index: 10;
-`
-
-const ModeFieldWrapper = styled.div`
-  min-width: 200px;
-`
-
 const ViewArea = styled.div`
   flex: 1;
   overflow: hidden;
 `
+
+const VERSIONS = [
+  { id: 'workspace2', label: 'Workspace V2 info bar' },
+  { id: 'workspace3', label: 'Workspace V3 bundles' },
+  { id: 'workspace', label: 'Workspace', archived: true },
+  { id: 'mvp2', label: 'MVP v2', archived: true },
+  { id: 'mvp', label: 'MVP', archived: true },
+  { id: 'scaled', label: 'Scaled', archived: true },
+]
 
 export default function App() {
   const [currentProduct, setCurrentProduct] = useState('support')
@@ -106,61 +110,50 @@ export default function App() {
   return (
     <ThemeProvider>
       <ToastProvider zIndex={1000} placementProps={{ 'top-end': { style: { top: '72px', right: '40px' } } }}>
-      <PageContainer>
-        <TopBarRow>
-          <TopBar
-            currentProduct={currentProduct}
-            onProductChange={setCurrentProduct}
-          />
-          <TabBarOverlay>
-            <TabBar
-              openTabs={openTabs}
-              activeTab={activeTab}
-              onTabClick={setActiveTab}
-              onTabClose={handleCloseTab}
+      <Shell>
+        <PrototypeBar
+          title="Shared email / Change requester"
+          meta="Started June 2026"
+          versions={VERSIONS}
+          versionId={mode}
+          onVersionChange={handleModeChange}
+        />
+        <PageContainer>
+          <TopBarRow>
+            <TopBar
+              currentProduct={currentProduct}
+              onProductChange={setCurrentProduct}
             />
-          </TabBarOverlay>
-          <ToggleOverlay>
-            <ModeFieldWrapper>
-              <Field>
-                <Combobox
-                  isCompact
-                  isEditable={false}
-                  inputValue={mode === 'mvp' ? 'MVP' : mode === 'mvp2' ? 'MVP v2' : mode === 'scaled' ? 'Scaled' : mode === 'workspace2' ? 'Workspace V2 info bar' : mode === 'workspace3' ? 'Workspace V3 bundles' : 'Workspace'}
-                  selectionValue={mode}
-                  onChange={({ selectionValue }) => { if (selectionValue) handleModeChange(selectionValue) }}
-                >
-                  <Option value="mvp">MVP</Option>
-                  <Option value="mvp2">MVP v2</Option>
-                  <Option value="scaled">Scaled</Option>
-                  <Option value="workspace">Workspace</Option>
-                  <Option value="workspace2">Workspace V2 info bar</Option>
-                  <Option value="workspace3">Workspace V3 bundles</Option>
-                </Combobox>
-              </Field>
-            </ModeFieldWrapper>
-          </ToggleOverlay>
-        </TopBarRow>
-        <ContentRow>
-          <MainNav
-            currentProduct="support"
-            activeNavItem={activeNavItem}
-            setActiveNavItem={setActiveNavItem}
-            isSubnavExpanded={isSubnavExpanded}
-            setIsSubnavExpanded={setIsSubnavExpanded}
-          />
-          <MainContent>
-            <ViewArea>
-              <div style={{ display: activeTabData?.type === 'ticket' ? 'contents' : 'none' }}>
-                <TicketView onOpenProfile={handleOpenProfile} mode={mode} />
-              </div>
-              {activeTabData?.type === 'profile' && (
-                <CustomerProfilePage user={activeTabData.user} mode={mode} />
-              )}
-            </ViewArea>
-          </MainContent>
-        </ContentRow>
-      </PageContainer>
+            <TabBarOverlay>
+              <TabBar
+                openTabs={openTabs}
+                activeTab={activeTab}
+                onTabClick={setActiveTab}
+                onTabClose={handleCloseTab}
+              />
+            </TabBarOverlay>
+          </TopBarRow>
+          <ContentRow>
+            <MainNav
+              currentProduct="support"
+              activeNavItem={activeNavItem}
+              setActiveNavItem={setActiveNavItem}
+              isSubnavExpanded={isSubnavExpanded}
+              setIsSubnavExpanded={setIsSubnavExpanded}
+            />
+            <MainContent>
+              <ViewArea>
+                <div style={{ display: activeTabData?.type === 'ticket' ? 'contents' : 'none' }}>
+                  <TicketView onOpenProfile={handleOpenProfile} mode={mode} />
+                </div>
+                {activeTabData?.type === 'profile' && (
+                  <CustomerProfilePage user={activeTabData.user} mode={mode} />
+                )}
+              </ViewArea>
+            </MainContent>
+          </ContentRow>
+        </PageContainer>
+      </Shell>
       </ToastProvider>
     </ThemeProvider>
   )
